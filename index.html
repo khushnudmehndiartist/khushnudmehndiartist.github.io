@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="qBJg9eJnVS2zFmDFIoJT8I8cD9qIqVoAdGMXoJ4Oe30" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Khushnud Mehndi Artist Mumbai | Bridal, Arabic & Party Henna</title>
-  <meta name="description" content="Khushnud Mehndi Artist in Mumbai: Bridal, Arabic & Party mehndi at home. One‑tap WhatsApp booking. View real Instagram work & packages."/>
+  <meta name="description" content="Khushnud Mehndi Artist in Mumbai: Bridal, Arabic & Party mehndi at home. One‑tap WhatsApp booking. View Instagram work, packages, About & Services pages."/>
   <meta name="keywords" content="Khushnud Mehndi Artist, mehndi artist Mumbai, bridal mehndi, arabic mehndi, henna artist, party mehndi, home service mehndi"/>
   <link rel="canonical" href="https://khushnudmehndiartist.github.io/"/>
-  <meta name="theme-color" content="#0c0a09"/>
+  <meta name="theme-color" content="#7c2d12"/>
+  <meta name="google-site-verification" content="qBJg9eJnVS2zFmDFIoJT8I8cD9qIqVoAdGMXoJ4Oe30" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Khushnud Mehndi Artist | Bridal & Party Mehndi in Mumbai"/>
   <meta property="og:description" content="Book on WhatsApp • Verified Instagram work • Transparent packages"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://khushnudmehndiartist.github.io/"/>
-  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0b0b/ffffff&text=Khushnud+Mehndi+Artist"/>
+  <meta property="og:image" content="https://khushnudmehndiartist.github.io/logo.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
   <!-- Preconnects for performance -->
@@ -27,11 +27,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 50; }
-    .shine{background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,0) 40%,rgba(255,255,255,.06));}
-  </style>
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wa-float{position:fixed;right:16px;bottom:16px;z-index:60}
+    .shine{background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,0) 40%,rgba(255,255,255,.08))}
+    /* Mehndi paisley background using SVG pattern */
+    .mehndi-bg{background-image:url('data:image/svg+xml;utf8,\
+      <svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 200 200\'>\
+        <defs>\
+          <pattern id=\'p\' x=\'0\' y=\'0\' width=\'80\' height=\'80\' patternUnits=\'userSpaceOnUse\'>\
+            <path d=\'M40 12c20 12 28 30 18 46s-34 18-52 6c10 6 26 6 34-6s2-26-10-34c-6-4-12-6-18-6 10-6 26-6 28-6z\' fill=\'%23fde68a\' fill-opacity=\'0.35\'/>\
+            <circle cx=\'10\' cy=\'10\' r=\'2\' fill=\'%23fecdd3\' fill-opacity=\'0.5\'/>\
+            <circle cx=\'70\' cy=\'70\' r=\'1.8\' fill=\'%23bbf7d0\' fill-opacity=\'0.5\'/>\
+            <path d=\'M10 60c10-8 20-8 30 0\' stroke=\'%23fca5a5\' stroke-width=\'1\' stroke-opacity=\'0.4\' fill=\'none\'/>\
+          </pattern>\
+        </defs>\
+        <rect width=\'100%\' height=\'100%\' fill=\'%23fff7ed\'/>\
+        <rect width=\'100%\' height=\'100%\' fill=\'url(%23p)\'/>\
+      </svg>');background-size:400px 400px}
+    /* Simple page router (hash) visibility helpers */
+    .page{display:none}
+    .page.active{display:block}
+    .no-scrollbar::-webkit-scrollbar{display:none}
+  .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+</style>
 
   <!-- LocalBusiness + FAQ Schema -->
   <script type="application/ld+json">
@@ -39,16 +58,11 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Khushnud Mehndi Artist",
-    "image": "https://dummyimage.com/600x400/0b0b0b/ffffff&text=Khushnud+Mehndi",
+    "image": "https://dummyimage.com/600x400/7c2d12/ffffff&text=Khushnud+Mehndi",
     "description": "Bridal, Arabic & Party mehndi services in Mumbai with home visits.",
     "url": "https://khushnudmehndiartist.github.io/",
-    "telephone": "+91XXXXXXXXXX",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Mumbai",
-      "addressRegion": "MH",
-      "addressCountry": "IN"
-    },
+    "telephone": "+919152584828",
+    "address": {"@type": "PostalAddress","addressLocality": "Mumbai","addressRegion": "MH","addressCountry": "IN"},
     "areaServed": "Mumbai Metropolitan Region",
     "sameAs": ["https://www.instagram.com/khushnudmehndiartist/"]
   }
@@ -58,116 +72,141 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{
-      "@type": "Question",
-      "name": "How do I book?",
+      "@type": "Question","name": "How do I book?",
       "acceptedAnswer": {"@type": "Answer","text": "Tap the WhatsApp button and send your date, location and package."}
     },{
-      "@type": "Question",
-      "name": "Do you travel across Mumbai?",
+      "@type": "Question","name": "Do you travel across Mumbai?",
       "acceptedAnswer": {"@type": "Answer","text": "Yes, across MMR. Out‑station on request."}
     },{
-      "@type": "Question",
-      "name": "Are cones skin‑safe?",
+      "@type": "Question","name": "Are cones skin‑safe?",
       "acceptedAnswer": {"@type": "Answer","text": "We use quality, skin‑safe cones for rich stain."}
     }]
   }
   </script>
+  <link rel="icon" type="image/png" href="/logo.png" />
 </head>
-<body class="bg-stone-50 text-stone-900">
+<body class="text-stone-900">
+  <!-- Soft rotating copyright‑free mehndi background -->
+  <div id="siteBg" class="fixed inset-0 -z-50 bg-center bg-cover opacity-20"></div>
   <!-- Top Bar -->
-  <header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
+  <header class="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-extrabold text-xl tracking-tight">Khushnud <span class="text-stone-500">Mehndi</span></a>
+      <a href="#/" class="font-extrabold text-xl tracking-tight"><img src="/logo.png" alt="Khushnud Mehndi Artist Logo" class="w-8 h-8 inline-block mr-2 align-middle">Khushnud Mehndi Artist</a>
       <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#work" class="hover:underline">Work</a>
-        <a href="#services" class="hover:underline">Services</a>
-        <a href="#packages" class="hover:underline">Packages</a>
-        <a href="#reviews" class="hover:underline">Reviews</a>
-        <a href="#book" class="hover:underline">Book</a>
+        <a href="#/work" class="hover:underline">Work</a>
+        <a href="#/about" class="hover:underline">About</a>
+        <a href="#/services" class="hover:underline">Services</a>
+        <a href="#/packages" class="hover:underline">Packages</a>
+        <a href="#/reviews" class="hover:underline">Reviews</a>
+        <a href="#/book" class="hover:underline">Book</a>
       </nav>
-      <a href="#book" class="hidden md:inline-flex px-4 py-2 rounded-2xl shadow border bg-stone-900 text-white">WhatsApp Booking</a>
+      <div class="hidden md:flex gap-2">
+        <a href="#/book" class="px-4 py-2 rounded-2xl shadow border bg-amber-800 text-white">WhatsApp</a>
+        <a href="tel:+919152584828" class="px-4 py-2 rounded-2xl shadow border bg-emerald-700 text-white">Call</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(16,16,16,.06),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(16,16,16,.06),transparent_40%)]"></div>
-    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Bridal & Party Mehndi in Mumbai
-          <span class="block text-stone-500 mt-2">By Khushnud</span></h1>
-        <p class="mt-4 text-stone-700">Elegant Bridal • Arabic • Indo‑Arabic • Portrait mehndi. Home visits. One‑tap WhatsApp booking.</p>
-        <div class="mt-6 flex gap-3">
-          <a href="#book" class="px-5 py-3 rounded-2xl shadow bg-stone-900 text-white">Book on WhatsApp</a>
-          <a href="#work" class="px-5 py-3 rounded-2xl border">See Instagram Work</a>
+  <!-- HOME -->
+  <main id="page-home" class="page active">
+    <!-- Hero (with full-width rotating banner) -->
+    <section class="relative overflow-hidden h-[70vh] md:h-[82vh]">
+      <div id="banner" class="absolute inset-0 -z-10 bg-center bg-cover transition-all duration-700"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/10 to-white/0"></div>
+      <div class="max-w-6xl mx-auto h-full px-4 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-end md:items-center">
+        <div class="bg-white/80 backdrop-blur rounded-3xl p-6 md:p-8 border shadow-sm">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-amber-100 text-amber-900 border">MMR Home Service</span>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mt-3">Bridal & Party Mehndi in Mumbai
+            <span class="block text-stone-600 mt-2">By Khushnud</span></h1>
+          <p class="mt-4 text-stone-700">Elegant Bridal • Arabic • Indo‑Arabic • Portrait mehndi. Home visits. One‑tap WhatsApp booking.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#/book" class="px-5 py-3 rounded-2xl shadow bg-emerald-700 text-white">Book on WhatsApp</a>
+            <a href="#/work" class="px-5 py-3 rounded-2xl border bg-white">See Instagram Work</a>
+            <a href="#/packages" class="px-5 py-3 rounded-2xl border bg-white">See Packages</a>
+          </div>
+          <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
+            <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Fast Replies</dt><dd class="text-stone-600">Under 1 hour*</dd></div>
+            <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Skin‑Safe</dt><dd class="text-stone-600">Rich stain cones</dd></div>
+            <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Home Service</dt><dd class="text-stone-600">Across MMR</dd></div>
+            <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Transparent</dt><dd class="text-stone-600">Clear packages</dd></div>
+          </dl>
         </div>
-        <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-          <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Fast Replies</dt><dd class="text-stone-600">Under 1 hour*</dd></div>
-          <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Skin‑Safe</dt><dd class="text-stone-600">Rich stain cones</dd></div>
-          <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Home Service</dt><dd class="text-stone-600">Across MMR</dd></div>
-          <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Transparent</dt><dd class="text-stone-600">Clear packages</dd></div>
-        </dl>
       </div>
-      <div class="rounded-3xl overflow-hidden border bg-white shadow-sm">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIOLFHxC7qX/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote>
-      </div>
-    </div>
-    <script async src="https://www.instagram.com/embed.js"></script>
-  </section>
+    </section>
+    <script>
+      // ===== Rotating banner images (use your OWN photos) =====
+      const BANNERS = [
+        'https://images.unsplash.com/photo-1602327058593-3f41d4bdf2a1?q=80&w=1600&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1623482565597-96e8c616161d?q=80&w=1600&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1602327058550-a2b8b4b3e5a7?q=80&w=1600&auto=format&fit=crop'
+      ];
+      let _b=0; const _el=document.getElementById('banner');
+      function setBanner(){ _el.style.backgroundImage = `url(${BANNERS[_b]})`; _b = (_b+1)%BANNERS.length; }
+      setBanner(); setInterval(setBanner, 4500);
+    </script>
 
-  <!-- Work / Carousel -->
-  <section id="work" class="py-12 border-t bg-white">
+    <!-- Feature embed below banner -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(16,16,16,.06),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(16,16,16,.06),transparent_40%)]"></div>
+      <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+        <div class="rounded-3xl overflow-hidden border bg-white shadow-sm">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIOLFHxC7qX/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%;"></blockquote>
+        </div>
+        <div>
+          <h3 class="text-2xl font-extrabold">Fine, balanced lines. Rich stain.</h3>
+          <p class="mt-3 text-stone-700">See live reels and photos straight from Instagram. Every design is drawn fresh with skin‑friendly cones.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#/work" class="px-5 py-3 rounded-2xl border bg-white">Open Gallery</a>
+            <a href="#/book" class="px-5 py-3 rounded-2xl shadow bg-amber-800 text-white">Check Dates</a>
+          </div>
+        </div>
+      </div>
+      <script async src="https://www.instagram.com/embed.js"></script>
+    </section>
+
+    <!-- Quick actions -->
+    <section class="py-6">
+      <div class="max-w-6xl mx-auto px-4 grid sm:grid-cols-3 gap-4 text-sm">
+        <a href="#/about" class="rounded-2xl p-4 border bg-white hover:shadow-md transition"><span class="font-semibold">About Me</span><p class="text-stone-600">Years of craft & neatness</p></a>
+        <a href="#/services" class="rounded-2xl p-4 border bg-white hover:shadow-md transition"><span class="font-semibold">Services</span><p class="text-stone-600">Bridal, Arabic, Events</p></a>
+        <a href="#/book" class="rounded-2xl p-4 border bg-white hover:shadow-md transition"><span class="font-semibold">Instant Booking</span><p class="text-stone-600">WhatsApp in one tap</p></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- WORK -->
+  <section id="page-work" class="page py-12 border-t bg-white/70">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Image & Video Gallery</h2>
-      <p class="text-stone-600 mt-2">All posts are embedded from Instagram. Video posts will play inside the card.</p>
-
+      <p class="text-stone-600 mt-2">All posts are embedded from Instagram. Video posts play inside the card.</p>
       <div id="igGrid" class="mt-6 grid md:grid-cols-3 gap-6"></div>
-
-      <script>
-        // === Instagram posts provided by you ===
-        const IG_LINKS = [
-          "https://www.instagram.com/p/DPx-_tPDLKW/?hl=en",
-          "https://www.instagram.com/p/DPhF6uUD23T/?hl=en",
-          "https://www.instagram.com/p/DPW8BmxjIdH/?hl=en",
-          "https://www.instagram.com/p/DPVbYwRDOnE/?hl=en",
-          "https://www.instagram.com/p/C2sIP17Ch9e/?hl=en",
-          "https://www.instagram.com/p/DOKw9QPDBXv/?hl=en",
-          "https://www.instagram.com/p/DN8CDUPkmt8/?hl=en",
-          "https://www.instagram.com/p/DNmrmuksGZK/?hl=en&img_index=1",
-          "https://www.instagram.com/p/DKDjH0ciUiF/?hl=en&img_index=1",
-          "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=3",
-          "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=3",
-          "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=4",
-          "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=6",
-          "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=8",
-          "https://www.instagram.com/p/DJLShIsClVA/?hl=en&img_index=10",
-          "https://www.instagram.com/p/DJJ6g03SvE2/?hl=en",
-          "https://www.instagram.com/p/DI1rNCZCtan/?hl=en&img_index=1",
-          "https://www.instagram.com/p/DIiLi2_C492/?hl=en&img_index=1",
-          "https://www.instagram.com/p/DIdJHKlCJW-/?hl=en",
-          "https://www.instagram.com/p/DINk0YoCUBb/?hl=en"
-        ];
-
-        // Render a clean grid of Instagram embeds
-        const container = document.getElementById('igGrid');
-        IG_LINKS.forEach((url) => {
-          const card = document.createElement('div');
-          card.className = 'rounded-2xl overflow-hidden border bg-stone-50 p-2';
-          card.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%;"></blockquote>`;
-          container.appendChild(card);
-        });
-
-        // (Re)load Instagram embed script when dynamic content is added
-        const igScript = document.createElement('script');
-        igScript.src = 'https://www.instagram.com/embed.js';
-        igScript.async = true;
-        document.body.appendChild(igScript);
-      </script>
     </div>
   </section>
 
-  <!-- Services (SEO keyword targets) -->
-  <section id="services" class="py-12">
+  <!-- ABOUT (separate page) -->
+  <section id="page-about" class="page py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold">About Khushnud</h2>
+        <p class="mt-3 text-stone-700">I'm a Mumbai‑based mehndi artist specialising in neat, symmetric Bridal and Arabic designs. From intimate mehndi nights to big bridal sittings, I bring calm, punctuality and rich stain results. I use quality, skin‑friendly cones only.</p>
+        <ul class="mt-4 text-sm text-stone-700 list-disc pl-5">
+          <li>On‑time arrival & hygienic setup</li>
+          <li>Custom motifs: names, dates, portraits</li>
+          <li>Clear pricing and booking confirmations</li>
+        </ul>
+        <div class="mt-6 flex gap-3">
+          <a href="#/work" class="px-5 py-3 rounded-2xl border bg-white">See Portfolio</a>
+          <a href="#/book" class="px-5 py-3 rounded-2xl shadow bg-emerald-700 text-white">Book Now</a>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden border bg-white shadow-sm">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPx-_tPDLKW/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%;"></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (separate page) -->
+  <section id="page-services" class="page py-12">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Mehndi Services in Mumbai</h2>
       <div class="mt-6 grid md:grid-cols-4 gap-4 text-sm">
@@ -176,38 +215,42 @@
         <div class="rounded-2xl p-4 border bg-white"><h3 class="font-semibold">Indo‑Arabic</h3><p class="text-stone-600 mt-1">Fusion patterns with neat shading.</p></div>
         <div class="rounded-2xl p-4 border bg-white"><h3 class="font-semibold">Group / Events</h3><p class="text-stone-600 mt-1">Weddings, festivals & corporate functions.</p></div>
       </div>
+      <div class="mt-6 flex gap-3">
+        <a href="#/packages" class="px-5 py-3 rounded-2xl border bg-white">View Packages</a>
+        <a href="#/book" class="px-5 py-3 rounded-2xl shadow bg-emerald-700 text-white">Check Dates</a>
+      </div>
     </div>
   </section>
 
-  <!-- Packages -->
-  <section id="packages" class="py-12 border-t bg-white">
+  <!-- PACKAGES -->
+  <section id="page-packages" class="page py-12 border-t bg-white/70">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Packages & Pricing</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <div class="rounded-3xl border bg-white p-6 shadow-sm">
           <h3 class="font-semibold text-lg">Bridal Classic</h3>
           <p class="text-sm text-stone-600 mt-1">Front & back full hands + feet</p>
-          <p class="text-xl font-semibold mt-3">Connect for price enquiry</p>
-          <a href="#book" class="mt-4 inline-block text-sm underline">WhatsApp for quote →</a>
+          <p class="text-xl font-semibold mt-3">Message for quote</p>
+          <a href="#/book" class="mt-4 inline-block text-sm underline">WhatsApp for price →</a>
         </div>
         <div class="rounded-3xl border bg-white p-6 shadow-sm">
           <h3 class="font-semibold text-lg">Arabic Party</h3>
           <p class="text-sm text-stone-600 mt-1">Per hand (simple/Arabic)</p>
-          <p class="text-xl font-semibold mt-3">Connect for price enquiry</p>
-          <a href="#book" class="mt-4 inline-block text-sm underline">Check availability →</a>
+          <p class="text-xl font-semibold mt-3">Message for quote</p>
+          <a href="#/book" class="mt-4 inline-block text-sm underline">Check availability →</a>
         </div>
         <div class="rounded-3xl border bg-white p-6 shadow-sm">
           <h3 class="font-semibold text-lg">Group Booking</h3>
           <p class="text-sm text-stone-600 mt-1">Weddings & functions</p>
-          <p class="text-xl font-semibold mt-3">Connect for price enquiry</p>
-          <a href="#book" class="mt-4 inline-block text-sm underline">Share details →</a>
+          <p class="text-xl font-semibold mt-3">Message for quote</p>
+          <a href="#/book" class="mt-4 inline-block text-sm underline">Share details →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reviews -->
-  <section id="reviews" class="py-12">
+  <!-- REVIEWS -->
+  <section id="page-reviews" class="page py-12">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Client Reviews</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
@@ -218,8 +261,8 @@
     </div>
   </section>
 
-  <!-- Booking Form to WhatsApp -->
-  <section id="book" class="py-12 border-t bg-white">
+  <!-- BOOK -->
+  <section id="page-book" class="page py-12 border-t bg-white/70">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Instant WhatsApp Booking</h2>
       <p class="text-stone-700 mt-2">Fill the form; it opens WhatsApp with all details pre‑filled. Free & fast.</p>
@@ -250,16 +293,17 @@
           <label class="block text-sm font-medium">Notes</label>
           <textarea id="notes" rows="3" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Timing, venue, number of guests, etc."></textarea>
         </div>
-        <div class="md:col-span-2 flex gap-3">
-          <button class="px-5 py-3 rounded-2xl shadow bg-green-600 text-white" type="submit">Send on WhatsApp</button>
-          <a id="waDirect" class="px-5 py-3 rounded-2xl border" href="#">Chat directly</a>
+        <div class="md:col-span-2 flex flex-wrap gap-3">
+          <button class="px-5 py-3 rounded-2xl shadow bg-emerald-700 text-white" type="submit">Send on WhatsApp</button>
+          <a id="waDirect" class="px-5 py-3 rounded-2xl border bg-white" href="#">Chat directly</a>
+          <a href="tel:+919152584828" class="px-5 py-3 rounded-2xl shadow bg-amber-800 text-white">Call Now</a>
         </div>
       </form>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-12">
+  <!-- FAQ (kept on home but reusable) -->
+  <section id="page-faq" class="page py-12">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">FAQ</h2>
       <div class="mt-6 grid md:grid-cols-2 gap-6 text-sm text-stone-700">
@@ -271,8 +315,38 @@
     </div>
   </section>
 
+  <!-- Instagram Horizontal Reel (near bottom) -->
+  <section class="py-10 border-t bg-white/80">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Latest on Instagram</h2>
+        <a href="#/work" class="text-sm underline">Open full gallery →</a>
+      </div>
+      <p class="text-stone-600 mt-2">Swipe to see reels & photos (live embeds).</p>
+      <div class="mt-4 overflow-x-auto no-scrollbar">
+        <div id="igReel" class="flex gap-4 min-h-[420px] pb-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organic cones CTA (bottom, above WhatsApp button) -->
+  <section class="py-6 bg-emerald-50/70 border-t">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl border bg-white p-4 md:p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div>
+          <p class="text-lg font-semibold">100% Organic Mehndi Cones Available</p>
+          <p class="text-stone-700 text-sm">Skin‑friendly, fresh cones for rich stain. Delivery in Mumbai on request.</p>
+        </div>
+        <div class="flex gap-3">
+          <a id="waCone" class="px-5 py-3 rounded-2xl shadow bg-emerald-700 text-white" href="#">WhatsApp to order</a>
+          <a href="#/services" class="px-5 py-3 rounded-2xl border bg-white">See Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer with NAP for local SEO -->
-  <footer class="py-10 border-t bg-white">
+  <footer class="py-10 border-t bg-white/80">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 items-start text-sm">
       <div>
         <p class="font-semibold">Khushnud Mehndi Artist</p>
@@ -283,46 +357,121 @@
         <p class="text-stone-600">Mumbai • Navi Mumbai • Thane</p>
       </div>
       <div class="md:text-right">
-        <a class="underline" href="#book">Book on WhatsApp</a>
+        <a href="https://www.instagram.com/khushnud_mehndi_artist110" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl shadow bg-pink-600 text-white mb-3">Follow on Instagram</a>
+        
+        <a class="underline" href="#/book">Book on WhatsApp</a>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp button -->
-  <a class="wa-float inline-flex items-center gap-2 rounded-full px-4 py-3 shadow-lg bg-green-600 text-white" id="waFloat" href="#" aria-label="Chat on WhatsApp">
+  <!-- Floating action button -->
+  <a class="wa-float inline-flex items-center gap-2 rounded-full px-4 py-3 shadow-lg bg-emerald-700 text-white" id="waFloat" href="#" aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.59 5.99L0 24l6.2-1.63A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 21.82c-1.96 0-3.87-.52-5.54-1.5l-.4-.23-3.68.97.98-3.59-.26-.41A9.8 9.8 0 012.18 12C2.18 6.56 6.56 2.18 12 2.18c2.62 0 5.08 1.02 6.93 2.88A9.76 9.76 0 0121.82 12c0 5.44-4.38 9.82-9.82 9.82zm5.53-7.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.41-1.5-.89-.79-1.5-1.77-1.68-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.63-.93-2.24-.24-.58-.49-.5-.68-.5-.18 0-.38-.02-.58-.02-.2 0-.53.08-.81.38-.27.3-1.06 1.03-1.06 2.5 0 1.47 1.09 2.9 1.24 3.1.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
     <span>Chat</span>
   </a>
 
-  <!-- WhatsApp JS -->
+  <!-- Router + Instagram + WhatsApp JS -->
   <script>
-    // Put your WhatsApp number here (digits only). Example: +91 9876543210 -> 919876543210
-    const WA_NUMBER = '919152584828';
+    // ===== Client-side router (hash based) =====
+    const routes = ['home','work','about','services','packages','reviews','book','faq'];
+    function showPage(name){
+      routes.forEach(r=>{
+        const el = document.getElementById('page-'+r);
+        if(!el) return;
+        if(r===name) el.classList.add('active'); else el.classList.remove('active');
+      });
+      // Lazy-load Instagram grid when visiting Work
+      if(name==='work' && !window._igLoaded){ buildIG(); window._igLoaded=true; }
+      // Smooth scroll to top on every nav
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    function parseRoute(){
+      const h = location.hash.replace('#/','');
+      const name = routes.includes(h)? h : 'home';
+      showPage(name);
+    }
+    window.addEventListener('hashchange', parseRoute);
+    parseRoute();
 
-    function buildWALink(message) {
-      const text = encodeURIComponent(message);
-      return `https://wa.me/${WA_NUMBER}?text=${text}`;
+    // ===== Instagram GRID (dynamic embeds) =====
+    const IG_LINKS = [
+      'https://www.instagram.com/p/DPx-_tPDLKW/',
+      'https://www.instagram.com/p/DPhF6uUD23T/',
+      'https://www.instagram.com/p/DPW8BmxjIdH/',
+      'https://www.instagram.com/p/DPVbYwRDOnE/',
+      'https://www.instagram.com/p/C2sIP17Ch9e/',
+      'https://www.instagram.com/p/DOKw9QPDBXv/',
+      'https://www.instagram.com/p/DN8CDUPkmt8/',
+      'https://www.instagram.com/p/DNmrmuksGZK/?img_index=1',
+      'https://www.instagram.com/p/DKDjH0ciUiF/?img_index=1',
+      'https://www.instagram.com/p/DJkBLcVCuxc/?img_index=3',
+      'https://www.instagram.com/p/DJkBLcVCuxc/?img_index=4',
+      'https://www.instagram.com/p/DJkBLcVCuxc/?img_index=6',
+      'https://www.instagram.com/p/DJkBLcVCuxc/?img_index=8',
+      'https://www.instagram.com/p/DJLShIsClVA/?img_index=10',
+      'https://www.instagram.com/p/DJJ6g03SvE2/',
+      'https://www.instagram.com/p/DI1rNCZCtan/?img_index=1',
+      'https://www.instagram.com/p/DIiLi2_C492/?img_index=1',
+      'https://www.instagram.com/p/DIdJHKlCJW-/',
+      'https://www.instagram.com/p/DINk0YoCUBb/'
+    ];
+    function buildIG(){
+      const container = document.getElementById('igGrid');
+      if(!container) return;
+      container.innerHTML='';
+      IG_LINKS.forEach(url=>{
+        const card=document.createElement('div');
+        card.className='rounded-2xl overflow-hidden border bg-stone-50 p-2';
+        card.innerHTML=`<blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%"></blockquote>`;
+        container.appendChild(card);
+      });
+      const s=document.createElement('script'); s.src='https://www.instagram.com/embed.js'; s.async=true; document.body.appendChild(s);
     }
 
+    // ===== WhatsApp links =====
+    const WA_NUMBER = '919152584828';
+    function buildWALink(message){
+      return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
     document.getElementById('waDirect')?.setAttribute('href', buildWALink('Hello Khushnud! I want to book mehndi.'));
     document.getElementById('waFloat').setAttribute('href', buildWALink('Hello! I want to book mehndi.'));
-
-    document.getElementById('waForm').addEventListener('submit', function(e){
+    document.getElementById('waForm')?.addEventListener('submit', function(e){
       e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const date = document.getElementById('date').value;
-      const city = document.getElementById('city').value.trim();
-      const pkg = document.getElementById('package').value;
-      const notes = document.getElementById('notes').value.trim();
-      const msg = `New Mehndi Booking
-
-Name: ${name}
-Date: ${date}
-City: ${city}
-Package: ${pkg}
-Notes: ${notes}`;
-      window.location.href = buildWALink(msg);
+      const name=document.getElementById('name').value.trim();
+      const date=document.getElementById('date').value;
+      const city=document.getElementById('city').value.trim();
+      const pkg=document.getElementById('package').value;
+      const notes=document.getElementById('notes').value.trim();
+      const msg=`New Mehndi Booking\n\nName: ${name}\nDate: ${date}\nCity: ${city}\nPackage: ${pkg}\nNotes: ${notes}`;
+      location.href=buildWALink(msg);
     });
+      });
+
+    // ===== Build Instagram Horizontal Reel =====
+    function buildReel(){
+      const wrap=document.getElementById('igReel');
+      if(!wrap) return;
+      wrap.innerHTML='';
+      IG_LINKS.forEach(url=>{
+        const card=document.createElement('div');
+        card.className='min-w-[320px] w-[320px] rounded-2xl overflow-hidden border bg-white p-2';
+        card.innerHTML=`<blockquote class=\"instagram-media\" data-instgrm-permalink=\"${url}\" data-instgrm-version=\"14\" style=\"background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%\"></blockquote>`;
+        wrap.appendChild(card);
+      });
+      const s=document.createElement('script'); s.src='https://www.instagram.com/embed.js'; s.async=true; document.body.appendChild(s);
+    }
+    // Build reel once on load
+    buildReel();
+
+    // ===== Site background (copyright‑free stock images) =====
+    const STOCKS=[
+      'https://images.unsplash.com/photo-1603574670812-d8c3b0c4f97c?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1599058917212-7fcd4e76fd05?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1603574671031-8b8d8196e0bc?q=80&w=1600&auto=format&fit=crop'
+    ];
+    const bgEl=document.getElementById('siteBg');
+    let sb=0; function setSiteBg(){ bgEl.style.backgroundImage=`url(${STOCKS[sb]})`; sb=(sb+1)%STOCKS.length; }
+    setSiteBg(); setInterval(setSiteBg, 7000);
   </script>
 </body>
 </html>
