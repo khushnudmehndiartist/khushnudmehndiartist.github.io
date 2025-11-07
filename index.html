@@ -5,18 +5,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Khushnud Mehndi Artist Mumbai | Bridal, Arabic & Party Henna</title>
-  <meta name="description" content="Khushnud Mehndi Artist in Mumbai: Bridal, Arabic & Party mehndi at home. One‑tap WhatsApp booking. View real Instagram work & packages."/>
-  <meta name="keywords" content="Khushnud Mehndi Artist, mehndi artist Mumbai, bridal mehndi, arabic mehndi, henna artist, party mehndi, home service mehndi"/>
+  <meta name="description" content="Khushnud Mehndi Artist in Mumbai: Bridal, Arabic & Party mehndi at home. 100% natural, skin‑safe cones. One‑tap WhatsApp booking. View real Instagram work & packages."/>
+  <meta name="keywords" content="Khushnud Mehndi Artist, mehndi artist Mumbai, bridal mehndi, arabic mehndi, henna artist, party mehndi, home service mehndi, organic mehndi cones"/>
   <link rel="canonical" href="https://khushnudmehndiartist.github.io/"/>
   <meta name="theme-color" content="#0c0a09"/>
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Khushnud Mehndi Artist | Bridal & Party Mehndi in Mumbai"/>
-  <meta property="og:description" content="Book on WhatsApp • Verified Instagram work • Transparent packages"/>
+  <meta property="og:description" content="Book on WhatsApp • 100% natural cones • Verified Instagram work • Transparent packages"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://khushnudmehndiartist.github.io/"/>
-  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0b0b/ffffff&text=Khushnud+Mehndi+Artist"/>
+  <meta property="og:image" content="https://khushnudmehndiartist.github.io/logo.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Favicon / App Icon -->
+  <link rel="icon" href="/logo.png" type="image/png"/>
 
   <!-- Preconnects for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +34,18 @@
     body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
     .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 50; }
     .shine{background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,0) 40%,rgba(255,255,255,.06));}
+
+    /* Mehndi motif background (subtle SVG pattern) */
+    .mehndi-bg{
+      --bg: #faf7f2;
+      background-color: var(--bg);
+      background-image: radial-gradient(circle at 10% 10%, rgba(143, 92, 72, .06) 0 20%, transparent 21%),
+        radial-gradient(circle at 90% 20%, rgba(143, 92, 72, .05) 0 18%, transparent 19%),
+        radial-gradient(circle at 30% 80%, rgba(143, 92, 72, .05) 0 16%, transparent 17%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none"><g opacity="0.07" stroke="%23845b44" stroke-width="1.2"><path d="M100 20c25 25 25 55 0 80s-55 25-80 0"/><path d="M180 100c-25 25-55 25-80 0s-25-55 0-80"/><circle cx="100" cy="100" r="16"/></g></svg>');
+      background-size: auto, auto, auto, 260px 260px;
+      background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    }
   </style>
 
   <!-- LocalBusiness + FAQ Schema -->
@@ -39,16 +54,11 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Khushnud Mehndi Artist",
-    "image": "https://dummyimage.com/600x400/0b0b0b/ffffff&text=Khushnud+Mehndi",
-    "description": "Bridal, Arabic & Party mehndi services in Mumbai with home visits.",
+    "image": "https://khushnudmehndiartist.github.io/logo.png",
+    "description": "Bridal, Arabic & Party mehndi services in Mumbai with home visits. 100% natural, skin‑safe cones.",
     "url": "https://khushnudmehndiartist.github.io/",
-    "telephone": "+91XXXXXXXXXX",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Mumbai",
-      "addressRegion": "MH",
-      "addressCountry": "IN"
-    },
+    "telephone": "+91 91525 84828",
+    "address": {"@type": "PostalAddress","addressLocality": "Mumbai","addressRegion": "MH","addressCountry": "IN"},
     "areaServed": "Mumbai Metropolitan Region",
     "sameAs": ["https://www.instagram.com/khushnudmehndiartist/"]
   }
@@ -68,20 +78,25 @@
     },{
       "@type": "Question",
       "name": "Are cones skin‑safe?",
-      "acceptedAnswer": {"@type": "Answer","text": "We use quality, skin‑safe cones for rich stain."}
+      "acceptedAnswer": {"@type": "Answer","text": "Yes. 100% natural, skin‑safe cones for rich stain."}
     }]
   }
   </script>
 </head>
-<body class="bg-stone-50 text-stone-900">
+<body class="mehndi-bg text-stone-900">
   <!-- Top Bar -->
   <header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-extrabold text-xl tracking-tight">Khushnud <span class="text-stone-500">Mehndi</span></a>
+      <a href="#" class="flex items-center gap-3">
+        <img src="/logo.png" alt="Khushnud Mehndi Artist logo" class="h-9 w-9 rounded-full border" loading="eager"/>
+        <span class="font-extrabold text-lg tracking-tight">Khushnud <span class="text-stone-500">Mehndi</span></span>
+      </a>
       <nav class="hidden md:flex gap-6 text-sm">
         <a href="#work" class="hover:underline">Work</a>
+        <a href="#usp" class="hover:underline">USP</a>
         <a href="#services" class="hover:underline">Services</a>
         <a href="#packages" class="hover:underline">Packages</a>
+        <a href="#about" class="hover:underline">About</a>
         <a href="#reviews" class="hover:underline">Reviews</a>
         <a href="#book" class="hover:underline">Book</a>
       </nav>
@@ -103,7 +118,7 @@
         </div>
         <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
           <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Fast Replies</dt><dd class="text-stone-600">Under 1 hour*</dd></div>
-          <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Skin‑Safe</dt><dd class="text-stone-600">Rich stain cones</dd></div>
+          <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">100% Natural</dt><dd class="text-stone-600">Skin‑safe cones</dd></div>
           <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Home Service</dt><dd class="text-stone-600">Across MMR</dd></div>
           <div class="rounded-2xl border p-3 bg-white"><dt class="font-semibold">Transparent</dt><dd class="text-stone-600">Clear packages</dd></div>
         </dl>
@@ -115,16 +130,30 @@
     <script async src="https://www.instagram.com/embed.js"></script>
   </section>
 
+  <!-- USP -->
+  <section id="usp" class="py-12 border-t bg-white/70">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Why Choose Us</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-4 text-sm">
+        <div class="rounded-2xl p-4 border bg-white"><h3 class="font-semibold">100% Organic</h3><p class="text-stone-600 mt-1">Natural henna paste—no harmful dyes.</p></div>
+        <div class="rounded-2xl p-4 border bg-white"><h3 class="font-semibold">Skin‑Safe</h3><p class="text-stone-600 mt-1">Gentle on skin with rich stain.</p></div>
+        <div class="rounded-2xl p-4 border bg-white"><h3 class="font-semibold">Hygienic</h3><p class="text-stone-600 mt-1">Fresh cones & clean tools.</p></div>
+        <div class="rounded-2xl p-4 border bg-white"><h3 class="font-semibold">On‑Time</h3><p class="text-stone-600 mt-1">Punctual & professional service.</p></div>
+      </div>
+      <div class="mt-6 rounded-2xl border bg-white p-4 flex items-center justify-between gap-4">
+        <p class="text-sm md:text-base">Want to <strong>order 100% organic, non‑harmful mehndi cones</strong> for your event?</p>
+        <a href="#orderCones" class="px-4 py-2 rounded-xl bg-stone-900 text-white">Order Now</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Work / Carousel -->
   <section id="work" class="py-12 border-t bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Image & Video Gallery</h2>
       <p class="text-stone-600 mt-2">All posts are embedded from Instagram. Video posts will play inside the card.</p>
-
       <div id="igGrid" class="mt-6 grid md:grid-cols-3 gap-6"></div>
-
       <script>
-        // === Instagram posts provided by you ===
         const IG_LINKS = [
           "https://www.instagram.com/p/DPx-_tPDLKW/?hl=en",
           "https://www.instagram.com/p/DPhF6uUD23T/?hl=en",
@@ -136,7 +165,6 @@
           "https://www.instagram.com/p/DNmrmuksGZK/?hl=en&img_index=1",
           "https://www.instagram.com/p/DKDjH0ciUiF/?hl=en&img_index=1",
           "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=3",
-          "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=3",
           "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=4",
           "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=6",
           "https://www.instagram.com/p/DJkBLcVCuxc/?hl=en&img_index=8",
@@ -147,8 +175,6 @@
           "https://www.instagram.com/p/DIdJHKlCJW-/?hl=en",
           "https://www.instagram.com/p/DINk0YoCUBb/?hl=en"
         ];
-
-        // Render a clean grid of Instagram embeds
         const container = document.getElementById('igGrid');
         IG_LINKS.forEach((url) => {
           const card = document.createElement('div');
@@ -156,8 +182,6 @@
           card.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%;"></blockquote>`;
           container.appendChild(card);
         });
-
-        // (Re)load Instagram embed script when dynamic content is added
         const igScript = document.createElement('script');
         igScript.src = 'https://www.instagram.com/embed.js';
         igScript.async = true;
@@ -166,7 +190,7 @@
     </div>
   </section>
 
-  <!-- Services (SEO keyword targets) -->
+  <!-- Services -->
   <section id="services" class="py-12">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Mehndi Services in Mumbai</h2>
@@ -202,6 +226,25 @@
           <p class="text-xl font-semibold mt-3">Connect for price enquiry</p>
           <a href="#book" class="mt-4 inline-block text-sm underline">Share details →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold">About Khushnud</h2>
+        <p class="mt-3 text-stone-700">I am a Mumbai‑based mehndi artist specializing in <strong>bridal, Arabic and Indo‑Arabic</strong> designs. Known for neat lines, rich stain and punctual service, I bring a friendly, calm experience to your big day. Home service is available across MMR and I’m open to out‑station bookings on request.</p>
+        <ul class="mt-4 grid gap-2 text-sm text-stone-700">
+          <li>• 7+ years of hands‑on experience</li>
+          <li>• Custom motifs (initials, portraits, themes)</li>
+          <li>• Fresh, 100% natural cones — <em>no harmful dyes</em></li>
+        </ul>
+      </div>
+      <div class="rounded-3xl overflow-hidden border bg-white shadow-sm p-4">
+        <img src="/logo.png" alt="Brand mark: Khushnud Mehndi Artist" class="w-40 h-40 object-contain mx-auto"/>
+        <div class="mt-4 text-center text-sm text-stone-600">Brand you can trust for your special day.</div>
       </div>
     </div>
   </section>
@@ -253,6 +296,7 @@
         <div class="md:col-span-2 flex gap-3">
           <button class="px-5 py-3 rounded-2xl shadow bg-green-600 text-white" type="submit">Send on WhatsApp</button>
           <a id="waDirect" class="px-5 py-3 rounded-2xl border" href="#">Chat directly</a>
+          <a id="orderCones" class="px-5 py-3 rounded-2xl border" href="#">Order 100% Organic Cones</a>
         </div>
       </form>
     </div>
@@ -266,7 +310,7 @@
         <div class="rounded-2xl border bg-white p-4"><p class="font-semibold">Do I need to pay to enquire?</p><p class="mt-1 text-stone-600">No. WhatsApp enquiry is free.</p></div>
         <div class="rounded-2xl border bg-white p-4"><p class="font-semibold">How do I confirm a booking?</p><p class="mt-1 text-stone-600">Share details on WhatsApp. Advance may be required for bridal slots.</p></div>
         <div class="rounded-2xl border bg-white p-4"><p class="font-semibold">Which areas do you cover?</p><p class="mt-1 text-stone-600">Across Mumbai MMR. Out‑station on request.</p></div>
-        <div class="rounded-2xl border bg-white p-4"><p class="font-semibold">Are cones skin‑safe?</p><p class="mt-1 text-stone-600">Yes, we use quality, skin‑safe cones for rich stain.</p></div>
+        <div class="rounded-2xl border bg-white p-4"><p class="font-semibold">Are cones skin‑safe?</p><p class="mt-1 text-stone-600">Yes, we use 100% natural, skin‑safe cones for rich stain.</p></div>
       </div>
     </div>
   </section>
@@ -284,6 +328,7 @@
       </div>
       <div class="md:text-right">
         <a class="underline" href="#book">Book on WhatsApp</a>
+        <p class="text-stone-600 mt-2 select-all">Phone: +91 91525 84828</p>
       </div>
     </div>
   </footer>
@@ -304,9 +349,11 @@
       return `https://wa.me/${WA_NUMBER}?text=${text}`;
     }
 
+    // Direct chat buttons
     document.getElementById('waDirect')?.setAttribute('href', buildWALink('Hello Khushnud! I want to book mehndi.'));
     document.getElementById('waFloat').setAttribute('href', buildWALink('Hello! I want to book mehndi.'));
 
+    // Form submit → WhatsApp
     document.getElementById('waForm').addEventListener('submit', function(e){
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -314,13 +361,14 @@
       const city = document.getElementById('city').value.trim();
       const pkg = document.getElementById('package').value;
       const notes = document.getElementById('notes').value.trim();
-      const msg = `New Mehndi Booking
+      const msg = `New Mehndi Booking\n\nName: ${name}\nDate: ${date}\nCity: ${city}\nPackage: ${pkg}\nNotes: ${notes}`;
+      window.location.href = buildWALink(msg);
+    });
 
-Name: ${name}
-Date: ${date}
-City: ${city}
-Package: ${pkg}
-Notes: ${notes}`;
+    // Order cones CTA → WhatsApp
+    document.getElementById('orderCones').addEventListener('click', function(e){
+      e.preventDefault();
+      const msg = 'Hi! I want to order 100% organic, skin‑safe mehndi cones.';
       window.location.href = buildWALink(msg);
     });
   </script>
