@@ -8,7 +8,9 @@
   <meta name="description" content="Khushnud Mehndi Artist in Mumbai: Bridal, Arabic & Party mehndi at home. 100% natural, skin‑safe cones. One‑tap WhatsApp booking. View real Instagram work & packages."/>
   <meta name="keywords" content="Khushnud Mehndi Artist, mehndi artist Mumbai, bridal mehndi, arabic mehndi, henna artist, party mehndi, home service mehndi, organic mehndi cones"/>
   <link rel="canonical" href="https://khushnudmehndiartist.github.io/"/>
-  <meta name="theme-color" content="#800000"/> <meta property="og:title" content="Khushnud Mehndi Artist | Bridal & Party Mehndi in Mumbai"/>
+  <meta name="theme-color" content="#800000"/>
+
+  <meta property="og:title" content="Khushnud Mehndi Artist | Bridal & Party Mehndi in Mumbai"/>
   <meta property="og:description" content="Book on WhatsApp • 100% natural cones • Verified Instagram work • Transparent packages"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://khushnudmehndiartist.github.io/"/>
@@ -21,7 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.instagram.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* --- NEW LIGHT PINK & MAROON THEME VARIABLES --- */
@@ -29,19 +32,25 @@
         --primary-light: #fff0f5; /* Light Pink Background */
         --secondary-light: #ffe8ee; /* Slightly darker light pink for card background */
         --accent-maroon: #800000; /* Maroon Accent */
-        --accent-gold: #d4af37; /* Consistent Gold Accent */
+        --accent-gold: #d4af37; /* Gold Accent */
         --text-dark: #330000; /* Dark Maroon Text */
         --text-muted: #5a0000; /* Muted Maroon Text */
         --border-color: #cc8899; /* Pinkish-Maroon Border */
         --cta-bg: #800000; /* Maroon for main CTAs */
         --cta-text: #ffffff; /* White text on maroon */
+        --link-color: #800000; /* Maroon for links */
+        --hover-link-color: #d4af37; /* Gold on link hover */
     }
 
     html { scroll-behavior: smooth; }
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Inter', sans-serif; /* Body font */
         color: var(--text-dark);
         background-color: var(--primary-light);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', serif; /* Heading font */
+        color: var(--accent-maroon); /* Headings in maroon */
     }
     .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 50; }
     
@@ -64,21 +73,22 @@
     .text-white { color: var(--cta-text); } /* White text on maroon buttons */
     .bg-white { background-color: var(--secondary-light); } /* Light Pink Card BG */
     .border { border-color: var(--border-color); } /* Pinkish-Maroon Border */
-    .hover\:underline:hover { color: var(--accent-gold); } /* Gold on hover */
+    .hover\:underline:hover { color: var(--hover-link-color); } /* Gold on hover for nav links */
     .text-yellow-600 { color: var(--accent-gold); } /* Star rating gold */
 
-    /* Custom CTA Styling for Light Pink Background (Maroon/Gold look) */
+    /* Custom CTA Styling */
     .cta-button {
         background: var(--cta-bg);
         color: var(--cta-text);
         border: 2px solid var(--cta-bg);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
+        transition: all 0.3s ease-in-out;
     }
     .cta-button:hover {
         background: var(--accent-gold);
         color: var(--text-dark);
         border-color: var(--accent-gold);
+        transform: translateY(-2px);
     }
 
     .cta-button-outline {
@@ -86,12 +96,23 @@
         color: var(--accent-maroon);
         border: 2px solid var(--accent-maroon);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s;
+        transition: all 0.3s ease-in-out;
     }
     .cta-button-outline:hover {
         background: var(--accent-maroon);
         color: var(--cta-text);
         border-color: var(--accent-maroon);
+        transform: translateY(-2px);
+    }
+
+    /* Link Styling */
+    a {
+        color: var(--link-color); /* Maroon for all general links */
+        text-decoration: underline; /* Underline all links */
+        transition: color 0.2s ease-in-out;
+    }
+    a:hover {
+        color: var(--hover-link-color); /* Gold on hover */
     }
 
     /* Navbar adjustment for light theme */
@@ -99,11 +120,34 @@
         background: var(--primary-light);
     }
     header .logo-text {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Lora', serif; /* Use Lora for logo text */
         font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--accent-maroon); /* Main part of logo text in maroon */
     }
     header .logo-text .gold {
-        color: var(--accent-gold);
+        color: var(--accent-gold); /* 'Mehndi' in gold */
+    }
+
+    /* Emphasis Styling */
+    strong {
+        font-weight: 600; /* Stronger bold */
+        color: var(--accent-maroon); /* Make bold text pop with maroon */
+    }
+    em {
+        font-style: italic;
+        color: var(--text-muted); /* Italic text slightly muted */
+    }
+
+    /* Form input styling */
+    input[type="text"], input[type="date"], textarea, select {
+      border-color: var(--border-color);
+      background-color: var(--primary-light);
+      color: var(--text-dark);
+    }
+    input[type="text"]::placeholder, textarea::placeholder {
+      color: var(--text-muted);
+      opacity: 0.7;
     }
   </style>
 
@@ -141,14 +185,14 @@
   }
   </script>
 </head>
-<body class="mehndi-bg text-stone-900">
-  <header class="sticky top-0 z-40 border-b border-border-color bg-white/80 backdrop-blur">
+<body class="mehndi-bg text-text-dark">
+  <header class="sticky top-0 z-40 border-b border-border-color bg-primary-light/80 backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <img src="https://i.imgur.com/Kz3ZpI9.png" alt="Khushnud Mehndi Artist logo" class="h-10 w-auto rounded-full border border-maroon-700" loading="eager"/>
-        <span class="logo-text font-extrabold text-lg tracking-tight text-text-dark">Khushnud <span class="gold">Mehndi</span> Artist</span>
+        <img src="/logo.png" alt="Khushnud Mehndi Artist logo" class="h-10 w-auto rounded-full border border-accent-maroon" loading="eager"/>
+        <span class="logo-text font-extrabold text-lg tracking-tight">Khushnud <span class="gold">Mehndi</span> Artist</span>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm">
+      <nav class="hidden md:flex gap-6 text-base font-medium">
         <a href="#work" class="hover:underline">Work</a>
         <a href="#usp" class="hover:underline">Why Choose Us</a>
         <a href="#services" class="hover:underline">Services</a>
@@ -165,73 +209,77 @@
       <div>
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Bridal & Party Mehndi in Mumbai
           <span class="block text-accent-gold mt-2">By Khushnud, Dubai-Returned Expert</span></h1>
-        <p class="mt-4 text-text-muted">**7+ Years of International Expertise.** Elegant Bridal • Arabic • Portrait mehndi. Home visits across MMR. One‑tap WhatsApp booking.</p>
+        <p class="mt-4 text-text-muted text-lg">**<span class="font-bold text-accent-maroon">7+ Years of International Expertise</span>.** *Elegant Bridal • Arabic • Portrait mehndi*. Home visits across MMR. <span class="font-bold text-accent-maroon">One‑tap WhatsApp booking.</span></p>
         <div class="mt-6 flex gap-3">
-          <a href="#book" class="px-5 py-3 rounded-2xl shadow cta-button">Book on WhatsApp</a>
-          <a href="#work" class="px-5 py-3 rounded-2xl cta-button-outline">See 1000+ Customer Designs</a>
+          <a href="#book" class="px-6 py-3 rounded-2xl shadow cta-button text-lg">Book on WhatsApp</a>
+          <a href="#work" class="px-6 py-3 rounded-2xl cta-button-outline text-lg">See 1000+ Customer Designs</a>
         </div>
-        <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold">Fast Replies</dt><dd class="text-text-muted">Under 1 hour*</dd></div>
-          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold">100% Natural</dt><dd class="text-text-muted">Skin‑safe cones</dd></div>
-          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold">Home Service</dt><dd class="text-text-muted">Across MMR & Outstation</dd></div>
-          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold">5-Star Rated</dt><dd class="text-text-muted">1000+ Customer Feedback</dd></div>
+        <dl class="mt-6 grid grid-cols-2 gap-4 text-base">
+          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold text-accent-maroon">Fast Replies</dt><dd class="text-text-muted">Under 1 hour*</dd></div>
+          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold text-accent-maroon">100% Natural</dt><dd class="text-text-muted">Skin‑safe cones</dd></div>
+          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold text-accent-maroon">Home Service</dt><dd class="text-text-muted">Across MMR & Outstation</dd></div>
+          <div class="rounded-2xl border p-3 bg-secondary-light"><dt class="font-semibold text-accent-maroon">5-Star Rated</dt><dd class="text-text-muted">1000+ Customer Feedback</dd></div>
         </dl>
       </div>
-      <div class="rounded-3xl overflow-hidden border border-border-color bg-secondary-light shadow-sm">
-        <img src="https://i.imgur.com/Kz3ZpI9.png" alt="Khushnud Mehndi Artist with clients" class="w-full h-auto object-cover"/>
+      <div class="rounded-3xl overflow-hidden border border-border-color bg-secondary-light shadow-lg">
+        <img src="/hero-banner.png" alt="Khushnud Mehndi Artist with clients and beautiful mehndi designs" class="w-full h-auto object-cover"/>
       </div>
     </div>
-    <script async src="https://www.instagram.com/embed.js"></script>
   </section>
 
   <section id="usp" class="py-12 border-t border-border-color bg-secondary-light">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark">Why Choose Us: International Quality</h2>
-      <div class="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-        <div class="rounded-2xl p-4 border border-border-color bg-primary-light"><h3 class="font-semibold text-text-dark">100% Organic</h3><p class="text-text-muted mt-1">Natural henna paste—no harmful dyes.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-primary-light"><h3 class="font-semibold text-text-dark">Skin‑Safe</h3><p class="text-text-muted mt-1">Gentle on skin with rich, dark stain.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-primary-light"><h3 class="font-semibold text-text-dark">Hygienic</h3><p class="text-text-muted mt-1">Fresh cones & clean tools for every client.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-primary-light"><h3 class="font-semibold text-text-dark">On‑Time</h3><p class="text-text-muted mt-1">Punctual & professional service guaranteed.</p></div>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">Why Choose Us: International Quality & Trust</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6 text-base">
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-sm"><h3 class="font-semibold text-accent-maroon">100% Organic</h3><p class="text-text-muted mt-1">We use only *natural henna paste*—<span class="font-bold text-accent-maroon">no harmful dyes or chemicals</span> ever.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-sm"><h3 class="font-semibold text-accent-maroon">Skin‑Safe</h3><p class="text-text-muted mt-1">Gentle on all skin types, ensuring a *rich, dark, and long-lasting stain* with peace of mind.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-sm"><h3 class="font-semibold text-accent-maroon">Hygienic Practices</h3><p class="text-text-muted mt-1">We maintain the highest standards with *fresh cones & sterilized tools* for every single client.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-sm"><h3 class="font-semibold text-accent-maroon">Punctual & Professional</h3><p class="text-text-muted mt-1">Enjoy *on‑time arrival* and a calm, friendly, and professional service experience guaranteed.</p></div>
       </div>
-      <div class="mt-6 rounded-2xl border border-border-color bg-primary-light p-4 flex items-center justify-between gap-4">
-        <p class="text-sm md:text-base text-text-dark">Want to **order 100% organic, non‑harmful mehndi cones** for your event?</p>
-        <a href="#orderCones" class="px-4 py-2 rounded-xl cta-button">Order Now</a>
+      <div class="mt-8 rounded-2xl border border-border-color bg-primary-light p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+        <p class="text-lg md:text-xl font-bold text-accent-maroon text-center md:text-left">Looking to <em class="text-accent-gold">order our premium 100% organic, non‑harmful mehndi cones</em> for your special event?</p>
+        <a href="#orderCones" class="px-6 py-3 rounded-xl cta-button text-lg flex-shrink-0">Order Our Cones Now</a>
       </div>
     </div>
   </section>
 
   <section id="work" class="py-12 border-t border-border-color bg-primary-light">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark">Live Instagram Gallery: Our Latest Work</h2>
-      <p class="text-text-muted mt-2">See our beautiful designs, intricate details, and rich stains directly from our Instagram feed. Videos play right here!</p>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">Our Exquisite Work: Live Instagram Gallery</h2>
+      <p class="text-text-muted mt-2 text-lg">Explore our beautiful designs, intricate details, and rich stains directly from our <a href="https://www.instagram.com/khushnudmehndiartist/" target="_blank">Instagram feed</a>. *Videos play right here*!</p>
       
-      <div id="igGrid" class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div id="igGrid" class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         </div>
       <script>
-        // List of IG posts to embed on the page (mix of images and videos)
-        // I've used some generic placeholder links, please replace with YOUR actual Instagram URLs for images and videos.
-        // Make sure the permalink is correct for each post.
+        // *** FINAL, EXPANDED LIST OF WORKING INSTAGRAM LINKS ***
         const IG_LINKS = [
-          "https://www.instagram.com/p/DQ5wJ1qjP3o/", // Example Image 1 (bridal)
-          "https://www.instagram.com/p/DPx-_tPDLKW/", // Example Image 2 (full hands)
-          "https://www.instagram.com/p/DPhF6uUD23T/", // Example Image 3 (feet)
-          "https://www.instagram.com/p/C2sIP17Ch9e/", // Example Image 4 (arabic)
-          "https://www.instagram.com/p/DO7t1xdjO8r/", // Example Image 5 (stain test)
-          "https://www.instagram.com/p/DJkBLcVCuxc/?img_index=4", // Example Image 6 (another view)
-          "https://www.instagram.com/p/DQ8pHTXjHKW/", // Example Video: Mehndi mixing
-          "https://www.instagram.com/p/DQ6LhqajErp/", // Example Video: Process video
-          "https://www.instagram.com/p/DQVq94oD6_1/", // Example Image 7
-          "https://www.instagram.com/p/DQgFyy4D_bn/", // Example Image 8
-          "https://www.instagram.com/p/DPsWPfsEp78/", // Example Image 9
-          "https://www.instagram.com/p/DPW8BmxjIdH/" // Example Image 10
-          // Add more actual links from your Instagram here for a richer gallery!
+          // New Video Links
+          "https://www.instagram.com/p/DN4rokZEp2-/",
+          "https://www.instagram.com/p/DKRdMxhitxq/",
+          "https://www.instagram.com/p/DJ-7lsrC6lj/",
+          "https://www.instagram.com/p/DJyT_mzik0x/",
+          "https://www.instagram.com/p/DJrwLSDiB6Z/",
+          "https://www.instagram.com/p/DO2qAGYDB2J/",
+          "https://www.instagram.com/p/DO1jC9ijCXN/",
+          // New Image Links
+          "https://www.instagram.com/p/DN0tVD5WMR1/?img_index=1",
+          "https://www.instagram.com/p/DN0leBL2MB3/",
+          "https://www.instagram.com/p/DNuTs8aWGi4/?img_index=2",
+          "https://www.instagram.com/p/DNmrmuksGZK/?img_index=2",
+          "https://www.instagram.com/p/DKDjH0ciUiF/?img_index=2",
+          "https://www.instagram.com/p/DJkBLcVCuxc/?img_index=2",
+          "https://www.instagram.com/p/DO-NfHdjOsz/",
+          // Selected Previous Working Links
+          "https://www.instagram.com/p/DQ5wJ1qjP3o/", 
+          "https://www.instagram.com/p/DPhF6uUD23T/", 
+          "https://www.instagram.com/p/C2sIP17Ch9e/",
+          "https://www.instagram.com/p/DQ8pHTXjHKW/", 
         ];
+        
         const container = document.getElementById('igGrid');
         IG_LINKS.forEach((url) => {
           const card = document.createElement('div');
-          // Using light card styling for the embeds
           card.className = 'rounded-2xl overflow-hidden border border-border-color bg-secondary-light p-2 shadow-md';
-          // Important: Instagram embed.js handles images and videos automatically based on the permalink
           card.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;margin:0;padding:0;width:100%;"></blockquote>`;
           container.appendChild(card);
         });
@@ -240,92 +288,98 @@
         igScript.async = true;
         document.body.appendChild(igScript);
       </script>
+      <div class="mt-10 text-center">
+        <a href="https://www.instagram.com/khushnudmehndiartist/" target="_blank" class="px-8 py-4 rounded-full shadow-lg cta-button text-lg inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 0c-3.53 0-4.053.014-5.465.078-1.408.064-2.396.288-3.242.637-.872.359-1.574.887-2.31 1.623C.486 3.015 0 3.717 0 4.588s.359 1.574.718 2.31c.349.846.573 1.834.637 3.242.064 1.412.078 1.935.078 5.465s-.014 4.053-.078 5.465c-.064 1.408-.288 2.396-.637 3.242-.359.872-.887 1.574-1.623 2.31-.736.736-1.438 1.105-2.31 1.623-.846.349-1.834.573-3.242.637-1.412.064-1.935.078-5.465.078s-4.053-.014-5.465-.078c-1.408-.064-2.396-.288-.637 3.242-.872-.359-1.574-.887-2.31-1.623C.486 20.985 0 20.283 0 19.412s.359-1.574.718-2.31c.349-.846.573-1.834.637-3.242.064-1.412.078-1.935.078-5.465s-.014-4.053-.078-5.465c-.064-1.408-.288-2.396-.637-3.242C1.105 1.574 1.633.887 2.37.486 3.216.137 4.204-.087 5.612-.15C7.025-.214 7.548-.228 12-.228zM12 2.18c-3.5 0-3.953.015-5.325.078-1.37.062-2.186.281-2.733.492-.58.225-.99.522-1.41.942-.42.42-.717.83-.942 1.41-.211.547-.43 1.363-.492 2.733-.063 1.372-.078 1.825-.078 5.325s.015 3.953.078 5.325c.062 1.37.281 2.186.492 2.733.225.58.522.99.942 1.41.42.42.83.717.942 1.41.211.547.43 1.363.492 2.733.063 1.372.078 1.825.078 5.325s-.015-3.953-.078-5.325c-.062-1.37-.281-2.186-.492-2.733-.225-.58-.522-.99-.942-1.41-.42-.42-.83-.717-1.41-.942-.547-.211-1.363-.43-2.733-.492-1.372-.063-1.825-.078-5.325-.078zm0 4.103c-3.24 0-5.88 2.64-5.88 5.88s2.64 5.88 5.88 5.88 5.88-2.64 5.88-5.88-2.64-5.88-5.88-5.88zm0 9.613c-2.071 0-3.75-1.679-3.75-3.75s1.679-3.75 3.75-3.75 3.75 1.679 3.75 3.75-1.679 3.75-3.75 3.75zm6.406-11.84c0-.704.571-1.275 1.275-1.275s1.275.571 1.275 1.275-.571 1.275-1.275 1.275-1.275-.571-1.275-1.275z"/></svg>
+            Follow Us on Instagram for More
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="services" class="py-12 border-t border-border-color">
+  <section id="services" class="py-12 border-t border-border-color bg-secondary-light">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark">Exquisite Mehndi Services in Mumbai</h2>
-      <p class="text-text-muted mt-2">Specializing in International, Traditional, and Modern Henna Artistry.</p>
-      <div class="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Bridal Mehndi</h3><p class="text-text-muted mt-1">Full hands & feet, custom motifs. **Exquisite Bridal Designs by Khushnud**.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Arabic & Floral</h3><p class="text-text-muted mt-1">Fluid, bold, and quick party designs. View our <a href="https://www.instagram.com/stories/highlights/18093689140560474/" target="_blank" class="underline font-medium text-text-dark">Dubai Floral Highlight</a>.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Mandala & Fancy</h3><p class="text-text-muted mt-1">Symmetrical patterns and modern fusion styles perfect for parties.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Baby Shower Henna</h3><p class="text-text-muted mt-1">Delicate belly/hand designs to celebrate motherhood (Godh Bharai).</p></div>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">Exquisite Mehndi Services in Mumbai</h2>
+      <p class="text-text-muted mt-2 text-lg">Specializing in *International, Traditional, and Modern* Henna Artistry to make your occasion unforgettable.</p>
+      <div class="mt-8 grid md:grid-cols-4 gap-6 text-base">
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Bridal Mehndi</h3><p class="text-text-muted mt-1">Full hands & feet, custom motifs. **Exquisite Bridal Designs by Khushnud**.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Arabic & Floral</h3><p class="text-text-muted mt-1">Fluid, bold, and quick party designs. View our <a href="https://www.instagram.com/stories/highlights/18093689140560474/" target="_blank">Dubai Floral Highlight</a>.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Mandala & Fancy</h3><p class="text-text-muted mt-1">Symmetrical patterns and modern fusion styles perfect for parties.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Baby Shower Henna</h3><p class="text-text-muted mt-1">Delicate belly/hand designs to celebrate motherhood (*Godh Bharai*).</p></div>
       </div>
-      <div class="mt-4 grid md:grid-cols-4 gap-4 text-sm">
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Indian Traditional</h3><p class="text-text-muted mt-1">Intricate, dense patterns telling a traditional story.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Dubai Mehndi Pattern</h3><p class="text-text-muted mt-1">International style with refined lines and spaces. See <a href="https://www.instagram.com/stories/highlights/17880769737046729/" target="_blank" class="underline font-medium text-text-dark">Dubai Highlight</a>.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Group / Events</h3><p class="text-text-muted mt-1">Weddings, Sangeet, Festivals, and Corporate functions.</p></div>
-        <div class="rounded-2xl p-4 border border-border-color bg-secondary-light shadow-md"><h3 class="font-semibold text-text-dark">Outstation Bookings</h3><p class="text-text-muted mt-1">Available across India. Connect on WhatsApp for travel packages.</p></div>
+      <div class="mt-6 grid md:grid-cols-4 gap-6 text-base">
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Indian Traditional</h3><p class="text-text-muted mt-1">Intricate, dense patterns telling a traditional story.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Dubai Mehndi Pattern</h3><p class="text-text-muted mt-1">International style with refined lines and spaces. See <a href="https://www.instagram.com/stories/highlights/17880769737046729/" target="_blank">Dubai Highlight</a>.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Group / Events</h3><p class="text-text-muted mt-1">Weddings, Sangeet, Festivals, and Corporate functions.</p></div>
+        <div class="rounded-2xl p-4 border border-border-color bg-primary-light shadow-md"><h3 class="font-semibold text-accent-maroon">Outstation Bookings</h3><p class="text-text-muted mt-1">Available across India. Connect on WhatsApp for travel packages.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="py-12 border-t border-border-color bg-secondary-light">
+  <section id="about" class="py-12 border-t border-border-color bg-primary-light">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
       <div>
-        <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark">About Khushnud Mehndi Artist</h2>
-        <p class="mt-3 text-text-muted">I am a **Dubai-Returned International Mehndi Designer** with **7+ years of hands-on experience**, specializing in high-end bridal, Arabic and Indo‑Arabic designs across Mumbai. Known for neat lines, a rich, dark stain, and punctual service, I bring a refined, calm, and friendly experience to your special day.</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">About Khushnud Mehndi Artist</h2>
+        <p class="mt-3 text-text-muted text-lg">I am a **Dubai-Returned International Mehndi Designer** with **7+ years of hands-on experience**, specializing in *high-end bridal, Arabic and Indo‑Arabic* designs across Mumbai. Known for <span class="font-bold text-accent-maroon">neat lines, a rich, dark stain, and punctual service</span>, I bring a refined, calm, and friendly experience to your special day.</p>
         
-        <div class="mt-6 grid grid-cols-3 gap-4 text-sm">
-          <div class="p-3 bg-primary-light rounded-xl text-center border border-border-color"><p class="font-extrabold text-xl text-text-dark">7+</p><p class="text-text-muted">Years Experience</p></div>
-          <div class="p-3 bg-primary-light rounded-xl text-center border border-border-color"><p class="font-extrabold text-xl text-text-dark">1000+</p><p class="text-text-muted">Happy Clients</p></div>
-          <div class="p-3 bg-primary-light rounded-xl text-center border border-border-color"><p class="font-extrabold text-xl text-text-dark">5 Star</p><p class="text-text-muted">Customer Rating</p></div>
+        <div class="mt-6 grid grid-cols-3 gap-4 text-base">
+          <div class="p-3 bg-secondary-light rounded-xl text-center border border-border-color"><p class="font-extrabold text-xl text-text-dark">7+</p><p class="text-text-muted">Years Experience</p></div>
+          <div class="p-3 bg-secondary-light rounded-xl text-center border border-border-color"><p class="font-extrabold text-xl text-text-dark">1000+</p><p class="text-text-muted">Happy Clients</p></div>
+          <div class="p-3 bg-secondary-light rounded-xl text-center border border-border-color"><p class="font-extrabold text-xl text-text-dark">5 Star</p><p class="text-text-muted">Customer Rating</p></div>
         </div>
 
-        <p class="mt-4 text-text-muted font-semibold">Our Promise: We only use 100% organic, skin‑safe henna cones—no harmful dyes or chemicals. Your satisfaction and safety are our priority.</p>
+        <p class="mt-4 text-text-muted font-semibold text-lg">Our Promise: We only use <span class="font-bold text-accent-maroon">100% organic, skin‑safe henna cones</span>—no harmful dyes or chemicals. Your satisfaction and safety are our priority.</p>
       </div>
-      <div class="rounded-3xl overflow-hidden border border-border-color bg-primary-light shadow-sm p-4">
-        <img src="https://i.imgur.com/Kz3ZpI9.png" alt="Khushnud Mehndi Artist with clients" class="w-full h-auto object-cover rounded-2xl mx-auto"/>
-        <p class="mt-4 text-center text-sm text-text-muted">Book the professional, trusted choice for your special occasion.</p>
-        <a href="https://wa.me/919968917573" target="_blank" class="mt-4 block w-full text-center px-4 py-2 rounded-xl cta-button">Book Your Date Now</a>
+      <div class="rounded-3xl overflow-hidden border border-border-color bg-secondary-light shadow-lg p-6">
+        <img src="/logo.png" alt="Khushnud Mehndi Artist Logo Mark" class="w-40 h-40 object-contain mx-auto border-4 border-accent-gold rounded-full"/>
+        <p class="mt-6 text-center text-base text-text-muted">Book the professional, trusted choice for your special occasion.</p>
+        <a href="https://wa.me/919968917573" target="_blank" class="mt-4 block w-full text-center px-4 py-2 rounded-xl cta-button text-lg">Book Your Date Now</a>
       </div>
     </div>
   </section>
 
-  <section id="reviews" class="py-12 border-t border-border-color">
+  <section id="reviews" class="py-12 border-t border-border-color bg-secondary-light">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark">What Clients Say (20+ Reviews)</h2>
-      <p class="text-text-muted mt-2">We take pride in our service. Check out real feedback from brides and clients.</p>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">What Clients Say (20+ Reviews)</h2>
+      <p class="text-text-muted mt-2 text-lg">We take pride in our service. Check out real feedback from brides and clients.</p>
       
       <div class="mt-6 text-center">
-          <a href="https://www.instagram.com/stories/highlights/18109317937493927/" target="_blank" class="px-5 py-3 rounded-2xl shadow cta-button inline-flex items-center gap-2">
+          <a href="https://www.instagram.com/stories/highlights/18109317937493927/" target="_blank" class="px-5 py-3 rounded-2xl shadow cta-button-outline inline-flex items-center gap-2 text-lg">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M12 4.5C7 4.5 3 8.5 3 12s4 7.5 9 7.5 9-4 9-7.5-4-7.5-9-7.5zM12 18c-3.79 0-7-3.13-7-6.93s3.21-6.93 7-6.93 7 3.13 7 6.93-3.21 6.93-7 6.93zm.5-12c.75 0 1.5.25 2.12.75l-4.5 4.5c-.5-.62-.75-1.37-.75-2.12 0-2.07 1.68-3.75 3.75-3.75zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
               View Client Feedback Highlight (20+ Stories)
           </a>
       </div>
 
-      <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
-        <figure class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-md">
-          <figcaption class="font-semibold text-text-dark">Priya S. (Bridal, Bandra)</figcaption>
-          <p class="mt-2 text-text-muted">"Khushnud made my bridal day extra special! The design was stunning, and the color turned out so rich and deep. Highly recommended in Mumbai!"</p>
-          <p class="mt-2 text-lg text-yellow-600" aria-label="rating">★★★★★</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6 text-base">
+        <figure class="rounded-2xl border border-border-color bg-primary-light p-4 shadow-md">
+          <figcaption class="font-semibold text-accent-maroon">Priya S. (*Bridal, Bandra*)</figcaption>
+          <p class="mt-2 text-text-muted">"Khushnud made my bridal day extra special! The design was <span class="font-bold">stunning</span>, and the color turned out so <em class="text-accent-gold">rich and deep</em>. Highly recommended in Mumbai!"</p>
+          <p class="mt-2 text-xl text-yellow-600" aria-label="rating">★★★★★</p>
         </figure>
-        <figure class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-md">
-          <figcaption class="font-semibold text-text-dark">Neha R. (Engagement, Thane)</figcaption>
-          <p class="mt-2 text-text-muted">"Got Arabic mehndi done for my engagement, and everyone loved it. So neat, detailed, and elegant! Best in the Maharashtra region."</p>
-          <p class="mt-2 text-lg text-yellow-600" aria-label="rating">★★★★★</p>
+        <figure class="rounded-2xl border border-border-color bg-primary-light p-4 shadow-md">
+          <figcaption class="font-semibold text-accent-maroon">Neha R. (*Engagement, Thane*)</figcaption>
+          <p class="mt-2 text-text-muted">"Got Arabic mehndi done for my engagement, and everyone loved it. So <span class="font-bold">neat, detailed, and elegant</span>! Best in the Maharashtra region."</p>
+          <p class="mt-2 text-xl text-yellow-600" aria-label="rating">★★★★★</p>
         </figure>
-        <figure class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-md">
-          <figcaption class="font-semibold text-text-dark">Aishwarya D. (Wedding, Colaba)</figcaption>
-          <p class="mt-2 text-text-muted">"The best bridal mehndi artist! Khushnud and her team were so patient and creative. Worth every penny for the quality and experience."</p>
-          <p class="mt-2 text-lg text-yellow-600" aria-label="rating">★★★★★</p>
+        <figure class="rounded-2xl border border-border-color bg-primary-light p-4 shadow-md">
+          <figcaption class="font-semibold text-accent-maroon">Aishwarya D. (*Wedding, Colaba*)</figcaption>
+          <p class="mt-2 text-text-muted">"The best bridal mehndi artist! Khushnud and her team were so patient and creative. Worth <span class="font-bold">every penny</span> for the quality and experience."</p>
+          <p class="mt-2 text-xl text-yellow-600" aria-label="rating">★★★★★</p>
         </figure>
-        <figure class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-md">
-          <figcaption class="font-semibold text-text-dark">Sneha K. (Baby Shower, Vashi)</figcaption>
-          <p class="mt-2 text-text-muted">"Booked them for my baby shower. The design was absolutely perfect for the occasion. Great professionalism!"</p>
-          <p class="mt-2 text-lg text-yellow-600" aria-label="rating">★★★★★</p>
+        <figure class="rounded-2xl border border-border-color bg-primary-light p-4 shadow-md">
+          <figcaption class="font-semibold text-accent-maroon">Sneha K. (*Baby Shower, Vashi*)</figcaption>
+          <p class="mt-2 text-text-muted">"Booked them for my baby shower. The design was absolutely <span class="font-bold">perfect for the occasion</span>. Great professionalism!"</p>
+          <p class="mt-2 text-xl text-yellow-600" aria-label="rating">★★★★★</p>
         </figure>
-        <figure class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-md">
-          <figcaption class="font-semibold text-text-dark">Zahra K. (Colaba)</figcaption>
-          <p class="mt-2 text-text-muted">"Flawless and quick service! The Dubai pattern was exactly what I wanted. I'll be booking Khushnud for every event."</p>
-          <p class="mt-2 text-lg text-yellow-600" aria-label="rating">★★★★★</p>
+        <figure class="rounded-2xl border border-border-color bg-primary-light p-4 shadow-md">
+          <figcaption class="font-semibold text-accent-maroon">Zahra K. (*Colaba*)</figcaption>
+          <p class="mt-2 text-text-muted">"<span class="font-bold">Flawless and quick service</span>! The Dubai pattern was exactly what I wanted. I'll be booking Khushnud for every event."</p>
+          <p class="mt-2 text-xl text-yellow-600" aria-label="rating">★★★★★</p>
         </figure>
-        <figure class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-md">
-          <figcaption class="font-semibold text-text-dark">Ritika M. (Andheri)</figcaption>
-          <p class="mt-2 text-text-muted">"Khushnud's attention to detail is unmatched. The colour lasted beautifully. Truly the top-rated artist in Mumbai."</p>
-          <p class="mt-2 text-lg text-yellow-600" aria-label="rating">★★★★★</p>
+        <figure class="rounded-2xl border border-border-color bg-primary-light p-4 shadow-md">
+          <figcaption class="font-semibold text-accent-maroon">Ritika M. (*Andheri*)</figcaption>
+          <p class="mt-2 text-text-muted">"Khushnud's attention to detail is <span class="font-bold">unmatched</span>. The colour lasted beautifully. Truly the top-rated artist in Mumbai."</p>
+          <p class="mt-2 text-xl text-yellow-600" aria-label="rating">★★★★★</p>
         </figure>
       </div>
     </div>
@@ -333,7 +387,111 @@
 
   <section id="book" class="py-12 border-t border-border-color bg-secondary-light">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark">Instant WhatsApp Booking</h2>
-      <p class="text-text-muted mt-2">Fill the form; it opens WhatsApp with all details pre‑filled. Free & fast.</p>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">Instant WhatsApp Booking & Inquiry</h2>
+      <p class="text-text-muted mt-2 text-lg">Fill this quick form; it generates a complete message that opens directly in WhatsApp. It's the *fastest way* to check availability.</p>
 
-      <form id="waForm" class="mt-6 grid md:grid-cols-2 gap
+      <form id="waForm" class="mt-8 p-6 border border-border-color bg-primary-light rounded-2xl shadow-lg grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-base font-medium text-accent-maroon">Your Name</label>
+          <input id="name" type="text" required class="mt-1 w-full rounded-xl border px-4 py-2" placeholder="Full name" />
+        </div>
+        <div>
+          <label class="block text-base font-medium text-accent-maroon">Event Date</label>
+          <input id="date" type="date" required class="mt-1 w-full rounded-xl border px-4 py-2" />
+        </div>
+        <div>
+          <label class="block text-base font-medium text-accent-maroon">City / Location</label>
+          <input id="city" type="text" required class="mt-1 w-full rounded-xl border px-4 py-2" placeholder="e.g., Bandra, Vashi, Thane" />
+        </div>
+        <div>
+          <label class="block text-base font-medium text-accent-maroon">Package</label>
+          <select id="package" class="mt-1 w-full rounded-xl border px-4 py-2">
+            <option>Bridal Classic</option>
+            <option>Arabic Party</option>
+            <option>Group Booking</option>
+            <option>Custom / Outstation</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-base font-medium text-accent-maroon">Additional Notes / Design Style</label>
+          <textarea id="notes" rows="3" class="mt-1 w-full rounded-xl border px-4 py-2" placeholder="Approximate time, number of people, specific style (Dubai/Mandala), etc."></textarea>
+        </div>
+        <div class="md:col-span-2 flex flex-col md:flex-row gap-4">
+          <button class="px-8 py-3 rounded-2xl shadow bg-green-600 hover:bg-green-700 text-white font-bold text-lg transition duration-200" type="submit">
+            Send Booking Request on WhatsApp
+          </button>
+          <a id="waDirect" class="px-8 py-3 rounded-2xl cta-button-outline font-bold text-lg text-center" href="#">
+            Chat Directly (General Inquiry)
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq" class="py-12 border-t border-border-color">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-accent-maroon">Frequently Asked Questions</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6 text-base text-text-muted">
+        <div class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-sm"><p class="font-semibold text-accent-maroon">Do I need to pay to enquire?</p><p class="mt-1 text-text-muted">No. WhatsApp enquiry is free. We provide personalized quotes based on your design and location.</p></div>
+        <div class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-sm"><p class="font-semibold text-accent-maroon">How do I confirm a booking?</p><p class="mt-1 text-text-muted">Share details on WhatsApp. An advance deposit may be required to secure your bridal slot.</p></div>
+        <div class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-sm"><p class="font-semibold text-accent-maroon">Which areas do you cover?</p><p class="mt-1 text-text-muted">Across Mumbai MMR (Mumbai, Navi Mumbai, Thane). Out‑station service is available on request.</p></div>
+        <div class="rounded-2xl border border-border-color bg-secondary-light p-4 shadow-sm"><p class="font-semibold text-accent-maroon">Are the cones skin‑safe?</p><p class="mt-1 text-text-muted">Yes, we use <span class="font-bold text-accent-maroon">100% natural, skin‑safe cones</span> for rich, dark stain. No black henna or harmful chemicals.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-border-color bg-secondary-light">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 items-start text-base">
+      <div>
+        <p class="font-semibold text-accent-maroon text-lg">Khushnud Mehndi Artist</p>
+        <p class="text-text-muted mt-1">Bridal • Arabic • Party Mehndi</p>
+      </div>
+      <div>
+        <p class="font-semibold text-accent-maroon text-lg">Service Area</p>
+        <p class="text-text-muted mt-1">Mumbai • Navi Mumbai • Thane • Outstation</p>
+      </div>
+      <div class="md:text-right">
+        <a class="underline font-bold text-accent-maroon" href="#book">Book on WhatsApp</a>
+        <p class="text-text-muted mt-2 select-all">Phone: +91 9968917573</p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 mt-6 pt-4 border-t border-border-color text-center text-sm text-text-muted">
+        <p>&copy; 2025 Khushnud Mehndi Artist. **All Rights Reserved.** | Designed for Git Publishing</p>
+    </div>
+  </footer>
+
+  <a class="wa-float inline-flex items-center gap-2 rounded-full px-4 py-3 shadow-lg bg-green-600 text-white font-bold" id="waFloat" href="#" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.59 5.99L0 24l6.2-1.63A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 21.82c-1.96 0-3.87-.52-5.54-1.5l-.4-.23-3.68.97.98-3.59-.26-.41A9.8 9.8 0 012.18 12C2.18 6.56 6.56 2.18 12 2.18c2.62 0 5.08 1.02 6.93 2.88A9.76 9.76 0 0121.82 12c0 5.44-4.38 9.82-9.82 9.82zm5.53-7.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.41-1.5-.89-.79-1.5-1.77-1.68-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.63-.93-2.24-.24-.58-.49-.5-.68-.5-.18 0-.38-.02-.58-.02-.2 0-.53.08-.81.38-.27.3-1.06 1.03-1.06 2.5 0 1.47 1.09 2.9 1.24 3.1.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+    <span>Chat</span>
+  </a>
+
+  <script>
+    // WhatsApp number for booking (used consistently across the site)
+    const WA_NUMBER = '919968917573';
+
+    function buildWALink(message) {
+      const text = encodeURIComponent(message);
+      return `https://wa.me/${WA_NUMBER}?text=${text}`;
+    }
+
+    // Direct chat buttons (Float and Direct CTA)
+    document.getElementById('waDirect')?.setAttribute('href', buildWALink('Hello Khushnud! I have a general inquiry about booking mehndi.'));
+    document.getElementById('waFloat').setAttribute('href', buildWALink('Hello Khushnud! I want to book mehndi.'));
+
+    // Form submit → WhatsApp
+    document.getElementById('waForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const date = document.getElementById('date').value;
+      const city = document.getElementById('city').value.trim();
+      const pkg = document.getElementById('package').value;
+      const notes = document.getElementById('notes').value.trim();
+      
+      const eventDate = date ? new Date(date).toLocaleDateString('en-IN') : 'Not specified';
+
+      const msg = `⭐ New Mehndi Booking Request ⭐\n\nName: ${name}\nEvent Date: ${eventDate}\nCity/Location: ${city}\nPackage Requested: ${pkg}\n\nAdditional Notes: ${notes}\n\n(Sent via Website Form)`;
+      window.location.href = buildWALink(msg);
+    });
+  </script>
+</body>
+</html>
