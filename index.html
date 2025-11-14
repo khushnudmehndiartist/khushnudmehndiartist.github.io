@@ -1,264 +1,896 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="qBJg9eJnVS2zFmDFIoJT8I8cD9qIqVoAdGMXoJ4Oe30" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khushnud Mehndi Artist Mumbai | Portfolio Gallery</title>
-  <meta name="description" content="Khushnud Mehndi Artist Mumbai: View our portfolio of Bridal, Arabic & Party mehndi designs. 100% natural, skin‑safe cones."/>
-  <meta name="keywords" content="Khushnud Mehndi Artist, mehndi artist Mumbai, bridal mehndi, arabic mehndi, henna artist, party mehndi, gallery, portfolio"/>
-  <link rel="canonical" href="https://khushnudmehndiartist.github.io/"/>
-  <meta name="theme-color" content="#c32321"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushnud Mehndi Artist - Exquisite Henna Artistry in Mumbai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #1a0a1a; /* Very dark purple/black */
+            --secondary-dark: #2a1a2a; /* Slightly lighter dark */
+            --accent-gold: #d4af37; /* Gold accent for highlights */
+            --text-light: #f0e6f0; /* Off-white for readability */
+            --text-muted: #b0a0b0; /* Muted text for descriptions */
+            --gradient-dark: linear-gradient(135deg, #1a0a1a 0%, #2a1a2a 100%);
+            --button-hover: #e0c26b;
+            --border-color: rgba(212, 175, 55, 0.3); /* Semi-transparent gold */
+        }
 
-    <meta property="og:title" content="Khushnud Mehndi Artist | Portfolio Gallery"/>
-  <meta property="og:description" content="Book on WhatsApp • 100% natural cones • Verified Instagram work • Transparent packages"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://khushnudmehndiartist.github.io/"/>
-  <meta property="og:image" content="https://khushnudmehndiartist.github.io/logo.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="icon" href="/logo.png" type="image/png"/>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-light);
+            background: var(--primary-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        /* Creative Background - subtle patterns or textures */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="10" fill="rgba(212, 175, 55, 0.05)"/></svg>'); /* Subtle dots */
+            background-size: 20px; /* Adjust size for density */
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 50; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    /* --- OCCASION THEMES (Background as per occasion) --- */
-    
-    /* Default: Bridal Theme (Maroon & Gold) */
-    .theme-bridal {
-      --primary-bg: #c32321;
-      --primary-accent: #daa520;
-    }
-    /* Party Theme (Dark Blue & Silver) */
-    .theme-party {
-      --primary-bg: #1f2937;
-      --primary-accent: #94a3b8;
-    }
-    /* Festive Theme (Orange & Green) */
-    .theme-festive {
-      --primary-bg: #e05e00;
-      --primary-accent: #10b981;
-    }
+        /* --- Global Styles --- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+            text-align: center;
+        }
 
-    /* Dynamic Background & Text Colors based on theme variables */
-    .theme-bg { background-color: var(--primary-bg); color: #fff; }
-    .theme-accent-text { color: var(--primary-accent); }
-    .theme-btn { background-color: #fff; color: var(--primary-bg); font-weight: 600; }
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
 
-    /* Gold/Accent Border Style (applied to cards) */
-    .accent-border {
-      border-color: var(--primary-accent);
-      border-width: 4px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 0 0 4px var(--primary-accent);
-    }
+        p {
+            margin-bottom: 1em;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-    /* Custom Scrollbar for Gallery Filters */
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  </style>
+        a:hover {
+            color: var(--button-hover);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background 0.3s ease, color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: var(--button-hover);
+            color: var(--primary-dark);
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+            z-index: 1; /* Ensure content is above pseudo-background */
+        }
+        
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+
+        /* --- Navbar --- */
+        .navbar {
+            background: rgba(26, 10, 26, 0.9); /* Slightly transparent dark */
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 1.1em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .whatsapp-cta {
+            background: #25D366; /* WhatsApp Green */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .whatsapp-cta:hover {
+            background: #1DA851;
+        }
+
+        .whatsapp-cta i {
+            margin-right: 8px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: var(--gradient-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://via.placeholder.com/1920x1080?text=Exquisite+Mehndi+Art+Background'); /* Replace with a high-quality mehndi art background image */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2; /* Subtly blend with the dark background */
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+
+        /* --- Services Section --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--secondary-dark);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 100 100 M 100 0 L 0 100" stroke="rgba(212, 175, 55, 0.03)" stroke-width="1"/></svg>'); /* Subtle diagonal lines */
+            background-size: 50px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        }
+
+        .service-card h3 {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            z-index: 1;
+        }
+        
+        .service-card .btn {
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin-top: 15px;
+            z-index: 1;
+        }
+
+        /* --- Why Choose Us Section --- */
+        .why-choose-us {
+            background: var(--secondary-dark);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 100px 0;
+        }
+
+        .why-choose-us .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .advantage-item {
+            text-align: center;
+            background: var(--primary-dark);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: background 0.3s ease;
+        }
+
+        .advantage-item:hover {
+            background: #201020;
+        }
+
+        .advantage-item i {
+            font-size: 3em;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .advantage-item h3 {
+            color: var(--text-light);
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .advantage-item p {
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        /* --- About Section --- */
+        .about-content {
+            display: flex;
+            flex-direction: column; /* Stack on smaller screens */
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .about-text {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .about-text h3 {
+            color: var(--accent-gold);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 500px; /* Adjust as needed */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-filters {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery-filters button {
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .gallery-filters button:hover,
+        .gallery-filters button.active {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px; /* Fixed height for uniformity */
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 10, 26, 0.7);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonials {
+            background: var(--gradient-dark);
+            border-top: 1px solid var(--border-color);
+            padding: 100px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--secondary-dark);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        .testimonial-card i.fa-quote-left {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 2em;
+            color: rgba(212, 175, 55, 0.3);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            padding-top: 20px;
+            text-align: left;
+        }
+        .testimonial-card .client-name {
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-align: right;
+            display: block;
+        }
+
+        /* --- Booking Section --- */
+        .booking-section {
+            background: var(--primary-dark);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .booking-options {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        .whatsapp-booking, .appointment-form-container {
+            background: var(--secondary-dark);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
+            flex: 1;
+            min-width: 300px; /* Minimum width for form */
+            max-width: 500px; /* Max width for form */
+        }
+        
+        .whatsapp-booking {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .whatsapp-booking h3, .appointment-form-container h3 {
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .appointment-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .appointment-form input[type="text"],
+        .appointment-form input[type="tel"],
+        .appointment-form input[type="date"],
+        .appointment-form input[type="time"],
+        .appointment-form select,
+        .appointment-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: #3a2a3a; /* Darker input background */
+            color: var(--text-light);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+        }
+
+        .appointment-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .appointment-form select option {
+            background: #3a2a3a;
+            color: var(--text-light);
+        }
+        
+        .appointment-form button[type="submit"] {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            padding: 15px;
+        }
+
+        /* --- FAQ Section --- */
+        .faq-accordion {
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            cursor: pointer;
+            background: var(--secondary-dark);
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #352535;
+        }
+
+        .faq-question i {
+            font-size: 1.2em;
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background: #2a1a2a;
+            color: var(--text-muted);
+        }
+        .faq-answer p {
+            padding-bottom: 20px;
+            text-align: left;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust based on content */
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background: var(--primary-dark);
+            color: var(--text-muted);
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .footer-col h4 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            text-align: left;
+        }
+
+        .footer-col p, .footer-col ul {
+            font-size: 0.95em;
+            text-align: left;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center; /* Center social icons */
+        }
+
+        .social-links a {
+            font-size: 1.5em;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            font-size: 0.9em;
+        }
+
+        .footer-bottom p {
+            text-align: center;
+        }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .navbar .container {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-links li {
+                margin: 10px 15px;
+            }
+            .whatsapp-cta {
+                margin-top: 20px;
+            }
+
+            .hero h1 {
+                font-size: 3.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 2.5em;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .about-image {
+                max-width: 100%;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-col h4, .footer-col p, .footer-col ul {
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+            .booking-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            .whatsapp-booking, .appointment-form-container {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+            section {
+                padding: 60px 0;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .hero h1 {
+                font-size: 3em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            .logo {
+                font-size: 1.5em;
+            }
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            .whatsapp-cta {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 0.9em;
+            }
+            .service-card, .advantage-item, .testimonial-card, .faq-item {
+                padding: 20px;
+            }
+            .faq-question {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
-<body class="theme-bridal theme-bg">
-    <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur text-stone-900">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <img src="/logo.png" alt="Khushnud Mehndi Artist logo" class="h-9 w-9 rounded-full border" loading="eager"/>
-        <span class="font-extrabold text-lg tracking-tight">Khushnud <span class="text-stone-500">Mehndi</span></span>
-      </a>
-      <a href="#book" class="hidden md:inline-flex px-4 py-2 rounded-2xl shadow border bg-stone-900 text-white">WhatsApp Booking</a>
-    </div>
-  </header>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Khushnud Mehndi Artist</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/919968917573" target="_blank" class="whatsapp-cta">
+                <i class="fab fa-whatsapp"></i> +91-9968917573
+            </a>
+        </div>
+    </nav>
 
-    <section class="py-14 text-center">
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Discover Stunning Mehndi Designs</h1>
-    <p class="mt-3 text-white/80">Browse our exclusive portfolio of Bridal, Arabic, Indian, and Party mehndi artistry.</p>
-  </section>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Exquisite Henna Artistry in Mumbai</h1>
+            <p>Your celebration deserves the best. We create breathtaking Bridal, Arabic, and Custom Mehndi designs with 7+ years of International expertise.</p>
+            <a href="https://wa.me/919968917573" target="_blank" class="btn">Book Your Dream Mehndi Now!</a>
+        </div>
+    </section>
 
-    <div class="sticky top-[73px] z-30 border-y bg-white/90 backdrop-blur py-3 text-stone-900">
-    <div class="max-w-6xl mx-auto px-4 overflow-x-auto no-scrollbar">
-      <nav class="flex justify-center md:justify-start gap-4 text-sm font-semibold whitespace-nowrap">
-        <a href="#all" class="px-3 py-1 rounded-full bg-stone-900 text-white">All Work</a>
-        <a href="#bridal" class="px-3 py-1 rounded-full hover:bg-stone-200">Bridal Mehndi</a>
-        <a href="#arabic" class="px-3 py-1 rounded-full hover:bg-stone-200">Arabic Designs</a>
-        <a href="#indian" class="px-3 py-1 rounded-full hover:bg-stone-200">Indian Traditional</a>
-        <a href="#mandala" class="px-3 py-1 rounded-full hover:bg-stone-200">Mandala Patterns</a>
-        <a href="#party" class="px-3 py-1 rounded-full hover:bg-stone-200">Party & Quick</a>
-        <a href="#babyshower" class="px-3 py-1 rounded-full hover:bg-stone-200">Baby Shower</a>
-      </nav>
-    </div>
-  </div>
-
-    <section id="gallery" class="py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 id="all" class="text-2xl font-bold mb-6 text-white text-center md:text-left">Full Portfolio</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <a id="bridal" href="#bridal" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/bridal-1.jpg" alt="Intricate Bridal Mehndi" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Bridal Hand Design</p></div>
-        </a>
-
-        <a id="arabic" href="#arabic" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/arabic-1.jpg" alt="Elegant Arabic Trail Mehndi" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Arabic Floral Trail</p></div>
-        </a>
-        
-        <a href="#bridal" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/bridal-2.jpg" alt="Heavy Bridal Leg Design" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Bridal Feet Design</p></div>
-        </a>
-
-        <a id="mandala" href="#mandala" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/mandala-1.jpg" alt="Symmetric Mandala Design" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Back Hand Mandala</p></div>
-        </a>
-
-        <a id="indian" href="#indian" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/indian-1.jpg" alt="Traditional Indian Mehndi" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Traditional Indian Full Hand</p></div>
-        </a>
-
-        <a id="party" href="#party" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/party-1.jpg" alt="Simple Party Mehndi" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Quick Party Design</p></div>
-        </a>
-
-        <a id="babyshower" href="#babyshower" class="group block rounded-xl overflow-hidden shadow-lg accent-border">
-          <img src="/babyshower-1.jpg" alt="Baby Shower Theme Mehndi" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy"/>
-          <div class="p-3 bg-white text-stone-900"><p class="text-sm font-semibold">Baby Shower Belly Art</p></div>
-        </a>
-        
-              </div>
-    </div>
-  </section>
-
-  <hr class="max-w-6xl mx-auto border-white/20">
-
-    <section id="about" class="py-12">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl font-extrabold text-white">Meet Khushnud – Expert Mehndi Artist in Mumbai</h2>
-        <p class="mt-4 text-white/80">I am a Mumbai‑based mehndi artist specializing in **bridal, Arabic and Indo‑Arabic** designs. With over 7+ years of experience, I craft intricate and elegant designs tailored to your style and celebration. My clients love the unique patterns and attention to detail that make every occasion memorable.</p>
-        <a href="#book" class="mt-6 inline-block px-6 py-3 rounded-2xl shadow theme-btn">Book Your Appointment</a>
-      </div>
-      <div class="rounded-3xl overflow-hidden accent-border">
-        <img src="/khushnud-artist.jpg" alt="Khushnud Mehndi Artist" class="w-full h-auto object-contain" loading="lazy"/>
-      </div>
-    </div>
-  </section>
-
-  <hr class="max-w-6xl mx-auto border-white/20">
-
-    <section id="book-cta" class="py-12 text-center">
-    <h2 class="text-3xl font-extrabold text-white">Ready to Get Your Dream Mehndi?</h2>
-    <p class="mt-3 text-white/80">Book your appointment today and experience exquisite, handcrafted Mehndi designs for weddings, events, and celebrations.</p>
-    <a href="#book" class="mt-6 inline-block px-6 py-3 rounded-2xl shadow theme-btn">Book on WhatsApp Now</a>
-  </section>
-
-  <hr class="max-w-6xl mx-auto border-white/20">
-  
-    <section id="faq" class="py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-6">FAQs - Khushnud Mehndi Mumbai</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6 text-sm text-white/90">
-        <div class="rounded-2xl border border-white/20 bg-white/10 p-4"><p class="font-semibold theme-accent-text">Are cones skin‑safe?</p><p class="mt-1 text-white/80">Yes, we use 100% natural, skin‑safe cones for rich stain—no harmful dyes.</p></div>
-        <div class="rounded-2xl border border-white/20 bg-white/10 p-4"><p class="font-semibold theme-accent-text">How do I confirm a booking?</p><p class="mt-1 text-white/80">Share details on WhatsApp. An advance may be required for bridal slots.</p></div>
-        <div class="rounded-2xl border border-white/20 bg-white/10 p-4"><p class="font-semibold theme-accent-text">Which areas do you cover?</p><p class="mt-1 text-white/80">Across Mumbai MMR. Out‑station on request.</p></div>
-        <div class="rounded-2xl border border-white/20 bg-white/10 p-4"><p class="font-semibold theme-accent-text">How long does bridal mehndi take?</p><p class="mt-1 text-white/80">Bridal mehndi application usually takes 3–6 hours depending on the complexity and design size.</p></div>
-      </div>
-    </div>
-  </section>
-
-    <section id="book" class="py-12 border-t bg-white/20">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-white">Instant WhatsApp Booking</h2>
-      <p class="text-white/70 mt-2">Fill the form; it opens WhatsApp with all details pre‑filled. Free & fast.</p>
-
-      <form id="waForm" class="mt-6 grid md:grid-cols-2 gap-6 p-6 rounded-3xl bg-white text-stone-900 accent-border">
-        <div>
-          <label class="block text-sm font-medium">Your Name</label>
-          <input id="name" required class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Full name" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Event Date</label>
-          <input id="date" type="date" required class="mt-1 w-full rounded-xl border px-3 py-2" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">City / Location</label>
-          <input id="city" required class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="e.g., Mumbai" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Package</label>
-          <select id="package" class="mt-1 w-full rounded-xl border px-3 py-2">
-            <option>Bridal Classic</option>
-            <option>Arabic Party</option>
-            <option>Group Booking</option>
-            <option>Custom</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium">Notes</label>
-          <textarea id="notes" rows="3" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Timing, venue, number of guests, etc."></textarea>
-        </div>
-        <div class="md:col-span-2 flex gap-3">
-          <button class="px-5 py-3 rounded-2xl shadow bg-green-600 text-white" type="submit">Send on WhatsApp</button>
-          <a id="waDirect" class="px-5 py-3 rounded-2xl border bg-white" href="#">Chat directly</a>
-        </div>
-      </form>
-    </div>
-  </section>
-
-    <footer class="py-10 border-t bg-white/10 text-white/90">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 items-start text-sm">
-      <div>
-        <p class="font-semibold text-white">Khushnud Mehndi Artist</p>
-        <p class="text-white/70">Bridal • Arabic • Party Mehndi</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white">Service Area</p>
-        <p class="text-white/70">Mumbai • Navi Mumbai • Thane</p>
-      </div>
-      <div class="md:text-right">
-        <p class="font-semibold text-white">Contact</p>
-        <p class="text-white/70 mt-1 select-all">Phone: +91 91525 84828</p>
-      </div>
-    </div>
-  </footer>
-
-    <a class="wa-float inline-flex items-center gap-2 rounded-full px-4 py-3 shadow-lg bg-green-600 text-white" id="waFloat" href="#" aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.59 5.99L0 24l6.2-1.63A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 21.82c-1.96 0-3.87-.52-5.54-1.5l-.4-.23-3.68.97.98-3.59-.26-.41A9.8 9.8 0 012.18 12C2.18 6.56 6.56 2.18 12 2.18c2.62 0 5.08 1.02 6.93 2.88A9.76 9.76 0 0121.82 12c0 5.44-4.38 9.82-9.82 9.82zm5.53-7.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.41-1.5-.89-.79-1.5-1.77-1.68-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.63-.93-2.24-.24-.58-.49-.5-.68-.5-.18 0-.38-.02-.58-.02-.2 0-.53.08-.81.38-.27.3-1.06 1.03-1.06 2.5 0 1.47 1.09 2.9 1.24 3.1.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-    <span>Chat</span>
-  </a>
-
-    <script>
-    // Put your WhatsApp number here (digits only). Example: +91 9876543210 -> 919876543210
-    const WA_NUMBER = '919152584828';
-
-    function buildWALink(message) {
-      const text = encodeURIComponent(message);
-      return `https://wa.me/${WA_NUMBER}?text=${text}`;
-    }
-
-    // Direct chat buttons
-    document.getElementById('waDirect')?.setAttribute('href', buildWALink('Hello Khushnud! I want to book mehndi.'));
-    document.getElementById('waFloat').setAttribute('href', buildWALink('Hello! I want to book mehndi.'));
-
-    // Form submit → WhatsApp
-    document.getElementById('waForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const date = document.getElementById('date').value;
-      const city = document.getElementById('city').value.trim();
-      const pkg = document.getElementById('package').value;
-      const notes = document.getElementById('notes').value.trim();
-      const msg = `New Mehndi Booking\n\nName: ${name}\nDate: ${date}\nCity: ${city}\nPackage: ${pkg}\nNotes: ${notes}`;
-      window.location.href = buildWALink(msg);
-    });
-  </script>
-</body>
-</html>
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Signature Mehndi Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Authentic Bridal Mehndi Designs</h3>
+                    <p>Turn your wedding dreams into reality with stunning bridal mehndi art by Khushnud Mehndi in Mumbai. From elegant traditional patterns to modern bridal designs, we create mehndi that beautifully reflects your love, culture, and celebration.</p>
+                    <a href="#" class="btn">View Bridal Gallery</a>
+                </div>
+                <div class="service-card">
+                    <h3>Intricate Arabic Mehndi Designs</h3>
+                    <p>Experience the beauty of flowing lines and bold floral patterns. Our Arabic Mehndi designs are perfect for engagements, festivals, and modern celebrations in Mumbai.</p>
+                    <a href="#" class="btn">View Arabic Gallery</a>
+                </div>
+                <div class="service-card">
+                    <h3>Symmetrical Mandala Henna Art</h3>
+                    <p>A stunning blend of tradition and geometry. Our Mandala designs bring focus, elegance, and quick application for parties and smaller events.</p>
+                    <a href="#" class="btn">View Mandala Gallery</a>
+                </div>
+                <div class="service-card">
+                    <h3>Joyful Baby Shower Henna</h3>
+                    <p>Delicate and meaningful designs to celebrate motherhood and the coming of a new baby. Custom belly henna and traditional hand/feet patterns available.</p>
+                    <a href="#" class="btn">View Baby Shower Gallery</a>
+                </div>
+                <div class="service-card">
+                    <h3>Trendy & Fashion-Forward Designs</h3>
+                    <p>Looking for something unique? Our Fancy Mehndi includes glitter, colored cones, and custom motifs perfect for photoshoots, parties, and corporate events.</p>
+                    <a href="#" class="btn">View Fancy Gallery</a>
+                </div>
+                <div class="service-card">
+                    <h3>Traditional Indian Henna Patterns</h3>
+                    <p>The heart of our artistry.
