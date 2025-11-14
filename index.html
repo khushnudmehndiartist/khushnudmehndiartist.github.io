@@ -3,48 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khushnud Mehndi Artist — Gallery Demo</title>
+  <title>Khushnud Mehndi Artist — Gallery Combined</title>
   <link rel="icon" href="https://khushnudmehndiartist.github.io/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{--rose:#ffdbe6;--card:rgba(255,255,255,0.95);--muted:#6b6b6b;}
+    :root{--rose:#ffdbe6;--card:rgba(255,255,255,0.96);--muted:#6b6b6b}
+    *{box-sizing:border-box}
     body{font-family:'Poppins',sans-serif;background:var(--rose);color:#111;margin:0}
-    header{backdrop-filter:blur(6px);background:rgba(255,255,255,0.8);position:sticky;top:0;z-index:60}
-    .logo{height:44px;width:44px;border-radius:9999px}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{position:sticky;top:0;z-index:120;background:rgba(255,255,255,0.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,0.06)}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+    .logo{height:44px;width:44px;border-radius:9999px;object-fit:cover}
+    .tabs{display:flex;gap:8px;justify-content:center;margin:14px 0}
+    .tab-btn{padding:10px 14px;border-radius:999px;background:white;border:2px solid rgba(0,0,0,0.06);cursor:pointer}
+    .tab-btn.active{border-color:#d4af37}
+    .note{color:var(--muted);text-align:center;font-size:14px;margin-top:6px}
 
-    /* Filters */
-    .filters{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0}
-    .filter-btn{border-radius:999px;padding:10px 14px;border:2px solid rgba(0,0,0,0.12);background:white;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
-    .filter-btn.active{background:#fff;border-color:#d4af37;color:#111}
-
-    /* Gallery grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
-    .card{background:var(--card);border-radius:14px;padding:8px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 24px rgba(0,0,0,0.06);overflow:hidden;position:relative}
-    .thumb{width:100%;height:360px;object-fit:cover;border-radius:10px}
+    /* grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:8px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 12px 30px rgba(0,0,0,0.06);overflow:hidden}
+    .thumb{width:100%;height:320px;object-fit:cover;border-radius:8px}
     .meta{display:flex;justify-content:space-between;align-items:center;padding:8px 6px}
-    .badge{font-size:12px;background:rgba(0,0,0,0.06);padding:6px 8px;border-radius:999px}
 
-    /* Floating images (decorative, automated) */
-    .float-wrap{position:fixed;left:8px;bottom:120px;z-index:30;display:flex;flex-direction:column;gap:12px}
-    .float-img{width:86px;height:86px;border-radius:12px;object-fit:cover;box-shadow:0 8px 20px rgba(0,0,0,0.12);transform:translateY(0);animation:floaty 6s ease-in-out infinite}
-    .float-img:nth-child(2){animation-delay:1.2s}
-    .float-img:nth-child(3){animation-delay:2.4s}
-    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-12px)}100%{transform:translateY(0)}}
+    /* original embeds container */
+    .embeds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+    .embed-card{background:var(--card);padding:8px;border-radius:12px}
 
-    /* Lightbox modal */
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:80;padding:20px;opacity:0;pointer-events:none;transition:opacity .18s}
+    /* lightbox */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.78);display:flex;align-items:center;justify-content:center;z-index:160;padding:12px;opacity:0;pointer-events:none;transition:opacity .18s}
     .modal.open{opacity:1;pointer-events:auto}
-    .viewer{max-width:1100px;width:100%;background:transparent;border-radius:10px;display:flex;gap:12px;align-items:center}
-    .viewer-media{flex:1;max-height:80vh;display:flex;align-items:center;justify-content:center}
-    .viewer-media img,.viewer-media video{max-width:100%;max-height:80vh;border-radius:12px}
-    .viewer-controls{width:72px;display:flex;flex-direction:column;gap:12px;align-items:center}
-    .close-btn{background:white;padding:8px;border-radius:10px;cursor:pointer}
-    .nav-btn{background:white;padding:10px;border-radius:10px;cursor:pointer}
+    .viewer{max-width:1100px;width:100%;display:flex;gap:12px;align-items:flex-start}
+    .viewer-media{flex:1;display:flex;align-items:center;justify-content:center}
+    .viewer-media img,.viewer-media video{max-width:100%;max-height:80vh;border-radius:10px}
+    .viewer-controls{width:72px;display:flex;flex-direction:column;gap:10px;align-items:center}
+    .btn{background:white;padding:8px;border-radius:10px;cursor:pointer}
 
-    /* responsive tweak */
-    @media (max-width:640px){ .thumb{height:220px} .viewer-controls{display:none} }
+    @media(max-width:640px){.thumb{height:220px}.viewer{flex-direction:column}.viewer-controls{display:flex;flex-direction:row;width:100%;justify-content:center;gap:18px}}
   </style>
 </head>
 <body>
@@ -52,56 +46,83 @@
     <div class="container flex items-center justify-between">
       <a href="#" class="flex items-center gap-3"><img class="logo" src="https://khushnudmehndiartist.github.io/logo.png" alt="logo"><strong>Khushnud Mehndi Artist</strong></a>
       <nav class="hidden md:flex gap-4">
-        <a href="#work">Work</a>
-        <a href="#usp">Why Choose Us</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#book">Book</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#usp" class="nav-link">Why Choose Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#book" class="nav-link">Book</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section id="work">
-      <h2 style="text-align:center;font-size:20px;margin-bottom:6px;font-weight:700">Designs & Highlights</h2>
-      <p style="text-align:center;color:var(--muted);margin-bottom:14px">Click a card to open — images and videos separated by filters. Replace URLs in the <code>GALLERY_ITEMS</code> array in JS with your own hosted image/video links.</p>
+      <h2 style="text-align:center;font-size:22px;margin-bottom:6px;font-weight:700">Designs & Highlights — Combined View</h2>
+      <p class="note">Two gallery modes available below: <strong>Reliable Tiles (open posts inline or in lightbox)</strong> and <strong>Original Instagram Embed Mode</strong> (the code you provided earlier). Use the tabs to switch.</p>
 
-      <div class="filters" role="tablist">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="image">Images</button>
-        <button class="filter-btn" data-filter="video">Videos</button>
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" id="tabReliable">Reliable Gallery</button>
+        <button class="tab-btn" id="tabOriginal">Original Instagram Embeds</button>
       </div>
 
-      <div class="grid" id="galleryGrid" aria-live="polite"></div>
+      <!-- RELIABLE GALLERY (cards that open lightbox) -->
+      <div id="reliableGallery">
+        <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+          <button class="tab-btn filter active" data-filter="all">All</button>
+          <button class="tab-btn filter" data-filter="image">Images</button>
+          <button class="tab-btn filter" data-filter="video">Videos</button>
+        </div>
+        <div id="gridReliable" class="grid"></div>
+      </div>
+
+      <!-- ORIGINAL EMBEDS (your earlier code placed here) -->
+      <div id="originalEmbeds" style="display:none">
+        <div class="embeds-grid" id="embedGrid">
+          <!-- Inserted original embed cards below (kept exactly like your original file) -->
+          <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPx-_tPDLKW/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote></div>
+          <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPhF6uUD23T/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote></div>
+          <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQ5wJ1qjP3o/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote></div>
+          <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPV6GIHjKJq/?img_index=1" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote></div>
+          <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPApu6qjMPs/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote></div>
+          <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cz7vpFvCheh/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; margin: 0; padding:0; width:100%; "></blockquote></div>
+        </div>
+        <p class="note">Note: Instagram embed display depends on Instagram; if embeds show blank for you it's due to Instagram blocking cross-origin media. In that case use the Reliable Gallery mode.</p>
+      </div>
+
     </section>
+
+    <!-- Placeholder sections so nav links work -->
+    <section id="usp" style="padding:40px 0"><div class="container"><h3>Why Choose Us</h3><p class="note">International quality, 100% organic cones.</p></div></section>
+    <section id="services" style="padding:40px 0"><div class="container"><h3>Services</h3></div></section>
+    <section id="about" style="padding:40px 0"><div class="container"><h3>About</h3></div></section>
+    <section id="reviews" style="padding:40px 0"><div class="container"><h3>Reviews</h3></div></section>
+    <section id="book" style="padding:40px 0"><div class="container"><h3>Book</h3></div></section>
+
   </main>
 
-  <!-- floating decorative images -->
-  <div class="float-wrap" aria-hidden="true">
-    <img class="float-img" src="https://khushnudmehndiartist.github.io/images/float1.jpg" alt="decor">
-    <img class="float-img" src="https://khushnudmehndiartist.github.io/images/float2.jpg" alt="decor">
-    <img class="float-img" src="https://khushnudmehndiartist.github.io/images/float3.jpg" alt="decor">
-  </div>
-
   <!-- Lightbox modal -->
-  <div id="lightbox" class="modal" aria-modal="true" role="dialog">
-    <div class="viewer" role="document">
+  <div id="lightbox" class="modal" role="dialog" aria-modal="true">
+    <div class="viewer">
       <div class="viewer-media" id="viewerMedia"></div>
       <div class="viewer-controls">
-        <button id="prevBtn" class="nav-btn" aria-label="Previous">◀</button>
-        <button id="closeBtn" class="close-btn" aria-label="Close">✕</button>
-        <button id="nextBtn" class="nav-btn" aria-label="Next">▶</button>
+        <button id="prevBtn" class="btn" aria-label="Previous">◀</button>
+        <button id="closeBtn" class="btn" aria-label="Close">✕</button>
+        <button id="nextBtn" class="btn" aria-label="Next">▶</button>
       </div>
     </div>
   </div>
 
   <script>
-    /*
-      GALLERY_ITEMS: replace thumb and src with your hosted URLs.
-      type: 'image' or 'video' (video can be mp4 or embed link).
-      For videos you can use a hosted mp4 in `src` and set `thumb` to a poster image.
-    */
+    // ----- Tab switch (Reliable vs Original) -----
+    const tabReliable = document.getElementById('tabReliable');
+    const tabOriginal = document.getElementById('tabOriginal');
+    const reliableGallery = document.getElementById('reliableGallery');
+    const originalEmbeds = document.getElementById('originalEmbeds');
+    tabReliable.addEventListener('click', ()=>{ tabReliable.classList.add('active'); tabOriginal.classList.remove('active'); reliableGallery.style.display='block'; originalEmbeds.style.display='none'; history.replaceState(null,'','#work'); });
+    tabOriginal.addEventListener('click', ()=>{ tabOriginal.classList.add('active'); tabReliable.classList.remove('active'); reliableGallery.style.display='none'; originalEmbeds.style.display='block'; history.replaceState(null,'','#work'); loadInstagramEmbeds(); });
+
+    // ----- Reliable gallery data (you can replace these with your hosted URLs) -----
     const GALLERY_ITEMS = [
       { id:1, type:'image', thumb:'https://khushnudmehndiartist.github.io/images/img1-thumb.jpg', src:'https://khushnudmehndiartist.github.io/images/img1.jpg', caption:'Bridal floral palms' },
       { id:2, type:'image', thumb:'https://khushnudmehndiartist.github.io/images/img2-thumb.jpg', src:'https://khushnudmehndiartist.github.io/images/img2.jpg', caption:'Arabic wrist design' },
@@ -110,98 +131,65 @@
       { id:5, type:'video', thumb:'https://khushnudmehndiartist.github.io/images/video2-thumb.jpg', src:'https://khushnudmehndiartist.github.io/videos/clip2.mp4', caption:'Application process' }
     ];
 
-    const grid = document.getElementById('galleryGrid');
+    const gridReliable = document.getElementById('gridReliable');
     const lightbox = document.getElementById('lightbox');
     const viewerMedia = document.getElementById('viewerMedia');
+    let currentFiltered = [];
     let currentIndex = 0;
 
-    function renderGrid(filter='all'){
-      grid.innerHTML='';
-      const items = GALLERY_ITEMS.filter(it => filter==='all' ? true : it.type===filter);
-      items.forEach((it, i) => {
-        const card = document.createElement('article');
-        card.className='card';
+    function buildReliable(filter='all'){
+      gridReliable.innerHTML='';
+      currentFiltered = GALLERY_ITEMS.filter(it=>filter==='all'?true:it.type===filter);
+      if(currentFiltered.length===0){ gridReliable.innerHTML='<p style="text-align:center;color:var(--muted)">No items in this filter</p>'; return; }
+      currentFiltered.forEach((it,i)=>{
+        const card = document.createElement('article'); card.className='card';
         card.innerHTML = `
           <button class="open-btn" data-index="${i}" style="background:transparent;border:0;padding:0;width:100%;text-align:left;cursor:pointer">
-            <img src="${it.thumb}" loading="lazy" alt="${it.caption}" class="thumb" />
+            <img src="${it.thumb}" loading="lazy" alt="${it.caption}" class="thumb" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'"/>
           </button>
-          <div class="meta">
-            <div style="font-size:13px;font-weight:600">${it.caption}</div>
-            <div class="badge">${it.type.toUpperCase()}</div>
-          </div>
+          <div class="meta"><div style=\"font-size:13px;font-weight:600\">${it.caption}</div><div class=\"badge\">${it.type.toUpperCase()}</div></div>
         `;
-        grid.appendChild(card);
+        gridReliable.appendChild(card);
       });
-
-      // attach click handlers
-      grid.querySelectorAll('.open-btn').forEach(btn => btn.addEventListener('click', (e)=>{
-        const idx = Number(btn.getAttribute('data-index'));
-        openLightbox(idx, filter);
-      }));
+      gridReliable.querySelectorAll('.open-btn').forEach(btn=>btn.addEventListener('click', ()=>{ openLightbox(Number(btn.dataset.index)); }));
     }
 
-    // initial render
-    renderGrid('all');
+    // initial reliable
+    buildReliable('all');
+    document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click', ()=>{ document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active')); b.classList.add('active'); buildReliable(b.dataset.filter); }));
 
-    // filter buttons
-    document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click', ()=>{
-      document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
-      b.classList.add('active');
-      const f = b.getAttribute('data-filter');
-      renderGrid(f);
-    }));
+    function openLightbox(idx){ currentIndex=idx; showItem(currentFiltered[currentIndex]); lightbox.classList.add('open'); }
+    function closeLightbox(){ lightbox.classList.remove('open'); viewerMedia.innerHTML=''; }
+    function showItem(it){ viewerMedia.innerHTML=''; if(!it) return; if(it.type==='image'){ const img=document.createElement('img'); img.src=it.src; img.alt=it.caption; img.onerror=function(){ this.src='https://via.placeholder.com/1200x800?text=Image+Not+Found' }; viewerMedia.appendChild(img); } else { const v=document.createElement('video'); v.src=it.src; v.controls=true; v.autoplay=true; v.playsInline=true; v.onerror=function(){ viewerMedia.innerHTML='<p style="color:white">Video not available.</p>' }; viewerMedia.appendChild(v); } }
 
-    function openLightbox(index, currentFilter){
-      // compute global index from filtered list
-      const filtered = (currentFilter && currentFilter!=='all') ? GALLERY_ITEMS.filter(it=>it.type===currentFilter) : GALLERY_ITEMS.slice();
-      currentIndex = index;
-      const item = filtered[currentIndex];
-      showItem(item);
-      lightbox.classList.add('open');
-      // store current filter on modal for nav logic
-      lightbox.dataset.filter = currentFilter || 'all';
-      lightbox.dataset.offsetIndex = currentIndex;
-    }
+    document.getElementById('closeBtn').addEventListener('click', closeLightbox);
+    document.getElementById('prevBtn').addEventListener('click', ()=>{ currentIndex=(currentIndex-1+currentFiltered.length)%currentFiltered.length; showItem(currentFiltered[currentIndex]); });
+    document.getElementById('nextBtn').addEventListener('click', ()=>{ currentIndex=(currentIndex+1)%currentFiltered.length; showItem(currentFiltered[currentIndex]); });
 
-    function showItem(item){
-      viewerMedia.innerHTML='';
-      if(item.type==='image'){
-        const img = document.createElement('img'); img.src = item.src; img.alt = item.caption; viewerMedia.appendChild(img);
-      } else if(item.type==='video'){
-        const v = document.createElement('video'); v.src = item.src; v.controls = true; v.autoplay = true; v.playsInline = true; viewerMedia.appendChild(v);
+    window.addEventListener('keydown',(e)=>{ if(!lightbox.classList.contains('open')) return; if(e.key==='Escape') closeLightbox(); if(e.key==='ArrowLeft') document.getElementById('prevBtn').click(); if(e.key==='ArrowRight') document.getElementById('nextBtn').click(); });
+    lightbox.addEventListener('click',(e)=>{ if(e.target===lightbox) closeLightbox(); });
+
+    // ----- Original Instagram embed loader -----
+    function loadInstagramEmbeds(){
+      // load embed script if not already loaded
+      if(window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process==='function'){
+        window.instgrm.Embeds.process();
+      } else {
+        const s = document.createElement('script'); s.src='https://www.instagram.com/embed.js'; s.async=true; s.onload = ()=> window.instgrm?.Embeds?.process?.(); document.body.appendChild(s);
       }
     }
 
-    // close / nav handlers
-    document.getElementById('closeBtn').addEventListener('click', ()=>{ lightbox.classList.remove('open'); viewerMedia.innerHTML=''; });
-    document.getElementById('prevBtn').addEventListener('click', ()=> navLightbox(-1));
-    document.getElementById('nextBtn').addEventListener('click', ()=> navLightbox(1));
+    // auto-load embed script only if user opens Original tab
+    // ensure nav anchor smooth offset
+    document.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click', function(e){ const href=this.getAttribute('href'); if(!href||href==='#') return; const el=document.querySelector(href); if(el){ e.preventDefault(); const top = el.getBoundingClientRect().top + window.pageYOffset - (document.querySelector('header').offsetHeight + 8); window.scrollTo({top,behavior:'smooth'}); history.pushState(null,'',href); } }));
 
-    function navLightbox(direction){
-      const f = lightbox.dataset.filter || 'all';
-      const list = f==='all' ? GALLERY_ITEMS : GALLERY_ITEMS.filter(it=>it.type===f);
-      let idx = Number(lightbox.dataset.offsetIndex) || 0;
-      idx = (idx + direction + list.length) % list.length;
-      lightbox.dataset.offsetIndex = idx;
-      showItem(list[idx]);
-    }
+    // If user opens original tab immediately (optional):
+    // loadInstagramEmbeds();
 
-    // keyboard navigation
-    window.addEventListener('keydown', (e)=>{
-      if(!lightbox.classList.contains('open')) return;
-      if(e.key==='Escape') { lightbox.classList.remove('open'); viewerMedia.innerHTML=''; }
-      if(e.key==='ArrowLeft') navLightbox(-1);
-      if(e.key==='ArrowRight') navLightbox(1);
-    });
+    // small accessibility: announce when switching tabs
+    tabReliable.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' ') tabReliable.click(); });
+    tabOriginal.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' ') tabOriginal.click(); });
 
-    // click outside to close
-    lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) { lightbox.classList.remove('open'); viewerMedia.innerHTML=''; } });
-
-    /* NOTES FOR DEPLOYMENT:
-      1) Replace every URL in GALLERY_ITEMS with your actual hosted image/video paths. Thumbnails (thumb) load fast; src is full image or mp4.
-      2) For Instagram posts: download the images/videos and host them in your repo (e.g., /images/). Using Instagram's embed is an alternative but slower.
-      3) If you want captions/likes overlay, extend each object with `meta` fields and render into card.
-    */
   </script>
 </body>
 </html>
