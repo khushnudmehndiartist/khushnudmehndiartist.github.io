@@ -64,12 +64,12 @@
             font-family: 'Pacifico', cursive;
         }
 
-        /* Instagram Embed Styling Overrides for Mobile Fix */
+        /* Instagram Embed Styling Overrides for Full Responsiveness (मोबाइल पर आधा न दिखे, इसके लिए) */
         .instagram-embed {
             background-color: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
-            padding: 0; 
+            padding: 0;
             overflow: hidden;
             width: 100%;
             height: 100%;
@@ -77,13 +77,27 @@
             align-items: center;
             justify-content: center;
         }
-        /* Ensures the Instagram blockquote is responsive */
+        .instagram-embed > div {
+             width: 100%;
+        }
+        /* Instagram's internal media container fix */
         .instagram-media {
-            width: 100% !important;
+            min-width: unset !important; /* Overrides Instagram's fixed min-width */
             max-width: 100% !important;
-            min-width: unset !important; /* Critical fix for mobile layout */
             margin: 0 !important;
         }
+        /* Ensure the grid is responsive */
+        @media (max-width: 640px) {
+            #gallery .grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr)); /* Mobile: Single column */
+            }
+        }
+        @media (min-width: 641px) and (max-width: 768px) {
+            #gallery .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* Tablet: Two columns */
+            }
+        }
+        
     </style>
 </head>
 <body class="text-gray-800">
@@ -144,7 +158,7 @@
         </div>
     </header>
     
-    <!-- About Section (New) --><section id="about" class="bg-white py-12 border-b border-gray-100">
+    <!-- About Section --><section id="about" class="bg-white py-12 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-extrabold text-gray-900 mb-2">About Khushnud Mehndi Artist</h2>
             <p class="text-xl font-bold text-primary-brand tracking-wide mb-4">
@@ -282,60 +296,61 @@
                     Scroll down to see our featured work, pulled directly from Instagram.
                 </p>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+                <!-- Responsive Grid for Gallery -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                     <!-- Instagram Embeds (First 8 Posts for performance) -->
 
                     <!-- Post 1 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cz7vpFvCheh/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cz7vpFvCheh/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 2 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DGpXxtVth6N/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DGpXxtVth6N/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 3 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DROahgpDOw2/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DROahgpDOw2/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 4 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DRJOngUjJHe/?img_index=1" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DRJOngUjJHe/?img_index=1" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 5 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DRIpEzhDMhs/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DRIpEzhDMhs/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 6 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQ5wJ1qjP3o/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQ5wJ1qjP3o/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 7 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQqTG4KDCxk/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQqTG4KDCxk/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
                     </div>
 
                     <!-- Post 8 (Embed) --><div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQlexVCjLm4/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQlexVCjLm4/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
                             </div>
                         </blockquote>
@@ -363,7 +378,8 @@
                             const card = document.createElement('a');
                             card.href = post.url;
                             card.target = "_blank";
-                            card.className = "relative overflow-hidden rounded-lg shadow-md aspect-square card-hover-effect group";
+                            // Adjusting the grid class for responsiveness
+                            card.className = "relative overflow-hidden rounded-lg shadow-md aspect-square card-hover-effect group block";
                             
                             // Use placeholder for fast loading
                             card.innerHTML = `
@@ -953,7 +969,7 @@
             resultsContentDiv.innerHTML = formattedText || `<p class="text-red-500">${resultText}</p>`;
         });
 
-        // Initialize carousels directly on load since AI image generation is removed.
+        // Initialize carousels
         window.addEventListener('load', initCarousels);
 
     </script>
