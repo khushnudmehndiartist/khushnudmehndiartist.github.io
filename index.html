@@ -35,7 +35,7 @@
         #image-carousel-track, #review-carousel-track {
             transition: transform 0.5s ease-in-out;
         }
-        /* लोडिंग स्पिनर CSS */
+        /* लोडिंग स्पिनर CSS (अब केवल AI Consultant के लिए उपयोग होगा) */
         .spinner {
             border: 4px solid rgba(0, 0, 0, 0.1);
             border-left-color: #8B5CF6;
@@ -83,6 +83,7 @@
 
                 <!-- Desktop Menu (डेस्कटॉप मेनू) -->
                 <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">About</a>
                     <a href="#services" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">Services</a>
                     <a href="#featured-work" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">Work</a>
                     <a href="#ai-design-generator" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">AI Design</a>
@@ -103,6 +104,7 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
                 <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Services</a>
                 <a href="#featured-work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Work</a>
                 <a href="#ai-design-generator" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">AI Design</a>
@@ -132,10 +134,23 @@
             </div>
         </div>
     </header>
+    
+    <!-- About Section (New) -->
+    <section id="about" class="bg-white py-12 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-2">About Khushnud Mehndi Artist</h2>
+            <p class="text-xl font-bold text-primary-brand tracking-wide mb-4">
+                Top Mehndi Artist In Mumbai
+            </p>
+            <p class="max-w-4xl mx-auto text-lg text-gray-600">
+                Khushnud specializes in delivering exceptional henna art with attention to detail, symmetry, and rich stain quality. With years of experience, we provide a personalized service, ensuring every client's vision—from traditional bridal looks to modern party designs—is executed flawlessly. We use only natural, skin-safe henna cones for the best results across the Mumbai Metropolitan Region (MMR).
+            </p>
+        </div>
+    </section>
 
     <main class="py-16">
         
-        <!-- Featured Work Carousel Section (AI Generated Images) -->
+        <!-- Featured Work Carousel Section (User Uploaded Banners) -->
         <section id="featured-work" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">Featured Work Showcase</h2>
             <p class="text-center text-lg text-gray-500 mb-12">
@@ -144,35 +159,25 @@
             
             <div id="image-carousel" class="relative overflow-hidden rounded-xl shadow-2xl">
                 <div id="image-carousel-track" class="flex transition-transform duration-500 ease-in-out">
-                    <!-- Slides are set up with unique IDs and loading state -->
-                    
-                    <!-- Slide 1: Bridal -->
+                    <!-- Slide 1: Banner1.jpg (Directly mapped image) -->
                     <div class="flex-shrink-0 w-full relative">
-                        <div id="image-slide-1" class="w-full object-cover h-64 sm:h-96 flex items-center justify-center bg-gray-200">
-                            <div class="spinner"></div>
-                        </div>
-                        <div id="caption-slide-1" class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl hidden">Meticulous Bridal Full Hand Design</div>
+                        <img src="Banner1.jpg" alt="Bridal Mehndi Banner" class="w-full object-cover h-64 sm:h-96">
+                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Meticulous Bridal Full Hand Design</div>
                     </div>
-                    <!-- Slide 2: Arabic -->
+                    <!-- Slide 2: Banner-2.jpg (Directly mapped image) -->
                     <div class="flex-shrink-0 w-full relative">
-                        <div id="image-slide-2" class="w-full object-cover h-64 sm:h-96 flex items-center justify-center bg-gray-200">
-                            <div class="spinner"></div>
-                        </div>
-                        <div id="caption-slide-2" class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl hidden">Elegant Arabic Flow and Shading</div>
+                        <img src="Banner-2.jpg" alt="Arabic Mehndi Banner" class="w-full object-cover h-64 sm:h-96">
+                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Elegant Arabic Flow and Shading</div>
                     </div>
-                    <!-- Slide 3: Portrait -->
+                    <!-- Slide 3: Banner-3.jpg (Directly mapped image) -->
                     <div class="flex-shrink-0 w-full relative">
-                        <div id="image-slide-3" class="w-full object-cover h-64 sm:h-96 flex items-center justify-center bg-gray-200">
-                            <div class="spinner"></div>
-                        </div>
-                        <div id="caption-slide-3" class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl hidden">Customized Couple Portrait Mehndi</div>
+                        <img src="Banner-3.jpg" alt="Portrait Mehndi Banner" class="w-full object-cover h-64 sm:h-96">
+                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Customized Couple Portrait Mehndi</div>
                     </div>
-                    <!-- Slide 4: Group/Event -->
+                    <!-- Slide 4: Banner-4.jpg (Directly mapped image) -->
                     <div class="flex-shrink-0 w-full relative">
-                        <div id="image-slide-4" class="w-full object-cover h-64 sm:h-96 flex items-center justify-center bg-gray-200">
-                            <div class="spinner"></div>
-                        </div>
-                        <div id="caption-slide-4" class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl hidden">Quick Designs for Sangeet Guests</div>
+                        <img src="Banner-4.jpg" alt="Group Mehndi Banner" class="w-full object-cover h-64 sm:h-96">
+                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Quick Designs for Sangeet Guests</div>
                     </div>
                 </div>
 
@@ -498,10 +503,10 @@
 
                     <!-- Navigation Buttons (Hidden on mobile for swipe) -->
                     <button id="review-prev" aria-label="Previous review set" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary-brand bg-opacity-70 p-2 rounded-r-full text-white hover:bg-opacity-90 transition z-10 hidden md:block">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
                     <button id="review-next" aria-label="Next review set" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary-brand bg-opacity-70 p-2 rounded-l-full text-white hover:bg-opacity-90 transition z-10 hidden md:block">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
                     
                 </div>
@@ -648,25 +653,6 @@
         // New WhatsApp Number
         const whatsappNumber = "919152584828";
         
-        // Prompts for AI Image Generation
-        const imagePrompts = [
-            "Intricate Indian bridal mehndi design covering full hand and arm, rich dark red-brown stain, highly detailed, realistic photo, diffused lighting.",
-            "Modern Arabic mehndi design on the back of a hand, free-flowing floral and vine patterns, soft shading, professional photography style.",
-            "Custom portrait mehndi design on the palm, featuring a detailed couple's portrait surrounded by traditional Indian motifs, hyperrealistic.",
-            "Minimalist Indo-Arabic fusion mehndi design extending up the forearm, focusing on neat lines and geometry, studio shot, high contrast."
-        ];
-        
-        const imageElements = [
-            { containerId: 'image-slide-1', captionId: 'caption-slide-1' },
-            { containerId: 'image-slide-2', captionId: 'caption-slide-2' },
-            { containerId: 'image-slide-3', captionId: 'caption-slide-3' },
-            { containerId: 'image-slide-4', captionId: 'caption-slide-4' }
-        ];
-        
-        // --- LLM API Configuration for Image Generation ---
-        const IMAGE_MODEL_NAME = "gemini-2.5-flash-image-preview";
-        const imageApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${IMAGE_MODEL_NAME}:generateContent?key=`; 
-        
         // --- LLM API Configuration for Text Generation (AI Consultant) ---
         const TEXT_MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
         const textApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${TEXT_MODEL_NAME}:generateContent?key=`;
@@ -755,97 +741,7 @@
             }, 5000);
         }
 
-        // 4. Image Generation Logic (Featured Work)
-
-        /**
-         * Fetches an image from the Gemini Image API based on a prompt.
-         * Implements exponential backoff for retries.
-         */
-        async function fetchImage(prompt, retries = 3) {
-            const payload = {
-                contents: [{
-                    parts: [{ text: prompt }]
-                }],
-                generationConfig: {
-                    responseModalities: ['IMAGE'],
-                    imageGenerationConfig: {
-                        aspectRatio: "3:1" 
-                    }
-                },
-            };
-            
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(imageApiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) {
-                        if (response.status === 429 && i < retries - 1) {
-                            const delay = Math.pow(2, i) * 1000;
-                            await new Promise(resolve => setTimeout(resolve, delay));
-                            continue;
-                        }
-                        throw new Error(`API error: ${response.statusText}`);
-                    }
-
-                    const result = await response.json();
-                    
-                    const base64Data = result?.candidates?.[0]?.content?.parts?.find(p => p.inlineData)?.inlineData?.data;
-
-                    if (base64Data) {
-                        return `data:image/png;base64,${base64Data}`;
-                    } else {
-                        throw new Error("Invalid response structure or content filtered.");
-                    }
-                } catch (error) {
-                    if (i === retries - 1) {
-                        console.error(`Failed to generate image after ${retries} attempts for prompt: ${prompt}`, error);
-                        return null;
-                    }
-                }
-            }
-        }
-
-        /**
-         * Generates and inserts images into the designated carousel elements.
-         */
-        async function initImageGeneration() {
-            const generationPromises = imagePrompts.map((prompt, index) => 
-                fetchImage(prompt).then(imageUrl => {
-                    const { containerId, captionId } = imageElements[index];
-                    const container = document.getElementById(containerId);
-                    const caption = document.getElementById(captionId);
-
-                    if (imageUrl && container) {
-                        const img = document.createElement('img');
-                        img.src = imageUrl;
-                        img.alt = prompt;
-                        img.className = "w-full object-cover h-64 sm:h-96";
-                        
-                        container.innerHTML = '';
-                        container.appendChild(img);
-                        
-                        if(caption) {
-                            caption.classList.remove('hidden');
-                        }
-                    } else {
-                        container.innerHTML = `<div class="p-4 text-center text-gray-500 flex flex-col items-center justify-center h-full">
-                            <span class="text-xl mb-2">🖼️</span>
-                            <span class="text-sm">Placeholder: Image failed to generate.</span>
-                        </div>`;
-                    }
-                })
-            );
-
-            await Promise.all(generationPromises);
-            
-            initCarousels();
-        }
-
-        // 5. Carousel Logic
+        // 4. Carousel Logic (Image and Review)
 
         /**
          * Generic Carousel Logic
@@ -956,7 +852,7 @@
             );
         }
         
-        // 6. AI Design Consultant Logic
+        // 5. AI Design Consultant Logic
         const aiDesignForm = document.getElementById('ai-design-form');
         const aiEventInput = document.getElementById('ai-event');
         const aiStyleTextarea = document.getElementById('ai-style');
@@ -1055,8 +951,8 @@
             resultsContentDiv.innerHTML = formattedText || `<p class="text-red-500">${resultText}</p>`;
         });
 
-        // Initialize on load
-        window.addEventListener('load', initImageGeneration);
+        // Initialize carousels directly on load since AI image generation is removed.
+        window.addEventListener('load', initCarousels);
 
     </script>
 
