@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Khushnud Mehndi Artist - Professional Bridal, Arabic, and Party Henna Artist in Mumbai. Book your personalized design today.">
     <title>Khushnud Mehndi Artist | Premium Henna Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4A7c59; /* Henna Green */
-            --secondary-color: #d4af37; /* Gold */
-            --bg-color: #fdfbf7; /* Off-white/Cream */
-            --text-color: #333;
-            --light-text: #666;
+            --primary-color: #2d5a27; /* Deep Henna Green */
+            --secondary-color: #b8932d; /* Elegant Gold */
+            --bg-color: #fefcf9; 
+            --text-color: #2c2c2c;
+            --light-text: #777;
             --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-            --radius: 8px;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+            --radius: 12px;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
         }
 
         /* --- Header & Nav --- */
         header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.03);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -42,228 +47,245 @@
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 1.2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             font-weight: bold;
             color: var(--primary-color);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 25px;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .cta-btn {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.3s;
+            font-size: 0.85rem;
+            transition: transform 0.3s, background 0.3s;
+            display: inline-block;
         }
 
         .cta-btn:hover {
-            background-color: #3a6345;
+            background-color: #1e3d1a;
+            transform: translateY(-2px);
         }
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(74, 124, 89, 0.1), rgba(74, 124, 89, 0.1)), url('https://placehold.co/1200x600/png?text=Elegant+Mehndi+Art') no-repeat center center/cover;
-            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1590001158193-79013ac50f71?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 2rem;
+            color: white;
         }
 
         .hero-content h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            color: var(--primary-color);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 300;
         }
 
         /* --- Sections General --- */
         section {
-            padding: 4rem 1rem;
+            padding: 6rem 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
             color: var(--primary-color);
         }
 
         /* --- Services Grid --- */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
             background: var(--white);
-            padding: 2rem;
+            padding: 3rem 2rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             text-align: center;
-            transition: transform 0.3s;
+            transition: 0.4s;
+            border-bottom: 4px solid transparent;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--secondary-color);
         }
 
         .card h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             color: var(--secondary-color);
+            font-size: 1.5rem;
         }
 
         /* --- AI Feature --- */
         .ai-section {
-            background-color: #eef5f0;
-            border-radius: var(--radius);
-            padding: 3rem;
+            background-color: #f1f5f2;
+            border-radius: 30px;
+            padding: 5rem 2rem;
             text-align: center;
         }
 
         .ai-interface {
             background: var(--white);
-            padding: 2rem;
-            max-width: 500px;
-            margin: 2rem auto;
+            padding: 3rem;
+            max-width: 550px;
+            margin: 2.5rem auto;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
 
         .ai-input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 15px;
+            margin: 12px 0;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: #fafafa;
         }
 
-        /* --- Gallery --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            height: 200px;
-            background-color: #ddd;
+        /* --- INSTAGRAM FEED (AUTOMATIC) --- */
+        .instagram-container {
+            width: 100%;
+            min-height: 400px;
+            background: #fff;
             border-radius: var(--radius);
             overflow: hidden;
-            position: relative;
+            box-shadow: var(--shadow);
+            padding: 1rem;
         }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+        .instagram-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .instagram-header img {
+            width: 30px;
         }
 
         /* --- Packages --- */
         .price-card {
-            border: 1px solid #eee;
-            padding: 2rem;
+            border: 1px solid #f0f0f0;
+            padding: 3rem 2rem;
             border-radius: var(--radius);
             background: var(--white);
             text-align: center;
+            transition: 0.3s;
+        }
+
+        .price-card:hover {
+            box-shadow: var(--shadow);
         }
 
         .price {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 2rem;
+            font-weight: 700;
             color: var(--primary-color);
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
 
         /* --- Testimonials --- */
         .testimonial {
             background: var(--white);
-            padding: 1.5rem;
+            padding: 2.5rem;
             margin: 1rem 0;
-            border-left: 4px solid var(--secondary-color);
-            border-radius: 0 var(--radius) var(--radius) 0;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            font-style: italic;
         }
 
-        /* --- Customer Support & Footer --- */
+        /* --- Customer Support --- */
         .support-section {
             background-color: var(--white);
-            border-top: 2px solid var(--primary-color);
-            padding: 3rem 1rem;
+            border-top: 1px solid #eee;
+            padding: 5rem 1rem;
             text-align: center;
         }
 
         .support-details {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             flex-wrap: wrap;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .support-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
+            gap: 0.8rem;
+            font-weight: 600;
+            font-size: 1rem;
         }
 
         footer {
-            background-color: #2c2c2c;
-            color: #ccc;
+            background-color: #1a1a1a;
+            color: #888;
             text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
+            padding: 2rem;
+            font-size: 0.85rem;
         }
 
         /* --- Mobile Responsive --- */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* In a real scenario, use a hamburger menu */
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .services-grid, .gallery-grid {
-                grid-template-columns: 1fr;
-            }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .support-details { flex-direction: column; gap: 1.5rem; }
+            section { padding: 4rem 1.2rem; }
         }
     </style>
 </head>
@@ -277,7 +299,7 @@
                 <a href="#services">Services</a>
                 <a href="#work">Work</a>
                 <a href="#packages">Packages</a>
-                <a href="https://wa.me/911234567890" class="cta-btn">Book on WhatsApp</a>
+                <a href="https://wa.me/910000000000" class="cta-btn">Book on WhatsApp</a>
             </div>
         </nav>
     </header>
@@ -285,137 +307,116 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Elegant Bridal & Party Mehndi</h1>
-            <p>Experience meticulous artistry with high-quality, skin-safe cones. Home service available across Mumbai (MMR).</p>
-            <a href="#packages" class="cta-btn">View Packages</a>
+            <p>Breathtaking designs with premium, organic henna. Serving clients across Mumbai, Navi Mumbai, and Thane.</p>
+            <a href="#packages" class="cta-btn">Explore Packages</a>
         </div>
     </section>
 
     <section id="about">
-        <h2 class="section-title">About The Artist</h2>
+        <h2 class="section-title">The Artistry</h2>
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p>Khushnud specializes in delivering exceptional henna art with attention to detail, symmetry, and rich stain quality. From traditional bridal looks to modern Indo-Arabic fusion, we ensure every client's vision is executed flawlessly.</p>
+            <p>Khushnud brings years of expertise in intricate bridal storytelling through henna. Every stroke is designed to reflect your personality, ensuring a deep, long-lasting stain and a flawless finish for your special day.</p>
         </div>
     </section>
 
     <section id="services">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title">Our Specialties</h2>
         <div class="services-grid">
             <div class="card">
-                <h3>Bridal Mehndi</h3>
-                <p>Full hands front & back, feet, and custom motifs. Detailed traditional and portrait options available.</p>
+                <h3>Bridal Masterpiece</h3>
+                <p>Intricate, full-length designs featuring traditional motifs, portraits, and personalized elements.</p>
             </div>
             <div class="card">
-                <h3>Arabic Mehndi</h3>
-                <p>Free-flowing floral patterns, elegant vines, and quick party designs. Light and modern.</p>
+                <h3>Contemporary Arabic</h3>
+                <p>Bold lines and negative space designs. Perfect for modern bridesmaids and party guests.</p>
             </div>
             <div class="card">
-                <h3>Indo-Arabic Fusion</h3>
-                <p>A perfect blend of intricate Indian motifs and bold Arabic shading for a unique look.</p>
+                <h3>Fusion Elegance</h3>
+                <p>A sophisticated mix of Indian density and Arabic fluidity for a unique, standout look.</p>
             </div>
         </div>
     </section>
 
     <section id="ai-design" class="ai-section">
-        <h2 class="section-title">✨ AI Mehndi Design Consultant ✨</h2>
-        <p>Describe your dream design and get personalized ideas instantly.</p>
-        
+        <h2 class="section-title">✨ AI Design Consultant ✨</h2>
+        <p>Get instant inspiration for your next henna design.</p>
         <div class="ai-interface">
-            <input type="text" class="ai-input" placeholder="Event Type (e.g., Wedding, Sangeet)">
-            <input type="text" class="ai-input" placeholder="Style (e.g., Minimalist, Peacock, Floral)">
-            <button class="cta-btn" style="width: 100%; margin-top: 10px;">Generate Concepts</button>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">*Feature connects to AI engine for instant inspiration</p>
+            <input type="text" class="ai-input" placeholder="Event Type (e.g. Wedding, Eid)">
+            <input type="text" class="ai-input" placeholder="Desired Style (e.g. Minimalist, Lotus)">
+            <button class="cta-btn" style="width: 100%; margin-top: 10px;">Visualize Design</button>
         </div>
     </section>
 
     <section id="work">
-        <h2 class="section-title">Featured Work</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://placehold.co/400x400/orange/white?text=Bridal" alt="Bridal Design"></div>
-            <div class="gallery-item"><img src="https://placehold.co/400x400/purple/white?text=Arabic" alt="Arabic Design"></div>
-            <div class="gallery-item"><img src="https://placehold.co/400x400/red/white?text=Fusion" alt="Fusion Design"></div>
-            <div class="gallery-item"><img src="https://placehold.co/400x400/green/white?text=Party" alt="Party Design"></div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://instagram.com" target="_blank" style="color: var(--primary-color); font-weight: bold;">View More on Instagram &rarr;</a>
-        </div>
+        <h2 class="section-title">Live Portfolio</h2>
+        <a href="https://instagram.com" target="_blank" class="instagram-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+            <strong>Follow @KhushnudMehndi</strong>
+        </a>
+        
+        <div class="instagram-container">
+            <div style="text-align:center; padding: 50px; color: #999;">
+                <p>Your Live Instagram Feed will appear here.</p>
+                <p style="font-size: 0.8rem;">(Connect your Instagram via LightWidget to enable auto-updates)</p>
+            </div>
+            
+            </div>
     </section>
 
     <section id="packages">
-        <h2 class="section-title">Packages & Pricing</h2>
+        <h2 class="section-title">Packages</h2>
         <div class="services-grid">
             <div class="price-card">
-                <h3>Bridal Classic</h3>
-                <p>Full Hands & Feet</p>
-                <div class="price">Custom Quote</div>
-                <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--light-text);">
-                    <li>Personalized Consultation</li>
-                    <li>Premium Skin-Safe Cones</li>
-                    <li>Home Service (MMR)</li>
+                <h3>Royal Bridal</h3>
+                <p>Front & Back to Elbows + Feet</p>
+                <div class="price">Premium</div>
+                <ul style="list-style: none; margin-bottom: 2rem; color: var(--light-text); font-size: 0.9rem;">
+                    <li>Free After-care Oil</li>
+                    <li>Symmetry Guaranteed</li>
+                    <li>Home Service Included</li>
                 </ul>
-                <a href="https://wa.me/911234567890?text=Hi,%20I%20am%20interested%20in%20Bridal%20Classic" class="cta-btn">Check Availability</a>
+                <a href="#" class="cta-btn">Book Now</a>
             </div>
             
             <div class="price-card">
-                <h3>Arabic Party</h3>
-                <p>Per Hand / Guest</p>
-                <div class="price">On Request</div>
-                <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--light-text);">
+                <h3>Sangeet Party</h3>
+                <p>Per Hand Design</p>
+                <div class="price">Value</div>
+                <ul style="list-style: none; margin-bottom: 2rem; color: var(--light-text); font-size: 0.9rem;">
                     <li>Fast Application</li>
-                    <li>Wrist to Forearm Designs</li>
-                    <li>Ideal for Sangeet</li>
+                    <li>Organic Dark Stain</li>
+                    <li>Groups of 5+ Discount</li>
                 </ul>
-                <a href="https://wa.me/911234567890?text=Hi,%20I%20am%20interested%20in%20Party%20Mehndi" class="cta-btn">Get Quote</a>
+                <a href="#" class="cta-btn">Enquire</a>
             </div>
         </div>
     </section>
 
     <section id="reviews">
-        <h2 class="section-title">Client Love</h2>
+        <h2 class="section-title">Client Experiences</h2>
         <div class="services-grid">
             <div class="testimonial">
-                <p>"Neat work and a rich, dark stain! Khushnud arrived on time and finished the bridal henna perfectly."</p>
-                <p style="margin-top: 10px; font-weight: bold;">- Aisha (Bridal)</p>
+                <p>"The most intricate bridal mehndi I've ever seen. The stain lasted for two weeks! Highly recommended."</p>
+                <p style="margin-top: 15px; font-weight: bold; color: var(--primary-color);">- Sarah Khan</p>
             </div>
             <div class="testimonial">
-                <p>"The fusion design was flawless! It was traditional yet modern. Excellent service."</p>
-                <p style="margin-top: 10px; font-weight: bold;">- Neha (Indo-Arabic)</p>
+                <p>"Very professional and punctual. She turned my vague ideas into a beautiful Arabic masterpiece."</p>
+                <p style="margin-top: 15px; font-weight: bold; color: var(--primary-color);">- Priya S.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="faq">
-        <h2 class="section-title">FAQ</h2>
-        <div style="max-width: 800px; margin: 0 auto;">
-            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
-                <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Are your cones skin-safe?</summary>
-                <p style="margin-top: 0.5rem;">Yes, absolutely. We only use high-quality, pure, skin-safe cones to ensure a beautiful, rich, and dark stain without any harmful chemicals.</p>
-            </details>
-            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
-                <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Do you travel for bookings?</summary>
-                <p style="margin-top: 0.5rem;">We offer home service across the Mumbai Metropolitan Region (MMR), including Mumbai, Navi Mumbai, and Thane.</p>
-            </details>
         </div>
     </section>
 
     <section class="support-section">
-        <h3>Customer Support & Booking Inquiries</h3>
-        <p style="margin-top: 0.5rem; color: var(--light-text);">Our team is available to assist you with quotes and scheduling.</p>
-        
+        <h2 class="section-title">Get In Touch</h2>
         <div class="support-details">
-            <div class="support-item">
-                <span>📍</span> Mumbai • Navi Mumbai • Thane
-            </div>
-            <div class="support-item">
-                <span>📧</span> info@khushnudmehndi.com
-            </div>
-            <div class="support-item">
-                <span>📱</span> +91 123 456 7890 (WhatsApp)
-            </div>
+            <div class="support-item"><span>📍</span> Mumbai • Navi Mumbai • Thane</div>
+            <div class="support-item"><span>📧</span> hello@khushnudmehndi.com</div>
+            <div class="support-item"><span>📱</span> +91 000 000 0000</div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Khushnud Mehndi Artist. All rights reserved.</p>
+        <p>&copy; 2026 Khushnud Mehndi Artist. Designed for Elegance.</p>
     </footer>
 
 </body>
