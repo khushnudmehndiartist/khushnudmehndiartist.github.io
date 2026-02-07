@@ -5,111 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Khushnud Mehndi Artist - Professional Bridal, Arabic, and Party Henna Artist in Mumbai. Book your personalized design today.">
     <title>Khushnud Mehndi Artist | Premium Henna Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2d5a27; /* Deep Henna Green */
-            --secondary-color: #b8932d; /* Elegant Gold */
-            --bg-color: #fefcf9; 
-            --text-color: #2c2c2c;
-            --light-text: #777;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.05);
-            --radius: 12px;
-            --hero-image: url('Banner1.jpg');
+            /* Palette Refinement */
+            --primary-color: #2e4a2b; /* Deep Botanical Green */
+            --primary-hover: #1f351d;
+            --accent-color: #c5a059; /* Antique Gold */
+            --bg-color: #fcfbf7;      /* Warm Cream */
+            --card-bg: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --shadow-soft: 0 10px 40px rgba(46, 74, 43, 0.08);
+            --radius: 16px;
+            --hero-overlay: linear-gradient(135deg, rgba(30, 50, 25, 0.85) 0%, rgba(46, 74, 43, 0.6) 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* --- Reset & Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
+            color: var(--text-dark);
             font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
         }
 
-        /* --- Header & Nav --- */
+        a { text-decoration: none; transition: 0.3s ease; }
+
+        /* --- Navigation --- */
         header {
-            background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
-@@ -76,58 +77,73 @@
+            z-index: 1000;
+            padding: 1rem 0;
         }
 
-        .nav-links a:hover {
-            color: var(--secondary-color);
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
         }
 
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+
+        /* --- Buttons --- */
         .cta-btn {
             background-color: var(--primary-color);
-            color: var(--white);
-            padding: 0.7rem 1.5rem;
+            color: #fff !important;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            transition: transform 0.3s, background 0.3s;
-            display: inline-block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(46, 74, 43, 0.2);
         }
 
         .cta-btn:hover {
-            background-color: #1e3d1a;
-            transform: translateY(-2px);
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(46, 74, 43, 0.3);
+        }
+
+        .ghost-btn {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .ghost-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
         }
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1590001158193-79013ac50f71?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
-            position: relative;
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), var(--hero-image) no-repeat center center/cover;
-            height: 75vh;
+            background: var(--hero-overlay), url('https://images.unsplash.com/photo-1590001158193-79013ac50f71?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 2rem;
             color: white;
-            transition: background-image 0.8s ease-in-out;
+            position: relative;
         }
 
-        .banner-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
+        .hero-content {
+            max-width: 800px;
+            animation: fadeUp 1s ease-out;
         }
 
-        .hero-content h1 {
+        .hero h1 {
+            color: #fff;
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
+        .hero p {
+            font-size: 1.25rem;
             margin-bottom: 2.5rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
+            opacity: 0.9;
             font-weight: 300;
         }
 
-        /* --- Sections General --- */
+        .banner-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- General Layout --- */
         section {
             padding: 6rem 1.5rem;
             max-width: 1200px;
@@ -117,181 +172,183 @@
         }
 
         .section-title {
-@@ -194,50 +210,160 @@
-        /* --- INSTAGRAM FEED (AUTOMATIC) --- */
-        .instagram-container {
-            width: 100%;
-            min-height: 400px;
-            background: #fff;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- Services Grid --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem;
             border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { margin-bottom: 1rem; font-size: 1.5rem; }
+        .card p { color: var(--text-light); }
+
+        /* --- AI Section --- */
+        .ai-section {
+            background: linear-gradient(135deg, #1e3d1a, #2d5a27);
+            border-radius: var(--radius);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 4rem auto;
+            max-width: 1000px;
+        }
+
+        .ai-section h2 { color: #fff; margin-bottom: 1rem; }
+        
+        .ai-interface {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ai-input {
+            width: 100%;
             padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: none;
+            font-family: inherit;
         }
 
-        .instagram-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 2rem;
-            text-decoration: none;
-            color: var(--text-color);
+        #ai-result {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: var(--text-dark);
+            border-radius: 8px;
+            display: none;
         }
 
-        .instagram-header img {
-            width: 30px;
-        }
-
+        /* --- Portfolio --- */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-top: 1.5rem;
         }
 
         .portfolio-card {
-            background: var(--white);
+            background: white;
             border-radius: var(--radius);
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid #f1f1f1;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: 0.3s;
         }
+        
+        .portfolio-card:hover { transform: scale(1.02); }
 
-        .portfolio-card a {
-            color: inherit;
-            text-decoration: none;
-        }
-
+        .portfolio-content { padding: 1.5rem; }
+        
         .portfolio-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.35rem 0.8rem;
-            border-radius: 999px;
-            background: #f3efe2;
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-size: 0.8rem;
-        }
-
-        .portfolio-meta {
-            color: var(--light-text);
-            font-size: 0.85rem;
-        }
-
-        .shuffle-note {
-            text-align: center;
-            color: var(--light-text);
-            font-size: 0.9rem;
+            font-size: 0.75rem;
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: #666;
+            margin-bottom: 10px;
+            display: inline-block;
         }
 
         /* --- Booking Form --- */
         .booking-section {
-            background: #fdfaf4;
-            border-radius: 30px;
-            padding: 5rem 2rem;
-            box-shadow: var(--shadow);
-        }
-
-        .booking-form {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 2.5rem;
+            background: #fff;
             border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            display: grid;
-            gap: 1.2rem;
+            box-shadow: var(--shadow-soft);
+            padding: 4rem 2rem;
         }
 
-        .form-row {
+        .form-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
         }
 
-        .booking-form label {
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
             font-weight: 600;
+            color: var(--primary-color);
             font-size: 0.9rem;
         }
 
-        .booking-form input,
-        .booking-form textarea,
-        .booking-form select {
-            width: 100%;
-            padding: 0.75rem 0.9rem;
-            border: 1px solid #e6e2d9;
-            border-radius: 10px;
-            font-family: inherit;
-            background: #fffdf9;
-        }
-
-        .booking-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .ghost-btn {
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .ghost-btn:hover {
-            background: rgba(45, 90, 39, 0.08);
-            transform: translateY(-2px);
-        }
-
-        /* --- Packages --- */
-        .price-card {
-            border: 1px solid #f0f0f0;
-            padding: 3rem 2rem;
-            border-radius: var(--radius);
-            background: var(--white);
+        /* --- Footer --- */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.7);
             text-align: center;
-            transition: 0.3s;
-        }
-
-        .price-card:hover {
-            box-shadow: var(--shadow);
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin: 1.5rem 0;
-        }
-
-        /* --- Testimonials --- */
-        .testimonial {
-            background: var(--white);
-            padding: 2.5rem;
-@@ -276,148 +402,298 @@
-            background-color: #1a1a1a;
-            color: #888;
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.85rem;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
         }
 
         /* --- Mobile Responsive --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .support-details { flex-direction: column; gap: 1.5rem; }
-            section { padding: 4rem 1.2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .form-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -300,292 +357,255 @@
     <header>
         <nav>
             <a href="#" class="logo">Khushnud Mehndi</a>
-            <div class="nav-links">
+            <div class="menu-toggle" id="mobile-menu-btn">☰</div>
+            <div class="nav-links" id="nav-links">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#work">Work</a>
-                <a href="#booking">Booking</a>
+                <a href="#work">Portfolio</a>
                 <a href="#packages">Packages</a>
-                <a href="https://wa.me/910000000000" class="cta-btn">Book on WhatsApp</a>
-                <a href="https://wa.me/919152584828" class="cta-btn">Book on WhatsApp</a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="cta-btn">Book on WhatsApp</a>
             </div>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <div class="banner-badge">Shuffled Banner Showcase</div>
-            <h1>Elegant Bridal & Party Mehndi</h1>
-            <p>Breathtaking designs with premium, organic henna. Serving clients across Mumbai, Navi Mumbai, and Thane.</p>
-            <a href="#packages" class="cta-btn">Explore Packages</a>
-            <a href="#booking" class="cta-btn">Book Your Date</a>
+            <div class="banner-badge">✨ Now Booking for 2026 Season</div>
+            <h1>The Art of Elegant<br>Mehndi Design</h1>
+            <p>Bespoke bridal and party henna services using 100% organic cones. Serving Mumbai, Navi Mumbai, and Thane.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#packages" class="cta-btn">View Packages</a>
+                <a href="#booking" class="ghost-btn" style="color: white; border-color: white;">Inquire Now</a>
+            </div>
         </div>
     </section>
 
     <section id="about">
         <h2 class="section-title">The Artistry</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p>Khushnud brings years of expertise in intricate bridal storytelling through henna. Every stroke is designed to reflect your personality, ensuring a deep, long-lasting stain and a flawless finish for your special day.</p>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-light);">
+            <p>Khushnud brings years of expertise in intricate bridal storytelling through henna. Every stroke is designed to reflect your personality, ensuring a deep, long-lasting stain and a flawless finish for your special day. We believe Mehndi is not just a ritual, but an accessory to your beauty.</p>
         </div>
     </section>
 
     <section id="services">
-        <h2 class="section-title">Our Specialties</h2>
+        <h2 class="section-title">Signature Styles</h2>
         <div class="services-grid">
             <div class="card">
                 <h3>Bridal Masterpiece</h3>
-                <p>Intricate, full-length designs featuring traditional motifs, portraits, and personalized elements.</p>
+                <p>Full-length intricate designs featuring traditional motifs, groom portraits, and personalized storytelling elements.</p>
             </div>
             <div class="card">
                 <h3>Contemporary Arabic</h3>
-                <p>Bold lines and negative space designs. Perfect for modern bridesmaids and party guests.</p>
+                <p>Modern, bold lines with negative space. Perfect for bridesmaids and guests looking for elegance without the weight.</p>
             </div>
             <div class="card">
-                <h3>Fusion Elegance</h3>
-                <p>A sophisticated mix of Indian density and Arabic fluidity for a unique, standout look.</p>
+                <h3>Indo-Western Fusion</h3>
+                <p>A sophisticated blend of Indian density and Arabic fluidity, creating a unique and standout look for any occasion.</p>
             </div>
         </div>
     </section>
 
     <section id="ai-design" class="ai-section">
-        <h2 class="section-title">✨ AI Design Consultant ✨</h2>
-        <p>Get instant inspiration for your next henna design.</p>
+        <h2 style="font-family: 'Playfair Display', serif;">✨ AI Design Consultant ✨</h2>
+        <p>Not sure what you want? Describe your vibe and let our tool suggest a style.</p>
         <div class="ai-interface">
-            <input type="text" class="ai-input" placeholder="Event Type (e.g. Wedding, Eid)">
-            <input type="text" class="ai-input" placeholder="Desired Style (e.g. Minimalist, Lotus)">
-            <button class="cta-btn" style="width: 100%; margin-top: 10px;">Visualize Design</button>
+            <input type="text" id="ai-style-input" class="ai-input" placeholder="E.g., Minimalist lotus for a bridesmaid...">
+            <button class="cta-btn" onclick="simulateAI()" style="width: 100%; border: none; cursor: pointer;">Generate Idea</button>
+            <div id="ai-result"></div>
         </div>
     </section>
 
     <section id="work">
         <h2 class="section-title">Live Portfolio</h2>
-        <a href="https://instagram.com" target="_blank" class="instagram-header">
-        <a href="https://www.instagram.com/khushnud_mehndi_artist110" target="_blank" class="instagram-header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
-            <strong>Follow @KhushnudMehndi</strong>
-        </a>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">Curated highlights from Instagram</p>
         
-        <p class="shuffle-note">Images and videos shuffle automatically on every page load.</p>
-
-        <div class="instagram-container">
-            <div style="text-align:center; padding: 50px; color: #999;">
-                <p>Your Live Instagram Feed will appear here.</p>
-                <p style="font-size: 0.8rem;">(Connect your Instagram via LightWidget to enable auto-updates)</p>
-            <h3>Image Highlights</h3>
-            <div id="image-portfolio" class="portfolio-grid"></div>
-            <h3 style="margin-top: 3rem;">Video Highlights</h3>
-            <div id="video-portfolio" class="portfolio-grid"></div>
+        <div class="services-grid" id="portfolio-feed">
+            </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://www.instagram.com/khushnud_mehndi_artist110" target="_blank" class="ghost-btn">View Full Instagram</a>
         </div>
-    </section>
-
-    <section id="booking" class="booking-section">
-        <h2 class="section-title">Inquiry & Booking</h2>
-        <p style="text-align:center; max-width: 720px; margin: 0 auto 2.5rem;">
-            Fill in the mandatory details below and submit. The form will open WhatsApp with your booking information ready to send.
-        </p>
-        <form class="booking-form" id="booking-form">
-            <div class="form-row">
-                <div>
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
-                </div>
-                <div>
-                    <label for="place">City / Location *</label>
-                    <input type="text" id="place" name="place" placeholder="Mumbai, Navi Mumbai, Thane" required>
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div>
-                    <label for="date">Event Date *</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div>
-                    <label for="time">Event Time *</label>
-                    <input type="time" id="time" name="time" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div>
-                    <label for="service">Service Type *</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select service</option>
-                        <option value="Bridal">Bridal</option>
-                        <option value="Arabic">Arabic</option>
-                        <option value="Party">Party</option>
-                        <option value="Custom">Custom</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="people">No. of Hands / Guests *</label>
-                    <input type="number" id="people" name="people" min="1" placeholder="e.g. 1" required>
-                </div>
-            </div>
-            <div>
-                <label for="details">Additional Details</label>
-                <textarea id="details" name="details" rows="4" placeholder="Design preferences, travel notes, or any questions."></textarea>
-            </div>
-            <div class="booking-actions">
-                <button type="submit" class="cta-btn">Send on WhatsApp</button>
-                <a class="ghost-btn" href="https://docs.google.com/forms" target="_blank" rel="noreferrer">Open Google Form</a>
-            </div>
-            <p class="portfolio-meta" style="text-align:center;">
-                WhatsApp Direct Booking: <strong>+91 91525 84828</strong>
-            </p>
-        </form>
     </section>
 
     <section id="packages">
         <h2 class="section-title">Packages</h2>
         <div class="services-grid">
-            <div class="price-card">
+            <div class="card" style="text-align: center; border-top-color: var(--primary-color);">
                 <h3>Royal Bridal</h3>
-                <p>Front & Back to Elbows + Feet</p>
-                <div class="price">Premium</div>
-                <ul style="list-style: none; margin-bottom: 2rem; color: var(--light-text); font-size: 0.9rem;">
-                    <li>Free After-care Oil</li>
-                    <li>Symmetry Guaranteed</li>
-                    <li>Home Service Included</li>
+                <p style="margin: 1rem 0;">Front & Back to Elbows + Feet</p>
+                <div style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin-bottom: 1rem;">Premium</div>
+                <ul style="list-style: none; color: var(--text-light); text-align: left; margin: 0 auto; display: inline-block; margin-bottom: 2rem;">
+                    <li>✓ Free After-care Oil</li>
+                    <li>✓ Symmetry Guaranteed</li>
+                    <li>✓ Home Service Included</li>
                 </ul>
-                <a href="#" class="cta-btn">Book Now</a>
-                <a href="https://wa.me/919152584828" class="cta-btn">Book Now</a>
+                <br>
+                <a href="https://wa.me/+919152584828?text=Inquiry%20for%20Royal%20Bridal%20Package" class="cta-btn">Book Now</a>
             </div>
             
-            <div class="price-card">
-                <h3>Sangeet Party</h3>
-                <p>Per Hand Design</p>
-                <div class="price">Value</div>
-                <ul style="list-style: none; margin-bottom: 2rem; color: var(--light-text); font-size: 0.9rem;">
-                    <li>Fast Application</li>
-                    <li>Organic Dark Stain</li>
-                    <li>Groups of 5+ Discount</li>
+            <div class="card" style="text-align: center;">
+                <h3>Party / Sangeet</h3>
+                <p style="margin: 1rem 0;">Per Hand / Guest Rates</p>
+                <div style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin-bottom: 1rem;">Value</div>
+                <ul style="list-style: none; color: var(--text-light); text-align: left; margin: 0 auto; display: inline-block; margin-bottom: 2rem;">
+                    <li>✓ Fast Application</li>
+                    <li>✓ Organic Dark Stain</li>
+                    <li>✓ Group Discounts Available</li>
                 </ul>
-                <a href="#" class="cta-btn">Enquire</a>
-                <a href="https://wa.me/919152584828" class="cta-btn">Enquire</a>
+                <br>
+                <a href="https://wa.me/+919152584828?text=Inquiry%20for%20Party%20Henna" class="cta-btn">Enquire</a>
             </div>
         </div>
     </section>
 
-    <section id="reviews">
-        <h2 class="section-title">Client Experiences</h2>
-        <div class="services-grid">
-            <div class="testimonial">
-                <p>"The most intricate bridal mehndi I've ever seen. The stain lasted for two weeks! Highly recommended."</p>
-                <p style="margin-top: 15px; font-weight: bold; color: var(--primary-color);">- Sarah Khan</p>
+    <section id="booking" class="booking-section">
+        <h2 class="section-title">Secure Your Date</h2>
+        <p style="text-align:center; max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-light);">
+            Fill in the details below. This form will automatically format a WhatsApp message for you to send to us.
+        </p>
+        
+        <form id="booking-form" style="max-width: 800px; margin: 0 auto;">
+            <div class="form-grid">
+                <div>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required placeholder="Bride / Client Name">
+                </div>
+                <div>
+                    <label for="place">Location *</label>
+                    <input type="text" id="place" required placeholder="City / Area">
+                </div>
             </div>
-            <div class="testimonial">
-                <p>"Very professional and punctual. She turned my vague ideas into a beautiful Arabic masterpiece."</p>
-                <p style="margin-top: 15px; font-weight: bold; color: var(--primary-color);">- Priya S.</p>
+            
+            <div class="form-grid">
+                <div>
+                    <label for="date">Event Date *</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="service">Service Type</label>
+                    <select id="service">
+                        <option value="Bridal">Bridal Mehndi</option>
+                        <option value="Sangeet/Party">Sangeet / Party</option>
+                        <option value="Engagement">Engagement</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <section class="support-section">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="support-details">
-            <div class="support-item"><span>📍</span> Mumbai • Navi Mumbai • Thane</div>
-            <div class="support-item"><span>📧</span> hello@khushnudmehndi.com</div>
-            <div class="support-item"><span>📱</span> +91 000 000 0000</div>
-            <div class="support-item"><span>📧</span> <a href="https://www.instagram.com/khushnud_mehndi_artist110" target="_blank" rel="noreferrer">instagram.com/khushnud_mehndi_artist110</a></div>
-            <div class="support-item"><span>📱</span> <a href="https://wa.me/919152584828">+91 91525 84828</a></div>
-        </div>
+            <div>
+                <label for="details">Additional Notes</label>
+                <textarea id="details" rows="4" placeholder="Number of guests, design preferences, or specific questions..."></textarea>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="cta-btn">Send Inquiry via WhatsApp</button>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: #999;">
+                Or call us directly at: <strong>+91 9152584828</strong>
+            </p>
+        </form>
     </section>
 
     <footer>
         <p>&copy; 2026 Khushnud Mehndi Artist. Designed for Elegance.</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 10px;">Instagram</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 10px;">Facebook</a>
+        </div>
     </footer>
 
     <script>
-        const bannerImages = [
-            "Banner1.jpg",
-            "Banner-2.jpg",
-            "Banner-3.jpg",
-            "Banner-4.jpg"
+        // --- Mobile Menu Logic ---
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // --- Portfolio Data & Shuffle ---
+        const posts = [
+            { title: "Bridal Intricacy", type: "Bridal", desc: "Full arms traditional design" },
+            { title: "Floral Arabesque", type: "Party", desc: "Modern floral fusion" },
+            { title: "Geometric Minimal", type: "Guest", desc: "Finger details and wristbands" },
+            { title: "Lotus Motifs", type: "Bridal", desc: "Detailed lotus artwork" },
+            { title: "Sangeet Group", type: "Party", desc: "Quick designs for bridesmaids" },
+            { title: "Feet Detailing", type: "Bridal", desc: "Matching feet patterns" }
         ];
 
-        const instagramPosts = [
-            { url: "https://www.instagram.com/p/C2sIP17Ch9e/", type: "image", label: "Bridal Storytelling" },
-            { url: "https://www.instagram.com/p/Cz7vpFvCheh/", type: "image", label: "Arabic Details" },
-            { url: "https://www.instagram.com/p/DGpXxtVth6N/", type: "video", label: "Video Showcase" },
-            { url: "https://www.instagram.com/p/DUQZWo7DKue/", type: "video", label: "Event Reel" },
-            { url: "https://www.instagram.com/p/DUQX3KhkgHd/", type: "image", label: "Floral Motifs" },
-            { url: "https://www.instagram.com/p/DUKGT0DArey/", type: "video", label: "Studio Reel" },
-            { url: "https://www.instagram.com/p/DUIlWdljNwc/", type: "image", label: "Minimal Fusion" },
-            { url: "https://www.instagram.com/p/DUD2YkdjDT3/", type: "video", label: "Festive Highlights" },
-            { url: "https://www.instagram.com/p/DT78wrejMfi/?img_index=1", type: "image", label: "Bridal Close-up" },
-            { url: "https://www.instagram.com/p/DT0IO69jFXD/", type: "video", label: "Process Reel" },
-            { url: "https://www.instagram.com/p/DTcbIk5jCOz/", type: "image", label: "Party Henna" },
-            { url: "https://www.instagram.com/p/DTdDVknDL0l/?img_index=2", type: "image", label: "Arabic Fusion" }
-        ];
-
-        const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
-
-        const setHeroBanner = () => {
-            const hero = document.querySelector(".hero");
-            const shuffled = shuffleArray([...bannerImages]);
-            let index = 0;
-            hero.style.setProperty("--hero-image", `url('${shuffled[index]}')`);
-            setInterval(() => {
-                index = (index + 1) % shuffled.length;
-                hero.style.setProperty("--hero-image", `url('${shuffled[index]}')`);
-            }, 5000);
-        };
-
-        const renderPortfolio = () => {
-            const imageContainer = document.getElementById("image-portfolio");
-            const videoContainer = document.getElementById("video-portfolio");
-            const shuffled = shuffleArray([...instagramPosts]);
-
-            shuffled.forEach((post, index) => {
-                const card = document.createElement("div");
-                card.className = "portfolio-card";
-                card.innerHTML = `
-                    <span class="portfolio-chip">${post.type === "video" ? "🎥 Video" : "🖼️ Image"}</span>
-                    <a href="${post.url}" target="_blank" rel="noreferrer">
-                        <h4>${post.label}</h4>
-                        <p class="portfolio-meta">Instagram post ${index + 1} • Tap to view</p>
-                    </a>
-                    <a class="ghost-btn" href="${post.url}" target="_blank" rel="noreferrer">View on Instagram</a>
+        function renderPortfolio() {
+            const container = document.getElementById('portfolio-feed');
+            // Shuffle array
+            const shuffled = posts.sort(() => 0.5 - Math.random()).slice(0, 3);
+            
+            container.innerHTML = '';
+            shuffled.forEach(post => {
+                const div = document.createElement('div');
+                div.className = 'portfolio-card';
+                div.innerHTML = `
+                    <div style="height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                        [Image: ${post.title}]
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-chip">${post.type}</span>
+                        <h4 style="font-size: 1.1rem;">${post.title}</h4>
+                        <p style="font-size: 0.9rem; color: #666;">${post.desc}</p>
+                    </div>
                 `;
-                if (post.type === "video") {
-                    videoContainer.appendChild(card);
-                } else {
-                    imageContainer.appendChild(card);
-                }
+                container.appendChild(div);
             });
-        };
+        }
 
-        const bindBookingForm = () => {
-            const form = document.getElementById("booking-form");
-            form.addEventListener("submit", (event) => {
-                event.preventDefault();
-                const name = document.getElementById("name").value.trim();
-                const place = document.getElementById("place").value.trim();
-                const date = document.getElementById("date").value;
-                const time = document.getElementById("time").value;
-                const service = document.getElementById("service").value;
-                const people = document.getElementById("people").value;
-                const details = document.getElementById("details").value.trim();
+        // --- Simulated AI Feature ---
+        function simulateAI() {
+            const input = document.getElementById('ai-style-input').value;
+            const resultBox = document.getElementById('ai-result');
+            
+            if (!input) {
+                alert("Please enter a style preference first!");
+                return;
+            }
 
-                const message = `
-Hello Khushnud,
-My name is ${name}.
-Location: ${place}
-Event Date: ${date}
-Event Time: ${time}
-Service: ${service}
-Guests/Hands: ${people}
-Additional Details: ${details || "N/A"}
-                `.trim();
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = "✨ Analyzing trends... formulating design...";
+            
+            setTimeout(() => {
+                const suggestions = [
+                    "We recommend a <strong>Mandala Centerpiece</strong> with delicate cuff detailing.",
+                    "A <strong>Reverse Negative Space</strong> design would suit this perfectly!",
+                    "Try a <strong>Mughal Jaali Pattern</strong> for that regal look."
+                ];
+                const randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+                
+                resultBox.innerHTML = `
+                    <h4 style="margin-bottom: 0.5rem; color: var(--primary-color);">Our Suggestion</h4>
+                    <p>Based on "${input}":</p>
+                    <p style="font-size: 1.1rem; margin-top: 0.5rem;">${randomSuggestion}</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">(Show this to Khushnud during your booking!)</p>
+                `;
+            }, 1500);
+        }
 
-                const whatsappUrl = `https://wa.me/919152584828?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, "_blank");
-            });
-        };
+        // --- WhatsApp Form Handler ---
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // SANITIZATION: REPLACE THIS NUMBER WITH YOUR REAL NUMBER
+            const phoneNumber = "+919152584828"; 
+            
+            const name = document.getElementById('name').value;
+            const place = document.getElementById('place').value;
+            const date = document.getElementById('date').value;
+            const service = document.getElementById('service').value;
+            const details = document.getElementById('details').value;
 
-        setHeroBanner();
+            const text = `*New Booking Inquiry*%0A%0AName: ${name}%0ALocation: ${place}%0ADate: ${date}%0AService: ${service}%0ANotes: ${details}`;
+            
+            window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+        });
+
+        // Initialize
         renderPortfolio();
-        bindBookingForm();
     </script>
 </body>
 </html>
