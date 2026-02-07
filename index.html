@@ -16,6 +16,7 @@
             --white: #ffffff;
             --shadow: 0 10px 30px rgba(0,0,0,0.05);
             --radius: 12px;
+            --hero-image: url('Banner1.jpg');
         }
 
         * {
@@ -41,38 +42,7 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.03);
             position: sticky;
             top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.7rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.3s;
+@@ -76,58 +77,73 @@
         }
 
         .nav-links a:hover {
@@ -99,6 +69,8 @@
         /* --- Hero Section --- */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1590001158193-79013ac50f71?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), var(--hero-image) no-repeat center center/cover;
             height: 75vh;
             display: flex;
             align-items: center;
@@ -106,6 +78,20 @@
             text-align: center;
             padding: 2rem;
             color: white;
+            transition: background-image 0.8s ease-in-out;
+        }
+
+        .banner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
         }
 
         .hero-content h1 {
@@ -131,66 +117,7 @@
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-        }
-
-        /* --- Services Grid --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 3rem 2rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: 0.4s;
-            border-bottom: 4px solid transparent;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid var(--secondary-color);
-        }
-
-        .card h3 {
-            margin-bottom: 1.2rem;
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        /* --- AI Feature --- */
-        .ai-section {
-            background-color: #f1f5f2;
-            border-radius: 30px;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .ai-interface {
-            background: var(--white);
-            padding: 3rem;
-            max-width: 550px;
-            margin: 2.5rem auto;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .ai-input {
-            width: 100%;
-            padding: 15px;
-            margin: 12px 0;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background: #fafafa;
-        }
-
+@@ -194,50 +210,160 @@
         /* --- INSTAGRAM FEED (AUTOMATIC) --- */
         .instagram-container {
             width: 100%;
@@ -214,6 +141,116 @@
 
         .instagram-header img {
             width: 30px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .portfolio-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .portfolio-card a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .portfolio-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: #f3efe2;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .portfolio-meta {
+            color: var(--light-text);
+            font-size: 0.85rem;
+        }
+
+        .shuffle-note {
+            text-align: center;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        /* --- Booking Form --- */
+        .booking-section {
+            background: #fdfaf4;
+            border-radius: 30px;
+            padding: 5rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .booking-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .booking-form label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .booking-form input,
+        .booking-form textarea,
+        .booking-form select {
+            width: 100%;
+            padding: 0.75rem 0.9rem;
+            border: 1px solid #e6e2d9;
+            border-radius: 10px;
+            font-family: inherit;
+            background: #fffdf9;
+        }
+
+        .booking-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .ghost-btn {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .ghost-btn:hover {
+            background: rgba(45, 90, 39, 0.08);
+            transform: translateY(-2px);
         }
 
         /* --- Packages --- */
@@ -241,38 +278,7 @@
         .testimonial {
             background: var(--white);
             padding: 2.5rem;
-            margin: 1rem 0;
-            border-left: 5px solid var(--secondary-color);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            font-style: italic;
-        }
-
-        /* --- Customer Support --- */
-        .support-section {
-            background-color: var(--white);
-            border-top: 1px solid #eee;
-            padding: 5rem 1rem;
-            text-align: center;
-        }
-
-        .support-details {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .support-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        footer {
+@@ -276,148 +402,298 @@
             background-color: #1a1a1a;
             color: #888;
             text-align: center;
@@ -298,17 +304,21 @@
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#work">Work</a>
+                <a href="#booking">Booking</a>
                 <a href="#packages">Packages</a>
                 <a href="https://wa.me/910000000000" class="cta-btn">Book on WhatsApp</a>
+                <a href="https://wa.me/919152584828" class="cta-btn">Book on WhatsApp</a>
             </div>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
+            <div class="banner-badge">Shuffled Banner Showcase</div>
             <h1>Elegant Bridal & Party Mehndi</h1>
             <p>Breathtaking designs with premium, organic henna. Serving clients across Mumbai, Navi Mumbai, and Thane.</p>
             <a href="#packages" class="cta-btn">Explore Packages</a>
+            <a href="#booking" class="cta-btn">Book Your Date</a>
         </div>
     </section>
 
@@ -350,17 +360,79 @@
     <section id="work">
         <h2 class="section-title">Live Portfolio</h2>
         <a href="https://instagram.com" target="_blank" class="instagram-header">
+        <a href="https://www.instagram.com/khushnud_mehndi_artist110" target="_blank" class="instagram-header">
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
             <strong>Follow @KhushnudMehndi</strong>
         </a>
         
+        <p class="shuffle-note">Images and videos shuffle automatically on every page load.</p>
+
         <div class="instagram-container">
             <div style="text-align:center; padding: 50px; color: #999;">
                 <p>Your Live Instagram Feed will appear here.</p>
                 <p style="font-size: 0.8rem;">(Connect your Instagram via LightWidget to enable auto-updates)</p>
+            <h3>Image Highlights</h3>
+            <div id="image-portfolio" class="portfolio-grid"></div>
+            <h3 style="margin-top: 3rem;">Video Highlights</h3>
+            <div id="video-portfolio" class="portfolio-grid"></div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <h2 class="section-title">Inquiry & Booking</h2>
+        <p style="text-align:center; max-width: 720px; margin: 0 auto 2.5rem;">
+            Fill in the mandatory details below and submit. The form will open WhatsApp with your booking information ready to send.
+        </p>
+        <form class="booking-form" id="booking-form">
+            <div class="form-row">
+                <div>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div>
+                    <label for="place">City / Location *</label>
+                    <input type="text" id="place" name="place" placeholder="Mumbai, Navi Mumbai, Thane" required>
+                </div>
             </div>
             
+            <div class="form-row">
+                <div>
+                    <label for="date">Event Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="time">Event Time *</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
             </div>
+            <div class="form-row">
+                <div>
+                    <label for="service">Service Type *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select service</option>
+                        <option value="Bridal">Bridal</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Party">Party</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="people">No. of Hands / Guests *</label>
+                    <input type="number" id="people" name="people" min="1" placeholder="e.g. 1" required>
+                </div>
+            </div>
+            <div>
+                <label for="details">Additional Details</label>
+                <textarea id="details" name="details" rows="4" placeholder="Design preferences, travel notes, or any questions."></textarea>
+            </div>
+            <div class="booking-actions">
+                <button type="submit" class="cta-btn">Send on WhatsApp</button>
+                <a class="ghost-btn" href="https://docs.google.com/forms" target="_blank" rel="noreferrer">Open Google Form</a>
+            </div>
+            <p class="portfolio-meta" style="text-align:center;">
+                WhatsApp Direct Booking: <strong>+91 91525 84828</strong>
+            </p>
+        </form>
     </section>
 
     <section id="packages">
@@ -376,6 +448,7 @@
                     <li>Home Service Included</li>
                 </ul>
                 <a href="#" class="cta-btn">Book Now</a>
+                <a href="https://wa.me/919152584828" class="cta-btn">Book Now</a>
             </div>
             
             <div class="price-card">
@@ -388,6 +461,7 @@
                     <li>Groups of 5+ Discount</li>
                 </ul>
                 <a href="#" class="cta-btn">Enquire</a>
+                <a href="https://wa.me/919152584828" class="cta-btn">Enquire</a>
             </div>
         </div>
     </section>
@@ -412,6 +486,8 @@
             <div class="support-item"><span>📍</span> Mumbai • Navi Mumbai • Thane</div>
             <div class="support-item"><span>📧</span> hello@khushnudmehndi.com</div>
             <div class="support-item"><span>📱</span> +91 000 000 0000</div>
+            <div class="support-item"><span>📧</span> <a href="https://www.instagram.com/khushnud_mehndi_artist110" target="_blank" rel="noreferrer">instagram.com/khushnud_mehndi_artist110</a></div>
+            <div class="support-item"><span>📱</span> <a href="https://wa.me/919152584828">+91 91525 84828</a></div>
         </div>
     </section>
 
@@ -419,5 +495,97 @@
         <p>&copy; 2026 Khushnud Mehndi Artist. Designed for Elegance.</p>
     </footer>
 
+    <script>
+        const bannerImages = [
+            "Banner1.jpg",
+            "Banner-2.jpg",
+            "Banner-3.jpg",
+            "Banner-4.jpg"
+        ];
+
+        const instagramPosts = [
+            { url: "https://www.instagram.com/p/C2sIP17Ch9e/", type: "image", label: "Bridal Storytelling" },
+            { url: "https://www.instagram.com/p/Cz7vpFvCheh/", type: "image", label: "Arabic Details" },
+            { url: "https://www.instagram.com/p/DGpXxtVth6N/", type: "video", label: "Video Showcase" },
+            { url: "https://www.instagram.com/p/DUQZWo7DKue/", type: "video", label: "Event Reel" },
+            { url: "https://www.instagram.com/p/DUQX3KhkgHd/", type: "image", label: "Floral Motifs" },
+            { url: "https://www.instagram.com/p/DUKGT0DArey/", type: "video", label: "Studio Reel" },
+            { url: "https://www.instagram.com/p/DUIlWdljNwc/", type: "image", label: "Minimal Fusion" },
+            { url: "https://www.instagram.com/p/DUD2YkdjDT3/", type: "video", label: "Festive Highlights" },
+            { url: "https://www.instagram.com/p/DT78wrejMfi/?img_index=1", type: "image", label: "Bridal Close-up" },
+            { url: "https://www.instagram.com/p/DT0IO69jFXD/", type: "video", label: "Process Reel" },
+            { url: "https://www.instagram.com/p/DTcbIk5jCOz/", type: "image", label: "Party Henna" },
+            { url: "https://www.instagram.com/p/DTdDVknDL0l/?img_index=2", type: "image", label: "Arabic Fusion" }
+        ];
+
+        const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
+
+        const setHeroBanner = () => {
+            const hero = document.querySelector(".hero");
+            const shuffled = shuffleArray([...bannerImages]);
+            let index = 0;
+            hero.style.setProperty("--hero-image", `url('${shuffled[index]}')`);
+            setInterval(() => {
+                index = (index + 1) % shuffled.length;
+                hero.style.setProperty("--hero-image", `url('${shuffled[index]}')`);
+            }, 5000);
+        };
+
+        const renderPortfolio = () => {
+            const imageContainer = document.getElementById("image-portfolio");
+            const videoContainer = document.getElementById("video-portfolio");
+            const shuffled = shuffleArray([...instagramPosts]);
+
+            shuffled.forEach((post, index) => {
+                const card = document.createElement("div");
+                card.className = "portfolio-card";
+                card.innerHTML = `
+                    <span class="portfolio-chip">${post.type === "video" ? "🎥 Video" : "🖼️ Image"}</span>
+                    <a href="${post.url}" target="_blank" rel="noreferrer">
+                        <h4>${post.label}</h4>
+                        <p class="portfolio-meta">Instagram post ${index + 1} • Tap to view</p>
+                    </a>
+                    <a class="ghost-btn" href="${post.url}" target="_blank" rel="noreferrer">View on Instagram</a>
+                `;
+                if (post.type === "video") {
+                    videoContainer.appendChild(card);
+                } else {
+                    imageContainer.appendChild(card);
+                }
+            });
+        };
+
+        const bindBookingForm = () => {
+            const form = document.getElementById("booking-form");
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const place = document.getElementById("place").value.trim();
+                const date = document.getElementById("date").value;
+                const time = document.getElementById("time").value;
+                const service = document.getElementById("service").value;
+                const people = document.getElementById("people").value;
+                const details = document.getElementById("details").value.trim();
+
+                const message = `
+Hello Khushnud,
+My name is ${name}.
+Location: ${place}
+Event Date: ${date}
+Event Time: ${time}
+Service: ${service}
+Guests/Hands: ${people}
+Additional Details: ${details || "N/A"}
+                `.trim();
+
+                const whatsappUrl = `https://wa.me/919152584828?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, "_blank");
+            });
+        };
+
+        setHeroBanner();
+        renderPortfolio();
+        bindBookingForm();
+    </script>
 </body>
 </html>
