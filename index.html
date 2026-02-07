@@ -3,966 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khushnud Mehndi Artist Mumbai | Bridal, Arabic & Party Henna</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
+    <meta name="description" content="Khushnud Mehndi Artist - Professional Bridal, Arabic, and Party Henna Artist in Mumbai. Book your personalized design today.">
+    <title>Khushnud Mehndi Artist | Premium Henna Services</title>
     <style>
-        /* सौंदर्य (aesthetic) अपील के लिए कस्टम स्टाइल */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fff;
-        }
-        .text-primary-brand {
-            color: #8B5CF6; /* एक हल्का, आकर्षक बैंगनी (violet) */
-        }
-        .bg-primary-brand {
-            background-color: #8B5CF6;
-        }
-        .card-hover-effect {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover-effect:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        /* स्मूथ स्क्रॉलिंग (smooth scrolling) के लिए कस्टम स्क्रॉल-स्पाई */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* सुनिश्चित करें कि कैरोसेल ट्रैक ट्रांज़िशन स्मूथ हों */
-        #image-carousel-track, #review-carousel-track {
-            transition: transform 0.5s ease-in-out;
-        }
-        /* लोडिंग स्पिनर CSS (अब केवल AI Consultant के लिए उपयोग होगा) */
-        .spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-left-color: #8B5CF6;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        .loading-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.8);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            border-radius: 0.5rem;
-        }
-        /* लोगो के लिए Pacifico फ़ॉन्ट */
-        .logo-font {
-            font-family: 'Pacifico', cursive;
+        :root {
+            --primary-color: #4A7c59; /* Henna Green */
+            --secondary-color: #d4af37; /* Gold */
+            --bg-color: #fdfbf7; /* Off-white/Cream */
+            --text-color: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 8px;
         }
 
-        /* Instagram Embed Styling Overrides for Full Responsiveness */
-        .instagram-embed {
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
+        * {
+            margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #3a6345;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(74, 124, 89, 0.1), rgba(74, 124, 89, 0.1)), url('https://placehold.co/1200x600/png?text=Elegant+Mehndi+Art') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        /* --- Services Grid --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        /* --- AI Feature --- */
+        .ai-section {
+            background-color: #eef5f0;
+            border-radius: var(--radius);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .ai-interface {
+            background: var(--white);
+            padding: 2rem;
+            max-width: 500px;
+            margin: 2rem auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .ai-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* --- Gallery --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            height: 200px;
+            background-color: #ddd;
+            border-radius: var(--radius);
             overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-item img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Packages --- */
+        .price-card {
+            border: 1px solid #eee;
+            padding: 2rem;
+            border-radius: var(--radius);
+            background: var(--white);
+            text-align: center;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        /* --- Testimonials --- */
+        .testimonial {
+            background: var(--white);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        /* --- Customer Support & Footer --- */
+        .support-section {
+            background-color: var(--white);
+            border-top: 2px solid var(--primary-color);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .support-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .support-item {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 500;
         }
-        .instagram-embed > div {
-             width: 100%;
+
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
         }
-        /* Instagram's internal media container fix */
-        .instagram-media {
-            min-width: unset !important; /* Overrides Instagram's fixed min-width */
-            max-width: 100% !important;
-            margin: 0 !important;
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* In a real scenario, use a hamburger menu */
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
-        
-        /* FIX: Ensure the gallery grid is correctly responsive using only Tailwind classes below.
-           Removing custom media queries from here as they conflict with Tailwind's classes 
-           defined in the HTML grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4. */
-        
     </style>
 </head>
-<body class="text-gray-800">
+<body>
 
-    <nav class="sticky top-0 z-50 bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-20 flex justify-between items-center">
-            
-            <a href="#" class="text-3xl sm:text-4xl font-extrabold text-primary-brand tracking-tight logo-font">
-                Khushnud Mehndi Artist
-            </a>
-
-            <div class="hidden md:flex space-x-8 items-center ml-auto">
-                <a href="#about" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">About</a>
-                <a href="#services" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">Services</a>
-                <a href="#featured-work" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">Work</a>
-                <a href="#ai-design-generator" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">AI Design</a>
-                <a href="#packages" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">Packages</a>
-                <a href="#reviews" class="text-gray-600 hover:text-primary-brand transition duration-150 ease-in-out font-medium">Reviews</a>
-                <a href="#booking" class="px-3 py-1 text-sm bg-primary-brand text-white rounded-full hover:bg-violet-700 transition duration-150 ease-in-out">Book Now</a>
+    <header>
+        <nav>
+            <a href="#" class="logo">Khushnud Mehndi</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#work">Work</a>
+                <a href="#packages">Packages</a>
+                <a href="https://wa.me/911234567890" class="cta-btn">Book on WhatsApp</a>
             </div>
-
-            <button id="mobile-menu-btn" class="md:hidden text-gray-500 hover:text-primary-brand focus:outline-none ml-4">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Services</a>
-                <a href="#featured-work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Work</a>
-                <a href="#ai-design-generator" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">AI Design</a>
-                <a href="#packages" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Packages</a>
-                <a href="#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Reviews</a>
-                <a href="#booking" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-brand text-white hover:bg-violet-700">Book Now</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="bg-violet-50 pt-16 pb-12 sm:pt-24 sm:pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-900 mb-4">
-                Elegant Bridal & Party Mehndi in <span class="text-primary-brand">Mumbai</span>
-            </h1>
-            <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 mb-8">
-                Experience meticulous artistry: Elegant Bridal, Arabic, Indo-Arabic, and Portrait mehndi. Skin-safe cones, home service across MMR.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary-brand hover:bg-violet-700 transition duration-300 ease-in-out transform hover:scale-105">
-                    Book on WhatsApp
-                </button>
-                <a href="https://www.instagram.com/khushnud_mehndi_artist110/" target="_blank" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-full text-gray-900 bg-white hover:bg-gray-50 transition duration-300 ease-in-out">
-                    See Instagram Work
-                </a>
-            </div>
-        </div>
+        </nav>
     </header>
-    
-    <section id="about" class="bg-white py-12 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-2">About Khushnud Mehndi Artist</h2>
-            <p class="text-xl font-bold text-primary-brand tracking-wide mb-4">
-                Top Mehndi Artist In Mumbai
-            </p>
-            <p class="max-w-4xl mx-auto text-lg text-gray-600">
-                Khushnud specializes in delivering exceptional henna art with attention to detail, symmetry, and rich stain quality. With years of experience, we provide a personalized service, ensuring every client's vision—from traditional bridal looks to modern party designs—is executed flawlessly. We use only natural, skin-safe henna cones for the best results across the Mumbai Metropolitan Region (MMR).
-            </p>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elegant Bridal & Party Mehndi</h1>
+            <p>Experience meticulous artistry with high-quality, skin-safe cones. Home service available across Mumbai (MMR).</p>
+            <a href="#packages" class="cta-btn">View Packages</a>
         </div>
     </section>
 
-    <main class="py-16">
-        
-        <section id="featured-work" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">Featured Work Showcase</h2>
-            <p class="text-center text-lg text-gray-500 mb-12">
-                Latest designs showing the richness of stain and intricacy of art. Swipe or use the arrows to see more.
-            </p>
-            
-            <div id="image-carousel" class="relative overflow-hidden rounded-xl shadow-2xl">
-                <div id="image-carousel-track" class="flex transition-transform duration-500 ease-in-out">
-                    <div class="flex-shrink-0 w-full relative">
-                        <img src="Banner1.jpg" alt="Meticulous Bridal Full Hand Mehndi Design for wedding" class="w-full object-cover h-64 sm:h-96">
-                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Meticulous Bridal Full Hand Design</div>
-                    </div>
-                    <div class="flex-shrink-0 w-full relative">
-                        <img src="Banner-2.jpg" alt="Elegant Arabic Flow and Shading Mehndi Design" class="w-full object-cover h-64 sm:h-96">
-                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Elegant Arabic Flow and Shading</div>
-                    </div>
-                    <div class="flex-shrink-0 w-full relative">
-                        <img src="Banner-3.jpg" alt="Customized Couple Portrait Mehndi for a Bride" class="w-full object-cover h-64 sm:h-96">
-                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Customized Couple Portrait Mehndi</div>
-                    </div>
-                    <div class="flex-shrink-0 w-full relative">
-                        <img src="Banner-4.jpg" alt="Quick and simple designs for Sangeet Guests" class="w-full object-cover h-64 sm:h-96">
-                        <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 w-full text-white text-lg font-semibold rounded-b-xl">Quick Designs for Sangeet Guests</div>
-                    </div>
-                </div>
-
-                <button id="img-prev" aria-label="Previous image" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-75 transition z-10">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-                <button id="img-next" aria-label="Next image" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-75 transition z-10">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-
-                <div id="image-carousel-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-                    </div>
-            </div>
-        </section>
-
-        <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">Mehndi Services in Mumbai</h2>
-            <p class="text-center text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
-                Tailored designs for every occasion, ensuring a rich stain and perfect finish.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover-effect border-t-4 border-primary-brand">
-                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Bridal Mehndi</h3>
-                    <p class="text-gray-600 mb-4">
-                        Full hands front & back, feet, custom motifs. Detailed, traditional, and portrait options available.
-                    </p>
-                    <span class="text-sm font-semibold text-primary-brand">The grand affair.</span>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover-effect border-t-4 border-primary-brand">
-                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Arabic Mehndi</h3>
-                    <p class="text-gray-600 mb-4">
-                        Free-flowing floral patterns, elegant vines, and quick party designs. Light and modern.
-                    </p>
-                    <span class="text-sm font-semibold text-primary-brand">Quick & stylish.</span>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover-effect border-t-4 border-primary-brand">
-                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Indo-Arabic Fusion</h3>
-                    <p class="text-gray-600 mb-4">
-                        A perfect blend of intricate Indian motifs and bold Arabic shading for a unique look.
-                    </p>
-                    <span class="text-sm font-semibold text-primary-brand">Fusion elegance.</span>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover-effect border-t-4 border-primary-brand">
-                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Group / Events</h3>
-                    <p class="text-gray-600 mb-4">
-                        Services for Sangeet, corporate functions, festivals, and large gathering bookings.
-                    </p>
-                    <span class="text-sm font-semibold text-primary-brand">For celebrations.</span>
-                </div>
-            </div>
-        </section>
-        
-        <section id="ai-design-generator" class="bg-violet-50 py-16">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">✨ AI Mehndi Design Consultant ✨</h2>
-                <p class="text-center text-lg text-gray-500 mb-8">
-                    Describe your dream design (event, style, motifs) and get 3 personalized ideas instantly!
-                </p>
-
-                <div class="bg-white p-8 rounded-xl shadow-2xl relative">
-                    
-                    <div id="ai-loading-overlay" class="loading-overlay hidden">
-                        <div class="spinner mb-4"></div>
-                        <p class="text-lg font-semibold text-primary-brand">Generating Design Concepts...</p>
-                    </div>
-
-                    <form id="ai-design-form" class="space-y-4">
-                        <div>
-                            <label for="ai-event" class="block text-sm font-medium text-gray-700 mb-1">Event Type (e.g., Wedding, Party, Festival)</label>
-                            <input type="text" id="ai-event" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand" placeholder="e.g., Sangeet Ceremony">
-                        </div>
-                        <div>
-                            <label for="ai-style" class="block text-sm font-medium text-gray-700 mb-1">Style/Motifs (e.g., Traditional, Minimalist, Peacock, Floral)</label>
-                            <textarea id="ai-style" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand" placeholder="e.g., Intricate Rajasthani patterns with elephant and bride motifs."></textarea>
-                        </div>
-
-                        <button type="submit" id="generate-btn" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-brand hover:bg-violet-700 transition duration-300 shadow-lg" disabled>
-                            Get Design Ideas
-                        </button>
-                    </form>
-
-                    <div id="ai-results" class="mt-8 pt-4 border-t border-gray-100 hidden">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Your Personalized Design Concepts:</h3>
-                        <div id="results-content" class="text-gray-600 space-y-4">
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="bg-white py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">Image & Video Gallery (Live Instagram Previews)</h2>
-                <p class="text-center text-lg text-gray-500 mb-8 max-w-3xl mx-auto">
-                    Scroll down to see our featured work, pulled directly from Instagram.
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cz7vpFvCheh/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DGpXxtVth6N/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DROahgpDOw2/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DRJOngUjJHe/?img_index=1" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DRIpEzhDMhs/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQ5wJ1qjP3o/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQqTG4KDCxk/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <div class="instagram-embed aspect-square card-hover-effect">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQlexVCjLm4/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <div style="padding:16px;">
-                            </div>
-                        </blockquote>
-                    </div>
-
-                    <script>
-                        const remainingInstagramPosts = [
-                            { url: "https://www.instagram.com/p/DPx-_tPDLKW/", color: '#FDBA74', altText: "Fast loading placeholder for an orange-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DPsWPfsEp78/", color: '#A78BFA', altText: "Fast loading placeholder for a purple-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DPV6GIHjKJq/?img_index=1", color: '#C4B5FD', altText: "Fast loading placeholder for a light purple-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DPApu6qjMPs/", color: '#FCA5A5', altText: "Fast loading placeholder for a red-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DO-NfHdjOsz/", color: '#8B5CF6', altText: "Fast loading placeholder for a violet-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DO7t1xdjO8r/", color: '#A8A29E', altText: "Fast loading placeholder for a gray-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DOvF9NRjDVZ/?img_index=1", color: '#FDBA74', altText: "Fast loading placeholder for an orange-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DOsDX2MDAg2/?img_index=1", color: '#C4B5FD', altText: "Fast loading placeholder for a light purple-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DMSIETQNRnq/", color: '#A78BFA', altText: "Fast loading placeholder for a purple-colored Instagram mehndi post" },
-                            { url: "https://www.instagram.com/p/DNmrmuksGZK/?img_index=1", color: '#FCA5A5', altText: "Fast loading placeholder for a red-colored Instagram mehndi post" },
-                        ];
-                        
-                        const galleryContainer = document.querySelector('#gallery .grid');
-                        
-                        remainingInstagramPosts.forEach(post => {
-                            const card = document.createElement('a');
-                            card.href = post.url;
-                            card.target = "_blank";
-                            // Adjusting the grid class for responsiveness
-                            card.className = "relative overflow-hidden rounded-lg shadow-md aspect-square card-hover-effect group block";
-                            
-                            // Use placeholder for fast loading - **IMPROVEMENT: Added post.altText for SEO/A11y**
-                            card.innerHTML = `
-                                <img src="https://placehold.co/400x400/${post.color.substring(1)}" alt="${post.altText}" class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80">
-                                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                    <span class="text-white font-semibold text-sm p-2 bg-primary-brand rounded-full">View Post</span>
-                                </div>
-                            `;
-                            galleryContainer.appendChild(card);
-                        });
-                    </script>
-
-                </div>
-
-                <div class="text-center mt-10">
-                    <a href="https://www.instagram.com/khushnud_mehndi_artist110/" target="_blank" class="inline-flex items-center px-6 py-2 border border-primary-brand text-base font-medium rounded-full text-primary-brand hover:bg-violet-50 transition duration-300 ease-in-out">
-                        View More on Instagram
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="packages" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">Packages & Pricing</h2>
-            <p class="text-center text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
-                Transparent and clear pricing options. Connect for a personalized, non-binding quote.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="flex flex-col bg-white rounded-xl shadow-xl p-8 card-hover-effect border-t-8 border-primary-brand">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">Bridal Classic</h3>
-                    <p class="text-gray-500 mb-6">Full hands (front & back) + complete feet coverage.</p>
-                    <div class="text-4xl font-extrabold text-primary-brand mb-8">
-                        Connect for Quote
-                    </div>
-                    <ul role="list" class="space-y-4 flex-grow mb-8">
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Personalized consultation</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Premium skin-safe cones</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Home service (MMR)</p>
-                        </li>
-                    </ul>
-                    <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })" class="mt-auto px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-brand hover:bg-violet-700 transition duration-300">
-                        WhatsApp for Quote →
-                    </button>
-                </div>
-
-                <div class="flex flex-col bg-white rounded-xl shadow-2xl ring-4 ring-primary-brand p-10 card-hover-effect transform scale-105">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">Arabic Party</h3>
-                    <p class="text-gray-500 mb-6">Simple or elaborate Arabic designs (per hand).</p>
-                    <div class="text-4xl font-extrabold text-primary-brand mb-8">
-                        Connect for Price
-                    </div>
-                    <ul role="list" class="space-y-4 flex-grow mb-8">
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Fast application</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Designs up to wrist/forearm</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Ideal for small parties</p>
-                        </li>
-                    </ul>
-                    <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })" class="mt-auto px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-brand hover:bg-violet-700 transition duration-300">
-                        Check Availability →
-                    </button>
-                </div>
-
-                <div class="flex flex-col bg-white rounded-xl shadow-xl p-8 card-hover-effect border-t-8 border-primary-brand">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">Group Booking</h3>
-                    <p class="text-gray-500 mb-6">For weddings, Sangeet, and corporate events with multiple guests.</p>
-                    <div class="text-4xl font-extrabold text-primary-brand mb-8">
-                        Connect for Price
-                    </div>
-                    <ul role="list" class="space-y-4 flex-grow mb-8">
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Per-hour or flat-rate options</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Multiple artists can be arranged</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                            <p class="ml-3 text-gray-600">Quick designs for guests</p>
-                        </li>
-                    </ul>
-                    <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })" class="mt-auto px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-brand hover:bg-violet-700 transition duration-300">
-                        Share Details →
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="reviews" class="bg-violet-50 py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">What Our Clients Say</h2>
-                <p class="text-center text-lg text-gray-500 mb-12">
-                    Read feedback from our happy customers. Swipe or use the arrows to see more.
-                </p>
-
-                <div id="review-carousel" class="relative overflow-hidden">
-                    <div id="review-carousel-track" class="flex transition-transform duration-500 ease-in-out">
-                        <div class="flex-shrink-0 w-full grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
-                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-brand">
-                                <div class="flex items-center mb-4"><span class="text-yellow-400">★★★★★</span><span class="ml-3 text-sm font-medium text-gray-900">Aisha (Bridal)</span></div>
-                                <p class="italic text-gray-700">“Neat work and a rich, dark stain! Khushnud arrived on time and finished the bridal henna perfectly. Highly professional.”</p>
-                            </div>
-        
-                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-brand">
-                                <div class="flex items-center mb-4"><span class="text-yellow-400">★★★★★</span><span class="ml-3 text-sm font-medium text-gray-900">Ritika (Party)</span></div>
-                                <p class="italic text-gray-700">“The Arabic designs were quick, gorgeous, and exactly what I wanted. A great experience for our party booking.”</p>
-                            </div>
-        
-                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-brand">
-                                <div class="flex items-center mb-4"><span class="text-yellow-400">★★★★★</span><span class="ml-3 text-sm font-medium text-gray-900">Zoya (Sangeet)</span></div>
-                                <p class="italic text-gray-700">“Friendly and incredibly talented artist. We used her for our Sangeet, and all guests loved their designs. Highly recommend in Mumbai!”</p>
-                            </div>
-                        </div>
-
-                        <div class="flex-shrink-0 w-full grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
-                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-brand">
-                                <div class="flex items-center mb-4"><span class="text-yellow-400">★★★★★</span><span class="ml-3 text-sm font-medium text-gray-900">Neha (Indo-Arabic)</span></div>
-                                <p class="italic text-gray-700">“The fusion design was flawless! It was traditional yet modern, and the stain development was fantastic. Excellent service.”</p>
-                            </div>
-                            
-                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-brand">
-                                <div class="flex items-center mb-4"><span class="text-yellow-400">★★★★★</span><span class="ml-3 text-sm font-medium text-gray-900">Fatima (Corporate Event)</span></div>
-                                <p class="italic text-gray-700">“Booked for a corporate event. Khushnud and her team were professional, fast, and handled the large crowd perfectly. Great value.”</p>
-                            </div>
-                            
-                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-brand">
-                                <div class="flex items-center mb-4"><span class="text-yellow-400">★★★★★</span><span class="ml-3 text-sm font-medium text-gray-900">Deepa (Trousseau)</span></div>
-                                <p class="italic text-gray-700">“Absolutely loved the intricate details for my trousseau. The application was comfortable and Khushnud was very patient.”</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button id="review-prev" aria-label="Previous review set" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary-brand bg-opacity-70 p-2 rounded-r-full text-white hover:bg-opacity-90 transition z-10 hidden md:block">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    <button id="review-next" aria-label="Next review set" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary-brand bg-opacity-70 p-2 rounded-l-full text-white hover:bg-opacity-90 transition z-10 hidden md:block">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
-                    
-                </div>
-            </div>
-        </section>
-
-        <section id="booking" class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">Instant WhatsApp Booking</h2>
-            <p class="text-center text-lg text-gray-500 mb-12">
-                Fill out the details below. We'll pre-fill a WhatsApp message for you for a free and fast quote!
-            </p>
-
-            <form id="whatsapp-form" class="bg-white p-8 rounded-xl shadow-2xl space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand" placeholder="E.g., Priya Sharma">
-                </div>
-
-                <div>
-                    <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Event Date (Approx)</label>
-                    <input type="date" id="date" name="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand">
-                </div>
-
-                <div>
-                    <label for="location" class="block text-sm font-medium text-gray-700 mb-1">City / Location</label>
-                    <input type="text" id="location" name="location" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand" placeholder="E.g., Bandra, Navi Mumbai, Thane">
-                </div>
-
-                <div>
-                    <label for="package" class="block text-sm font-medium text-gray-700 mb-1">Package</label>
-                    <select id="package" name="package" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand bg-white">
-                        <option value="Bridal Classic">Bridal Classic</option>
-                        <option value="Arabic Party">Arabic Party</option>
-                        <option value="Group Booking">Group Booking</option>
-                        <option value="Custom">Custom Design / Enquiry</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Additional Notes (Optional)</label>
-                    <textarea id="notes" name="notes" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-brand focus:border-primary-brand" placeholder="E.g., Want a fusion design up to elbow."></textarea>
-                </div>
-
-                <button type="submit" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-500 hover:bg-green-600 transition duration-300 shadow-lg">
-                    <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.558-3.953-1.558-6.096 0-6.702 5.48-12.181 12.203-12.181h.011c6.697 0 12.185 5.385 12.185 12.083 0 6.703-5.388 12.182-12.085 12.182-1.898 0-3.793-.425-5.454-1.429l-6.284 1.638zm11.961-22.126c-5.836 0-10.592 4.756-10.592 10.592 0 2.121.681 4.249 2.059 5.867l-1.353 4.945 5.023-1.312c1.458.751 3.096 1.159 4.792 1.159 5.836 0 10.593-4.756 10.593-10.592.002-5.84-4.755-10.597-10.591-10.597zM18.91 17.202c-.394 0-.573-.243-.799-.484-.226-.241-.51-.301-.716-.301-.205 0-.43.059-.656.301-.225.241-.75.885-.92.932-.17.046-.309.069-.588.046-.279-.023-1.189-.449-2.274-1.328-1.745-1.41-2.909-3.21-3.266-3.834-.085-.152-.018-.466.113-.672.131-.206.279-.395.427-.584.148-.189.176-.328.243-.466.066-.139.033-.257-.018-.358-.049-.101-.444-1.077-.604-1.465-.159-.387-.319-.344-.466-.344-.148 0-.395-.005-.62-.005-.225 0-.584.075-.899.419-.315.344-1.205 1.171-1.205 2.85 0 1.68 1.237 3.328 1.417 3.553.18.225 2.443 3.73 5.923 5.088 3.48 1.358 3.515 1.157 4.143 1.08 1.412-.175 2.534-1.049 2.76-1.633.225-.584.225-.972.159-1.073-.066-.101-.245-.152-.466-.279z"/></svg>
-                    Send on WhatsApp Chat Directly
-                </button>
-            </form>
-        </section>
-
-        <section id="faq" class="bg-gray-50 py-16">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
-
-                <div class="space-y-4">
-                    <details class="bg-white p-4 rounded-lg shadow-md group cursor-pointer" open>
-                        <summary class="flex justify-between items-center text-lg font-semibold text-gray-800 group-hover:text-primary-brand transition duration-150">
-                            Do I need to pay to enquire?
-                            <span class="group-open:rotate-180 transform transition duration-200">
-                                <svg class="h-6 w-6 text-primary-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </span>
-                        </summary>
-                        <div class="mt-2 text-gray-600 border-t pt-3">
-                            No. WhatsApp or email enquiry for a quote is completely free and non-binding. We aim for fast replies, usually under 1 hour*.
-                        </div>
-                    </details>
-
-                    <details class="bg-white p-4 rounded-lg shadow-md group cursor-pointer">
-                        <summary class="flex justify-between items-center text-lg font-semibold text-gray-800 group-hover:text-primary-brand transition duration-150">
-                            How do I confirm a booking?
-                            <span class="group-open:rotate-180 transform transition duration-200">
-                                <svg class="h-6 w-6 text-primary-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </span>
-                        </summary>
-                        <div class="mt-2 text-gray-600 border-t pt-3">
-                            Once details are finalized on WhatsApp, an advance payment is required to confirm and secure your date, especially for bridal slots.
-                        </div>
-                    </details>
-
-                    <details class="bg-white p-4 rounded-lg shadow-md group cursor-pointer">
-                        <summary class="flex justify-between items-center text-lg font-semibold text-gray-800 group-hover:text-primary-brand transition duration-150">
-                            Which areas do you cover?
-                            <span class="group-open:rotate-180 transform transition duration-200">
-                                <svg class="h-6 w-6 text-primary-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </span>
-                        </summary>
-                        <div class="mt-2 text-gray-600 border-t pt-3">
-                            We offer home service across the Mumbai Metropolitan Region (MMR), including Mumbai, Navi Mumbai, and Thane. Out-station bookings are accommodated upon request.
-                        </div>
-                    </details>
-                    
-                    <details class="bg-white p-4 rounded-lg shadow-md group cursor-pointer">
-                        <summary class="flex justify-between items-center text-lg font-semibold text-gray-800 group-hover:text-primary-brand transition duration-150">
-                            Are your henna cones skin-safe?
-                            <span class="group-open:rotate-180 transform transition duration-200">
-                                <svg class="h-6 w-6 text-primary-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </span>
-                        </summary>
-                        <div class="mt-2 text-gray-600 border-t pt-3">
-                            Yes, absolutely. We only use high-quality, pure, skin-safe cones to ensure a beautiful, rich, and dark stain without any harmful chemicals.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-3xl font-bold mb-3 text-primary-brand">Khushnud Mehndi Artist</h3>
-            <p class="text-lg text-gray-400 mb-6">Bridal • Arabic • Party Mehndi</p>
-            
-            <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-gray-300 mb-8">
-                <p>Service Area: Mumbai • Navi Mumbai • Thane</p>
-                <a href="mailto:info@khushnudmehndi.com" class="hover:text-primary-brand transition duration-150">Email: info@khushnudmehndi.com (Mock)</a>
-            </div>
-
-            <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })" class="inline-flex items-center justify-center px-6 py-2 border border-green-500 text-base font-medium rounded-full text-green-500 hover:bg-green-500 hover:text-white transition duration-300">
-                Book on WhatsApp
-            </button>
-
-            <p class="mt-8 text-sm text-gray-500">
-                &copy; <span id="current-year"></span> Khushnud Mehndi Artist. All rights reserved.
-            </p>
+    <section id="about">
+        <h2 class="section-title">About The Artist</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>Khushnud specializes in delivering exceptional henna art with attention to detail, symmetry, and rich stain quality. From traditional bridal looks to modern Indo-Arabic fusion, we ensure every client's vision is executed flawlessly.</p>
         </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Bridal Mehndi</h3>
+                <p>Full hands front & back, feet, and custom motifs. Detailed traditional and portrait options available.</p>
+            </div>
+            <div class="card">
+                <h3>Arabic Mehndi</h3>
+                <p>Free-flowing floral patterns, elegant vines, and quick party designs. Light and modern.</p>
+            </div>
+            <div class="card">
+                <h3>Indo-Arabic Fusion</h3>
+                <p>A perfect blend of intricate Indian motifs and bold Arabic shading for a unique look.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-design" class="ai-section">
+        <h2 class="section-title">✨ AI Mehndi Design Consultant ✨</h2>
+        <p>Describe your dream design and get personalized ideas instantly.</p>
+        
+        <div class="ai-interface">
+            <input type="text" class="ai-input" placeholder="Event Type (e.g., Wedding, Sangeet)">
+            <input type="text" class="ai-input" placeholder="Style (e.g., Minimalist, Peacock, Floral)">
+            <button class="cta-btn" style="width: 100%; margin-top: 10px;">Generate Concepts</button>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">*Feature connects to AI engine for instant inspiration</p>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://placehold.co/400x400/orange/white?text=Bridal" alt="Bridal Design"></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400/purple/white?text=Arabic" alt="Arabic Design"></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400/red/white?text=Fusion" alt="Fusion Design"></div>
+            <div class="gallery-item"><img src="https://placehold.co/400x400/green/white?text=Party" alt="Party Design"></div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://instagram.com" target="_blank" style="color: var(--primary-color); font-weight: bold;">View More on Instagram &rarr;</a>
+        </div>
+    </section>
+
+    <section id="packages">
+        <h2 class="section-title">Packages & Pricing</h2>
+        <div class="services-grid">
+            <div class="price-card">
+                <h3>Bridal Classic</h3>
+                <p>Full Hands & Feet</p>
+                <div class="price">Custom Quote</div>
+                <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--light-text);">
+                    <li>Personalized Consultation</li>
+                    <li>Premium Skin-Safe Cones</li>
+                    <li>Home Service (MMR)</li>
+                </ul>
+                <a href="https://wa.me/911234567890?text=Hi,%20I%20am%20interested%20in%20Bridal%20Classic" class="cta-btn">Check Availability</a>
+            </div>
+            
+            <div class="price-card">
+                <h3>Arabic Party</h3>
+                <p>Per Hand / Guest</p>
+                <div class="price">On Request</div>
+                <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--light-text);">
+                    <li>Fast Application</li>
+                    <li>Wrist to Forearm Designs</li>
+                    <li>Ideal for Sangeet</li>
+                </ul>
+                <a href="https://wa.me/911234567890?text=Hi,%20I%20am%20interested%20in%20Party%20Mehndi" class="cta-btn">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 class="section-title">Client Love</h2>
+        <div class="services-grid">
+            <div class="testimonial">
+                <p>"Neat work and a rich, dark stain! Khushnud arrived on time and finished the bridal henna perfectly."</p>
+                <p style="margin-top: 10px; font-weight: bold;">- Aisha (Bridal)</p>
+            </div>
+            <div class="testimonial">
+                <p>"The fusion design was flawless! It was traditional yet modern. Excellent service."</p>
+                <p style="margin-top: 10px; font-weight: bold;">- Neha (Indo-Arabic)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 class="section-title">FAQ</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Are your cones skin-safe?</summary>
+                <p style="margin-top: 0.5rem;">Yes, absolutely. We only use high-quality, pure, skin-safe cones to ensure a beautiful, rich, and dark stain without any harmful chemicals.</p>
+            </details>
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Do you travel for bookings?</summary>
+                <p style="margin-top: 0.5rem;">We offer home service across the Mumbai Metropolitan Region (MMR), including Mumbai, Navi Mumbai, and Thane.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="support-section">
+        <h3>Customer Support & Booking Inquiries</h3>
+        <p style="margin-top: 0.5rem; color: var(--light-text);">Our team is available to assist you with quotes and scheduling.</p>
+        
+        <div class="support-details">
+            <div class="support-item">
+                <span>📍</span> Mumbai • Navi Mumbai • Thane
+            </div>
+            <div class="support-item">
+                <span>📧</span> info@khushnudmehndi.com
+            </div>
+            <div class="support-item">
+                <span>📱</span> +91 123 456 7890 (WhatsApp)
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Khushnud Mehndi Artist. All rights reserved.</p>
     </footer>
-
-    <script async src="//www.instagram.com/embed.js"></script>
-
-    <script>
-        // --- CONFIGURATION ---
-        // New WhatsApp Number
-        const whatsappNumber = "919152584828";
-        
-        // --- LLM API Configuration for Text Generation (AI Consultant) ---
-        const TEXT_MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
-        const textApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${TEXT_MODEL_NAME}:generateContent?key=`;
-        
-        const apiKey = ""; // API key is provided by the environment
-
-        // --- UTILITY FUNCTIONS ---
-        
-        // Get the current year for the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // 1. Mobile Menu Toggle Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // 2. WhatsApp Form Submission Logic
-        const whatsappForm = document.getElementById('whatsapp-form');
-
-        whatsappForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const date = document.getElementById('date').value;
-            const location = document.getElementById('location').value;
-            const packageType = document.getElementById('package').value;
-            const notes = document.getElementById('notes').value;
-
-            // Construct the pre-filled message
-            let message = `Hello Khushnud, I would like to enquire about a booking.`;
-            message += `\n\n*Name:* ${name}`;
-            message += `\n*Event Date (Approx):* ${date || 'No specific date provided'}`;
-            message += `\n*Location:* ${location}`;
-            message += `\n*Preferred Package:* ${packageType}`;
-            if (notes) {
-                message += `\n*Notes:* ${notes}`;
-            }
-
-            // Encode the message for the URL
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Construct the WhatsApp URL using the updated number
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-            // Open the URL in a new tab
-            window.open(whatsappURL, '_blank');
-
-            showCustomMessage("Your enquiry is ready! We are opening WhatsApp chat now.", "success");
-        });
-
-        // 3. Custom Message/Alert Box Logic (instead of alert())
-        function showCustomMessage(msg, type = "info") {
-            const messageBox = document.createElement('div');
-            messageBox.className = `fixed bottom-5 right-5 z-50 p-4 rounded-lg shadow-xl text-white transition-opacity duration-300`;
-            messageBox.style.opacity = '0';
-            messageBox.style.maxWidth = '300px';
-
-            if (type === "success") {
-                messageBox.classList.add('bg-green-600');
-            } else if (type === "error") {
-                messageBox.classList.add('bg-red-600');
-            } else {
-                messageBox.classList.add('bg-gray-800');
-            }
-
-            messageBox.innerHTML = `<p class="font-bold mb-1">${type.charAt(0).toUpperCase() + type.slice(1)}:</p><p class="text-sm">${msg}</p>`;
-            document.body.appendChild(messageBox);
-            
-            // Fade in
-            setTimeout(() => { messageBox.style.opacity = '1'; }, 10);
-
-            // Fade out and remove
-            setTimeout(() => { 
-                messageBox.style.opacity = '0';
-                setTimeout(() => { messageBox.remove(); }, 300);
-            }, 5000);
-        }
-
-        // 4. Carousel Logic (Image and Review)
-
-        /**
-         * Generic Carousel Logic
-         */
-        function initCarousel(trackId, prevBtnId, nextBtnId, dotContainerId, autoAdvance = false) {
-            const track = document.getElementById(trackId);
-            const prevBtn = document.getElementById(prevBtnId);
-            const nextBtn = document.getElementById(nextBtnId);
-            const dotContainer = dotContainerId ? document.getElementById(dotContainerId) : null;
-
-            if (!track || !prevBtn || !nextBtn) return;
-
-            let currentSlide = 0;
-            const slides = track.children; 
-            const totalSlides = slides.length;
-
-            if (totalSlides === 0) return;
-
-            // Generate dots for image carousel only
-            if (dotContainer && dotContainer.children.length === 0) {
-                for (let i = 0; i < totalSlides; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = 'w-3 h-3 rounded-full bg-white transition-all duration-300 border border-gray-400';
-                    dot.setAttribute('data-slide-index', i);
-                    dot.addEventListener('click', () => moveToSlide(i));
-                    dotContainer.appendChild(dot);
-                }
-            }
-            
-            function updateCarousel() {
-                // Ensure slides[0] exists before accessing offsetWidth
-                if (slides.length === 0) return;
-                const slideWidth = slides[0].offsetWidth;
-                track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-                
-                // Update dots
-                if (dotContainer) {
-                    dotContainer.querySelectorAll('button').forEach((dot, index) => {
-                        dot.classList.toggle('bg-opacity-100', index === currentSlide);
-                        dot.classList.toggle('bg-opacity-50', index !== currentSlide);
-                    });
-                }
-            }
-
-            function moveToSlide(index) {
-                currentSlide = index;
-                if (currentSlide < 0) {
-                    currentSlide = totalSlides - 1;
-                } else if (currentSlide >= totalSlides) {
-                    currentSlide = 0;
-                }
-                updateCarousel();
-            }
-
-            nextBtn.addEventListener('click', () => moveToSlide(currentSlide + 1));
-            prevBtn.addEventListener('click', () => moveToSlide(currentSlide - 1));
-
-            window.addEventListener('resize', updateCarousel);
-            
-            if (autoAdvance) {
-                let intervalId = setInterval(() => {
-                    moveToSlide(currentSlide + 1);
-                }, 5000);
-                
-                track.parentElement.addEventListener('mouseenter', () => clearInterval(intervalId));
-                track.parentElement.addEventListener('mouseleave', () => {
-                    intervalId = setInterval(() => moveToSlide(currentSlide + 1), 5000);
-                });
-            }
-            
-            // Touch/Swipe functionality
-            let touchStartX = 0;
-
-            track.addEventListener('touchstart', (e) => {
-                touchStartX = e.touches[0].clientX;
-            });
-
-            track.addEventListener('touchend', (e) => {
-                const touchEndX = e.changedTouches[0].clientX;
-                const threshold = 50;
-                const diff = touchStartX - touchEndX;
-
-                if (diff > threshold) {
-                    moveToSlide(currentSlide + 1);
-                } else if (diff < -threshold) {
-                    moveToSlide(currentSlide - 1);
-                }
-            });
-
-            // FIX: Use requestAnimationFrame for more reliable initial layout calculation
-            requestAnimationFrame(updateCarousel); 
-        }
-
-        // Initialize Carousels
-        function initCarousels() {
-             // Image Carousel (Featured Work) - Auto advance is ON
-            initCarousel(
-                'image-carousel-track', 
-                'img-prev', 
-                'img-next', 
-                'image-carousel-dots',
-                true // Auto advance
-            );
-            
-            // Review Carousel - Auto advance is OFF
-            initCarousel(
-                'review-carousel-track', 
-                'review-prev', 
-                'review-next'
-                // No dot container for reviews
-            );
-        }
-        
-        // 5. AI Design Consultant Logic
-        const aiDesignForm = document.getElementById('ai-design-form');
-        const aiEventInput = document.getElementById('ai-event');
-        const aiStyleTextarea = document.getElementById('ai-style');
-        const generateBtn = document.getElementById('generate-btn');
-        const aiLoadingOverlay = document.getElementById('ai-loading-overlay');
-        const aiResultsDiv = document.getElementById('ai-results');
-        const resultsContentDiv = document.getElementById('results-content');
-        
-        // Enable button when inputs are filled
-        function checkInputs() {
-            const isFilled = aiEventInput.value.trim() !== '' && aiStyleTextarea.value.trim() !== '';
-            generateBtn.disabled = !isFilled;
-            if (isFilled) {
-                generateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-            } else {
-                generateBtn.classList.add('opacity-50', 'cursor-not-allowed');
-            }
-        }
-
-        aiEventInput.addEventListener('input', checkInputs);
-        aiStyleTextarea.addEventListener('input', checkInputs);
-        checkInputs(); // Initial check
-
-        async function generateDesignIdeas(event, style, retries = 3) {
-            const systemPrompt = "You are a creative and professional Mehndi Design Consultant. Your task is to generate three unique, detailed, and appealing design concepts based on the user's input. Format your response as a numbered list where each item is a distinct, short paragraph describing the concept. Do not include any introductory or concluding text, only the numbered list.";
-            
-            const userQuery = `Event: ${event}. Style/Motifs: ${style}. Generate 3 design concepts.`;
-            
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                systemInstruction: { parts: [{ text: systemPrompt }] },
-            };
-
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(textApiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) {
-                        if (response.status === 429 && i < retries - 1) {
-                            const delay = Math.pow(2, i) * 1000;
-                            await new Promise(resolve => setTimeout(resolve, delay));
-                            continue;
-                        }
-                        throw new Error(`API error: ${response.status} ${response.statusText}`);
-                    }
-
-                    const result = await response.json();
-                    const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                    if (text) {
-                        return text;
-                    } else {
-                        throw new Error("Invalid response structure or content missing.");
-                    }
-                } catch (error) {
-                    if (i === retries - 1) {
-                        console.error(`Failed to generate design ideas after ${retries} attempts.`, error);
-                        return "Sorry, I couldn't generate design ideas right now. Please try again later or contact us directly on WhatsApp.";
-                    }
-                }
-            }
-        }
-        
-        aiDesignForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const event = aiEventInput.value.trim();
-            const style = aiStyleTextarea.value.trim();
-
-            if (!event || !style) {
-                showCustomMessage("Please provide both the event type and design style.", "error");
-                return;
-            }
-
-            aiLoadingOverlay.classList.remove('hidden');
-            aiResultsDiv.classList.add('hidden');
-            resultsContentDiv.innerHTML = '';
-            
-            const resultText = await generateDesignIdeas(event, style);
-
-            aiLoadingOverlay.classList.add('hidden');
-            aiResultsDiv.classList.remove('hidden');
-            
-            // Format the numbered list output for display
-            const formattedText = resultText
-                .split('\n')
-                .map(line => line.trim())
-                .filter(line => line.length > 0)
-                .map(line => `<p class="flex items-start"><span class="mr-2 text-primary-brand font-bold">${line.split('.')[0]}.</span><span class="flex-1">${line.substring(line.indexOf('.') + 1).trim()}</span></p>`)
-                .join('');
-                
-            resultsContentDiv.innerHTML = formattedText || `<p class="text-red-500">${resultText}</p>`;
-        });
-
-        // Initialize carousels
-        window.addEventListener('load', initCarousels);
-
-    </script>
 
 </body>
 </html>
