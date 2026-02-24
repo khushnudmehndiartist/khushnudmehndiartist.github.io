@@ -74,7 +74,10 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-dark);
@@ -379,12 +382,10 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(128, 0, 32, 0.3) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0, 0, 0, 0.7) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(128, 0, 32, 0.3) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.7) 100%);
     z-index: 1;
 }
 
@@ -518,8 +519,15 @@ h1, h2, h3, h4 {
 }
 
 @keyframes bounceDown {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 /* ==================== TRUST BADGES ==================== */
@@ -753,11 +761,9 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(128, 0, 32, 0.1) 0%,
-        rgba(128, 0, 32, 0.7) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(128, 0, 32, 0.1) 0%,
+            rgba(128, 0, 32, 0.7) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1240,9 +1246,17 @@ footer {
 }
 
 @keyframes pulse-green {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 /* ==================== ANIMATIONS ==================== */
@@ -1255,6 +1269,189 @@ footer {
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ==================== PRODUCTS & CTA ==================== */
+.products-cta-section {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(128, 0, 32, 0.05));
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.product-info h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.product-info .highlight-text {
+    color: var(--primary);
+    font-style: italic;
+    font-family: var(--font-heading);
+}
+
+.terms-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--secondary);
+    margin: 25px 0;
+}
+
+.terms-card h4 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-list li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--text-body);
+}
+
+.product-composition {
+    position: relative;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.prod-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--secondary);
+}
+
+/* ==================== WORKSHOP SECTION ==================== */
+.workshop-section {
+    position: relative;
+    background: linear-gradient(rgba(128, 0, 32, 0.9), rgba(90, 0, 22, 0.95)), url('../assets/images/hero/hero_3.png') center/cover fixed;
+    color: white;
+}
+
+.text-light {
+    color: white !important;
+}
+
+.workshop-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.workshop-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.workshop-content-flex {
+    display: flex;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+}
+
+.workshop-details {
+    flex: 1;
+}
+
+.workshop-details h3 {
+    color: var(--secondary);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price-tag .currency {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.price-tag .suffix {
+    font-size: 1rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.workshop-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.workshop-includes h4 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.workshop-includes li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.workshop-includes li i {
+    color: #25D366;
+    /* WhatsApp green tick */
+}
+
+.workshop-form-container {
+    flex: 0.8;
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 30px;
+    color: var(--text-dark);
+}
+
+.workshop-form-container h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.workshop-form-container p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.workshop-form {
+    padding: 0 !important;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
