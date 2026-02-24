@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushnud Mehndi Artist | Premium Bridal & Party Henna Art</title>
+    <meta name="description"
+        content="Professional Mehndi Artist specializing in Bridal, Arabic, and Party Mehndi designs. 100% Organic Henna. Book your appointment today for exquisite henna art in Mumbai.">
+    <meta name="keywords" content="mehndi artist, bridal mehndi, henna, arabic mehndi, Mumbai, party mehndi">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+
+<body>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="mainNav">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="Khushnud Mehndi" class="logo-img">
+                <span>Khushnud Mehndi</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact" class="btn-nav">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ HERO CAROUSEL ============ -->
+    <section id="home" class="hero-slider">
+        <div class="hero-track" id="heroTrack">
+            <!-- Slide 1 -->
+            <div class="slide active" data-shuffle>
+                <img src="assets/images/hero/hero_1.png" alt="Exquisite Bridal Mehndi" class="slide-bg" loading="eager">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Premium Henna Art</span>
+                    <h1>Exquisite Bridal Mehndi</h1>
+                    <p>Adorning your hands with tradition, elegance, and love.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn-primary">Book Appointment</a>
+                        <a href="#gallery" class="btn-secondary">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" data-shuffle>
+                <img src="assets/images/hero/hero_2.png" alt="Intricate Arabic Designs" class="slide-bg" loading="lazy">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Bridal Special</span>
+                    <h1>Intricate Bridal Designs</h1>
+                    <p>Full hands & feet mehndi crafted with love for your big day.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn-primary">Get a Quote</a>
+                        <a href="#services" class="btn-secondary">Our Services</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" data-shuffle>
+                <img src="assets/images/hero/hero_3.png" alt="Arabic Mehndi Patterns" class="slide-bg" loading="lazy">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Arabic Art</span>
+                    <h1>Flowing Arabic Patterns</h1>
+                    <p>Modern, bold designs with stunning floral trails.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn-primary">Book Now</a>
+                        <a href="#gallery" class="btn-secondary">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide" data-shuffle>
+                <img src="assets/images/hero/hero_4.png" alt="Fusion Mehndi Art" class="slide-bg" loading="lazy">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Contemporary Fusion</span>
+                    <h1>Fusion Mehndi Artistry</h1>
+                    <p>Blending tradition with modern creativity.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn-primary">Check Availability</a>
+                        <a href="#about" class="btn-secondary">About Us</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide" data-shuffle>
+                <img src="assets/images/hero/hero_5.png" alt="Portrait Mehndi Art" class="slide-bg" loading="lazy">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Portrait Specialist</span>
+                    <h1>Portrait Mehndi Magic</h1>
+                    <p>Custom portraits & figures woven into henna art.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn-primary">Book Your Slot</a>
+                        <a href="#reviews" class="btn-secondary">Happy Brides</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-nav">
+            <button class="carousel-btn prev" id="heroPrev" aria-label="Previous Slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" id="heroNext" aria-label="Next Slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators" id="heroDots"></div>
+
+        <!-- Scroll Down Hint -->
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============ TRUST BADGES ============ -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <div class="badge-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>100% Organic</h4>
+                    <p>Chemical-free Natural Henna</p>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Dark Stain</h4>
+                    <p>Color Guarantee Promise</p>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon"><i class="fas fa-award"></i></div>
+                    <h4>Trusted Artist</h4>
+                    <p>Verified & Professional</p>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Genuine Service</h4>
+                    <p>No Hidden Charges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <img src="assets/images/hero/hero_2.png" alt="Khushnud Mehndi Artist at work">
+                    <div class="about-image-accent"></div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title-left">About Khushnud Mehndi Artist</h2>
+                    <p class="lead">Weaving tradition into every intricate line, we specialize in creating breathtaking
+                        mehndi designs that celebrate your special moments.</p>
+                    <p>With a passion for henna art and years of experience, Khushnud brings a unique blend of
+                        traditional Indian motifs and modern Arabic styles. Whether it's a grand wedding or an intimate
+                        gathering, our designs are tailored to reflect your personality and style.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> 100% Organic Henna — Dark, Long-lasting Stain</li>
+                        <li><i class="fas fa-check-circle"></i> Intricate & Neat Detailing</li>
+                        <li><i class="fas fa-check-circle"></i> Customized Bridal Packages</li>
+                        <li><i class="fas fa-check-circle"></i> On-Location Service Available</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary btn-lg">
+                        <i class="fab fa-whatsapp"></i> Book Your Mehndi Slot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <span class="section-tag center">What We Offer</span>
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Bridal Mehndi</h3>
+                    <p>Full hands and feet intricate designs with portraits, figures, and storytelling elements for the
+                        bride-to-be.</p>
+                    <a href="#contact" class="card-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Arabic Mehndi</h3>
+                    <p>Flowing, floral patterns with bold outlines and beautiful shading. Modern yet timeless.</p>
+                    <a href="#contact" class="card-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Party Mehndi</h3>
+                    <p>Elegant designs for guests, bridesmaids, sangeet, and festival celebrations.</p>
+                    <a href="#contact" class="card-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Custom Designs</h3>
+                    <p>Personalized motifs, portrait mehndi, initials, and custom artwork on request.</p>
+                    <a href="#contact" class="card-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALLERY SECTION ============ -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <span class="section-tag center">Our Portfolio</span>
+            <h2 class="section-title">Mehndi Gallery</h2>
+            <p class="section-subtitle">Tap on any image to view it in full size</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll" data-index="0">
+                    <img src="assets/images/gallery/gallery_1.png" alt="Bridal Mehndi Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Bridal Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-index="1">
+                    <img src="assets/images/gallery/gallery_2.png" alt="Arabic Mehndi Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Arabic Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-index="2">
+                    <img src="assets/images/gallery/gallery_3.png" alt="Fusion Mehndi Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Fusion Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-index="3">
+                    <img src="assets/images/gallery/gallery_4.png" alt="Group Mehndi Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Group Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-index="4">
+                    <img src="assets/images/gallery/gallery_5.png" alt="Portrait Mehndi Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Portrait Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-index="5">
+                    <img src="assets/images/gallery/gallery_6.png" alt="Traditional Mehndi Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Traditional Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-btn">
+                <a href="https://www.instagram.com/khushnud_mehndi_artist110/" target="_blank" class="btn-primary">
+                    <i class="fab fa-instagram"></i> View All on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LIGHTBOX MODAL ============ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image"><i
+                class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image"><i
+                class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Image" id="lightboxImg">
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- ============ REVIEWS SECTION ============ -->
+    <section id="reviews" class="section bg-light">
+        <div class="container">
+            <span class="section-tag center">Testimonials</span>
+            <h2 class="section-title">Happy Brides</h2>
+
+            <div class="testimonial-carousel">
+                <button class="review-btn prev" id="reviewPrev" aria-label="Previous Review">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="testimonial-track-container">
+                    <ul class="testimonial-track" id="testimonialTrack">
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Absolutely stunning work! Khushnud is so talented and patient.
+                                My bridal mehndi was exactly what I dreamed of."</p>
+                            <h4 class="client-name">Sarah Khan</h4>
+                            <span class="client-event">Bridal Mehndi</span>
+                        </li>
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"The color came out so dark and beautiful. The stain lasted over
+                                2 weeks! Highly recommend for bridal mehndi."</p>
+                            <h4 class="client-name">Anjali Sharma</h4>
+                            <span class="client-event">Bridal Mehndi</span>
+                        </li>
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Very neat and intricate designs. Everyone at the sangeet loved
+                                my mehndi! Will book again."</p>
+                            <h4 class="client-name">Fatima Z.</h4>
+                            <span class="client-event">Sangeet Party</span>
+                        </li>
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Professional service and amazing art. Booked for my entire
+                                wedding party and we were all impressed."</p>
+                            <h4 class="client-name">Priya Patel</h4>
+                            <span class="client-event">Wedding Party</span>
+                        </li>
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Khushnud is a true artist! The detailing is just next level.
+                                Thank you for making my special day even more beautiful."</p>
+                            <h4 class="client-name">Riya Singh</h4>
+                            <span class="client-event">Bridal Mehndi</span>
+                        </li>
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Loved the organic henna and the rich, dark stain. The fragrance
+                                was wonderful too. Will definitely book again for my sister's wedding."</p>
+                            <h4 class="client-name">Zoya Ahmed</h4>
+                            <span class="client-event">Party Mehndi</span>
+                        </li>
+                        <li class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Super fast yet so detailed. Best mehndi artist in Mumbai,
+                                hands down. My engagement mehndi was perfect!"</p>
+                            <h4 class="client-name">Meera K.</h4>
+                            <span class="client-event">Engagement</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="review-btn next" id="reviewNext" aria-label="Next Review">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT / BOOKING SECTION ============ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <span class="section-tag center">Get in Touch</span>
+            <h2 class="section-title">Book Your Appointment</h2>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's Create Something Beautiful</h3>
+                    <p>Ready to adorn your hands with stunning mehndi art? Reach out to check availability and discuss
+                        your requirements.</p>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/919152584828" target="_blank">+91-9152584828</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>bookings@khushnudmehndi.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mumbai, Maharashtra</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Available 7 Days — By Appointment</span>
+                    </div>
+                    <div class="social-links-contact">
+                        <a href="https://www.instagram.com/khushnud_mehndi_artist110/" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919152584828" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city"><i class="fas fa-city"></i> City / Area</label>
+                        <input type="text" id="city" name="city" placeholder="e.g. Mumbai, Andheri">
+                    </div>
+                    <div class="form-group">
+                        <label for="date"><i class="fas fa-calendar-alt"></i> Event Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="type"><i class="fas fa-palette"></i> Mehndi Type</label>
+                        <select id="type" name="type">
+                            <option value="Bridal Mehndi">Bridal Mehndi</option>
+                            <option value="Party Mehndi">Party Mehndi</option>
+                            <option value="Arabic Mehndi">Arabic Mehndi</option>
+                            <option value="Engagement Mehndi">Engagement Mehndi</option>
+                            <option value="Custom Design">Custom Design</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">
+                        <i class="fab fa-whatsapp"></i> Send on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Khushnud Mehndi" class="footer-logo">
+                    <p>Premium Mehndi Art for your special moments.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Book Now</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/khushnud_mehndi_artist110/" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://wa.me/919152584828" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Khushnud Mehndi Artist. Mumbai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919152584828" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
